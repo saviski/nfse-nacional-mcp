@@ -1,0 +1,4516 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br" xml:lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+  <!-- Google Tag Manager -->
+  <script type="text">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NHZSKTD');</script>
+  <!-- End Google Tag Manager -->
+
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "url": "https://www.gov.br/nfse",
+            "logo": "https://www.gov.br/nfse/logo.png"
+        }</script>
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "url": "https://www.gov.br/nfse",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://www.gov.br/nfse/search?SearchableText={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+        }</script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    
+        <base href="https://www.gov.br/nfse/pt-br/copy2_of_pagina-inicial/" /><!--[if lt IE 7]></base><![endif]-->
+    
+
+    
+        <meta property="og:title" content="Página Inicial" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.gov.br/nfse/pt-br/copy2_of_pagina-inicial" />
+<meta property="og:image" content="https://www.gov.br/nfse/logo.png" />
+
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:site_name" content="Portal da Nota Fiscal de Serviço eletrônica" />
+
+
+  
+
+  
+  
+  <script type="text">
+    (function() {
+        var po = document.createElement('script');
+        po.async = true;
+        po.src = document.location.protocol + '//connect.facebook.net/pt_BR/all.js#xfbml=1';
+        var head = document.getElementsByTagName('head')[0];
+        head.appendChild(po);
+    }());
+    </script>
+
+
+
+  
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@" />
+  
+
+
+
+
+
+<meta property="creator.productor" content="https://www.gov.br" />
+
+
+
+  
+    <link rel="stylesheet" type="text/css" href="https://www.gov.br/nfse/portal_css/Sunburst%20Theme/reset-cachekey-fd251e386adef7ac679419a1a994926d.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="https://www.gov.br/nfse/portal_css/Sunburst%20Theme/base-cachekey-565c78a196a6751b64375c4d0726d679.css" />
+    <style type="text/css" media="screen">@import url(https://www.gov.br/nfse/portal_css/Sunburst%20Theme/resourceplone.app.jquerytools.dateinput-cachekey-82d12d72050138c6db489ba092a5bd7d.css);</style>
+    <link rel="stylesheet" type="text/css" href="https://www.gov.br/nfse/portal_css/Sunburst%20Theme/resourceplone.formwidget.datetimestyles-cachekey-c02fc26d011190c21fd4a244dd0b12d8.css" />
+    <style type="text/css" media="screen">@import url(https://www.gov.br/nfse/portal_css/Sunburst%20Theme/jquery.autocomplete-cachekey-30e113b4c69112ddb884836ab373dc94.css);</style>
+    <link rel="stylesheet" type="text/css" href="https://www.gov.br/nfse/portal_css/Sunburst%20Theme/embedder-cachekey-cb81261bbdaaa2d778fd1ed20c8f7137.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="https://www.gov.br/nfse/portal_css/Sunburst%20Theme/resourcecollective.nitfnitf-cachekey-1da55b4bbeec11e69e7513fa1b977820.css" media="screen" />
+    <style type="text/css" media="screen">@import url(https://www.gov.br/nfse/portal_css/Sunburst%20Theme/resourcecollective.pollscsscollective.polls-cachekey-de2b141abfa0f47d7fa3b7668b5498c9.css);</style>
+        <!--[if lt IE 8]>    
+    
+    <link rel="stylesheet" type="text/css" href="https://www.gov.br/nfse/portal_css/Sunburst%20Theme/IEFixes-cachekey-dcc76e6417f77a954c00250ac1cec800.css" media="screen" />
+        <![endif]-->
+    
+    <style type="text/css" media="all">@import url(https://www.gov.br/nfse/portal_css/Sunburst%20Theme/resourcepas.plugins.loginunicologinunico-cachekey-663f28e06174c528b99e81c7e16dce96.css);</style>
+    <link rel="stylesheet" type="text/css" href="https://www.gov.br/nfse/portal_css/Sunburst%20Theme/resourcelgpd.plugindsgov.min-cachekey-505563815e345df614003aaab3c830eb.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="https://www.gov.br/nfse/portal_css/Sunburst%20Theme/resourcegovbr.policycanais-cachekey-cfdf52e2216219e6981553678585ac3a.css" />
+
+  
+  
+    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourcegovbr.policybrowser-update-cachekey-35bd6fbc672f7feb9ad1fdc2f60dd968.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourceplone.app.jquery-cachekey-99c17896a47fb7546cf3168df69f1131.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourcegovbr.policyfolder_contents-cachekey-e731c7881bdd9b4fa82313ed7f564f4d.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourcegovbr.policycookiebar_1_3_56-cachekey-8f881c3906b7f3aa09cc76cc80a8062c.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourcegovbr.policyapplication_cookiebar_1_3_56-cachekey-0c0986692f4dd6e65591987324f68798.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/collective.js.jqueryui.custom.min-cachekey-a0bd729a8b12693536273f7f75037ac0.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourceplone.formwidget.recurrencejquery.tmpl-beta1-cachekey-45dc187e15a57c8d9ae1e8f740ec82fa.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourcecollective.js.bootstrapjsbootstrap.min-cachekey-0232b7ac3377f955201bf6254635af74.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourcecollective.coverjsmain-cachekey-cf25606c9485ffca9d7dce4dd8046bc5.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourcecollective.nitfnitf-cachekey-98236da86960ad1eeee4e665eea8bd6b.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourcebrasil.gov.tilesvendorjquery.jplayer.min-cachekey-82c8c53110aff5b349e00663f7c5d9b3.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourcedropdown-menu-cachekey-5a0c5f7ba5cdd76c670e43e45d800f2c.js"></script>
+    <script type="text/javascript"></script>
+    <script type="text/javascript"></script>
+    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourcelgpd.pluginchangeCookieImage-cachekey-dc1b473ee7ff95942e8dcefa01527e5a.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourcelgpd.pluginblock_cookies-cachekey-d9f43b147b11f83594c90a4ad4becb05.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/++resource++govbr.recomendacao/govbr.recom.c339e72c8ffbb2f6c087.js"></script>
+
+
+
+  <link rel="stylesheet" href="https://www.gov.br/nfse/++resource++brasil.gov.agenda/brasilgovagenda-720c34e.css" />
+
+
+  <script defer="defer" src="https://www.gov.br/nfse/++resource++brasil.gov.agenda/brasilgovagenda-720c34e.js"></script>
+
+
+
+  <link rel="stylesheet" href="https://www.gov.br/nfse/++resource++brasil.gov.portal/brasilgovportal-ee510e4.css" />
+
+
+  <script defer="defer" src="https://www.gov.br/nfse/++resource++brasil.gov.portal/brasilgovportal-ee510e4.js"></script>
+
+
+
+  <link rel="stylesheet" href="https://www.gov.br/nfse/++resource++brasil.gov.tiles/brasilgovtiles-7d5753d.css" />
+
+
+  <script defer="defer" src="https://www.gov.br/nfse/++resource++brasil.gov.tiles/brasilgovtiles-7d5753d.js"></script>
+
+
+
+<title>Página Inicial — Portal da Nota Fiscal de Serviço eletrônica</title>
+<link rel="http://purl.org/dc/terms/subject http://schema.org/about http://xmlns.com/foaf/0.1/primaryTopic" href="http://vocab.e.gov.br/2011/03/vcge#esquema" />
+        
+    <link rel="author" href="https://www.gov.br/nfse/pt-br" title="Informações do Autor" />
+
+    <link rel="canonical" href="https://www.gov.br/nfse/pt-br" />
+
+    
+    
+
+
+<script type="text/javascript">
+        jQuery(function($){
+            if (typeof($.datepicker) != "undefined"){
+              $.datepicker.setDefaults(
+                jQuery.extend($.datepicker.regional['pt-BR'],
+                {dateFormat: 'dd/mm/yy'}));
+            }
+        });
+        </script>
+
+
+
+
+    <link rel="search" href="https://www.gov.br/nfse/pt-br/@@search" title="Buscar neste site" />
+
+
+
+        
+        
+        
+  
+
+        
+        
+
+        
+        <meta name="generator" content="Plone - http://plone.org" />
+    
+
+    
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/nfse/++theme++padrao_govbr/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/nfse/++theme++padrao_govbr/favicons/favicon-32x32.png" />
+    <link rel="shortcut icon" type="image/png" href="/nfse/++theme++padrao_govbr/favicons/favicon-48x48.png" />
+    <link rel="mask-icon" href="/nfse/++theme++padrao_govbr/favicons/safari-pinned-tab.svg" color="#00a300" />
+    <meta name="msapplication-config" content="favicons/browserconfig.xml" />
+    <meta name="theme-color" content="#00a300" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body.userrole-authenticated .btn.btn-success.fileinput-button span:after {
+            content: "Adicionar Arquivos" !important;
+        }
+    </style>
+    
+    <script type="module" id="barra-govbr-pro" src="https://barra.sistema.gov.br/v1/barra-govbr-wc.iife.js"></script>
+    <script type="module" src="/govbrportal/js/session.js" defer="defer"></script>
+<link href="/nfse/++theme++padrao_govbr/govbrtheme-432cf0d.css" rel="stylesheet" /></head>
+
+<body id="" class="default-header-template portal-govbr cover-layout-layout-vazio template-view portaltype-collective-cover-content site-pt-br section-copy2_of_pagina-inicial userrole-anonymous" data-base-url="https://www.gov.br/nfse/pt-br/copy2_of_pagina-inicial" data-portal-url="https://www.gov.br/nfse" dir="ltr">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe height="0" width="0" style="display:none;visibility:hidden" data-src="https://www.googletagmanager.com/ns.html?id=GTM-NHZSKTD"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <nav class="govbr-skip-menu" aria-label="Acesso rápido">
+    <a href="#wrapper" accesskey="1">
+      <span class="sr-only">Ir para o</span>
+      Conteúdo
+      <span class="access-key">1</span>
+    </a>
+    <a href="/" accesskey="2">
+      <span class="sr-only">Ir para a</span>
+      Página Inicial
+      <span class="access-key">2</span>
+    </a>
+    <a href="#main-navigation" accesskey="3">
+      <span class="sr-only">Ir para o menu de</span>
+      Navegação
+      <span class="access-key">3</span>
+    </a>
+    <a href="#govbr-busca-input" accesskey="4">
+      <span class="sr-only">Ir para a</span>
+      Busca
+      <span class="access-key">4</span>
+    </a>
+    <a href="#portal-footer" accesskey="5">
+      <span class="sr-only">Ir para o</span>
+      Mapa do site
+      <span class="access-key">5</span>
+    </a>
+  </nav>
+
+  <noscript aria-label="Aviso de Javascript desabilitado">
+    <dl class="portalMessage attention erro-javascript">
+      <dt>Atenção!</dt>
+      <dd>Seu navegador não pode executar javascript. Alguns recursos podem não funcionar corretamente.</dd>
+    </dl>
+  </noscript>
+<!-- modal session message --><!-- User --><!-- Header --><!--
+    Para habilitar o novo menu &#233; necess&#225;rio descoment&#225;-lo em:
+    govbr/institucional/viewlets/institucional_menu_govbr.pt
+    --><!-- <header id="site-header" class="has-navigation-swipe"> --><header id="site-header" class="has-navigation-dropdown" style="z-index: 999;">
+        <div class="header-wrapper secondary">
+            <barra-govbr class="width100 shadow-none show-contrast-toggle" style="width: 100%;" id="barra-govbr" titulo="" signinhref="/govbrportal/inicializacao-autenticacao-openid.html" signouthref="/govbrportal/logout.html" linktitulo="" linklogo="https://www.gov.br/pt-br" idiomas="" idiomaativo="" linksdosistema="[{&quot;title&quot;:&quot;Órgãos do Governo&quot;,&quot;href&quot;:&quot;https://www.gov.br/pt-br/orgaos-do-governo&quot;},{&quot;title&quot;:&quot;Acesso à Informação&quot;,&quot;href&quot;:&quot;https://www.gov.br/acessoainformacao/pt-br&quot;},{&quot;title&quot;:&quot;Legislação&quot;,&quot;href&quot;:&quot;http://www4.planalto.gov.br/legislacao&quot;},{&quot;title&quot;:&quot;Acessibilidade&quot;,&quot;href&quot;:&quot;https://www.gov.br/governodigital/pt-br/acessibilidade-digital&quot;}]" contrastactive="false">
+            </barra-govbr>
+        </div>
+
+        <div class="main">
+            <div class="header-wrapper">
+
+                <div class="site-name-wrapper">
+                    <a class="ico-navegacao toggle-main-navigation" href="#">
+                        <span class="sr-only">Abrir menu principal de navegação</span>
+                        <span class="fa fa-bars" aria-hidden="true"></span>
+                        <span class="fa fa-times" aria-hidden="true"></span>
+                    </a>
+
+                    <!-- <a href="/" class="site-name">Nome do site</a> -->
+                    <!-- Usar nome completo -->
+                    <h1 class="site-name">
+                        <a href="https://www.gov.br/nfse/pt-br">Portal da Nota Fiscal de Serviço eletrônica</a>
+                    </h1>
+                    
+                </div>
+
+                
+            <div class="termos-mais-buscados desktop">
+                <section class="source-termos-mais-buscados">
+                    <div class="source-header-termos-mais-buscados">
+                        Termos mais buscados
+                    </div>
+                    <ul class="list-termos-mais-buscados">
+                        
+                            <li class="item-termos-mais-buscados">
+                                <a href="https://www.gov.br/nfse/pt-br/search?origem=termos&amp;SearchableText=imposto de renda">
+                                   <span class="fa-solid fa-arrow-trend-up"></span>
+                                   imposto de renda
+                                </a>
+                            </li>
+                        
+                            <li class="item-termos-mais-buscados">
+                                <a href="https://www.gov.br/nfse/pt-br/search?origem=termos&amp;SearchableText=inss">
+                                   <span class="fa-solid fa-arrow-trend-up"></span>
+                                   inss
+                                </a>
+                            </li>
+                        
+                            <li class="item-termos-mais-buscados">
+                                <a href="https://www.gov.br/nfse/pt-br/search?origem=termos&amp;SearchableText=assinatura">
+                                   <span class="fa-solid fa-arrow-trend-up"></span>
+                                   assinatura
+                                </a>
+                            </li>
+                        
+                            <li class="item-termos-mais-buscados">
+                                <a href="https://www.gov.br/nfse/pt-br/search?origem=termos&amp;SearchableText=cnh social">
+                                   <span class="fa-solid fa-arrow-trend-up"></span>
+                                   cnh social
+                                </a>
+                            </li>
+                        
+                            <li class="item-termos-mais-buscados">
+                                <a href="https://www.gov.br/nfse/pt-br/search?origem=termos&amp;SearchableText=mei">
+                                   <span class="fa-solid fa-arrow-trend-up"></span>
+                                   mei
+                                </a>
+                            </li>
+                        
+                    </ul>
+                </section>
+            </div>
+            <div class="termos-mais-buscados mobile">
+                <section class="source-termos-mais-buscados">
+                    <div class="source-header-termos-mais-buscados">
+                        Termos mais buscados
+                    </div>                                
+                    <ul class="list-termos-mais-buscados">
+                        
+                            <li class="item-termos-mais-buscados">
+                                <a href="https://www.gov.br/nfse/pt-br/search?origem=termos&amp;SearchableText=imposto de renda">
+                                    <span class="fa-solid fa-arrow-trend-up"></span>
+                                    imposto de renda
+                                </a>
+                            </li>
+                        
+                            <li class="item-termos-mais-buscados">
+                                <a href="https://www.gov.br/nfse/pt-br/search?origem=termos&amp;SearchableText=inss">
+                                    <span class="fa-solid fa-arrow-trend-up"></span>
+                                    inss
+                                </a>
+                            </li>
+                        
+                            <li class="item-termos-mais-buscados">
+                                <a href="https://www.gov.br/nfse/pt-br/search?origem=termos&amp;SearchableText=assinatura">
+                                    <span class="fa-solid fa-arrow-trend-up"></span>
+                                    assinatura
+                                </a>
+                            </li>
+                        
+                    </ul>
+                </section>
+            </div>
+        <div class="govbr-busca-header">
+                    <div id="govbr-busca-input">
+                    </div>
+                </div>
+
+                <script>
+                    $(document).ready(function() {                
+                        $('#searchtext-label button').appendTo(".aa-InputWrapperPrefix");
+                        $('#searchtext-label').remove();
+                    });
+                </script>
+
+            </div>
+        </div>
+
+        <!-- Main Menu -->
+        <nav class="navigation-wrapper navigation-dropdown" aria-label="Menu Principal">
+            <div class="navigation-content">
+                <div id="main-navigation" class="navigation-cell">
+                    <ul class="list-navigation"><li class="plain dropdown-submenu"><a href="https://www.gov.br/nfse/pt-br/mei-e-demais-empresas" class="plain">MEI e demais empresas</a>
+                <ul class="submenu">
+                    <li>
+
+    
+
+        <a href="https://www.nfse.gov.br/EmissorNacional" class="state-published">
+            
+            Emissor de NFS-e WEB
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="http://www.nfse.gov.br/consultapublica" class="state-published">
+            
+            Consultar Nota Fiscal
+        </a>
+
+        
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/mei-e-demais-empresas/acesso-aos-sistemas" class="state-published hasDropDown">
+            
+            Acesso aos Sistemas
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/mei-e-demais-empresas/acesso-aos-sistemas/consultar-nota-fiscal" class="state-published">
+            
+            Consultar Nota Fiscal
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.nfse.gov.br/EmissorNacional" class="state-published">
+            
+            Prestador de Serviços
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.nfse.gov.br/PainelMunicipal" class="state-published">
+            
+            Município
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/mei-e-demais-empresas/acesso-aos-sistemas/cidadao" class="state-published">
+            
+            Cidadão
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.nfse.gov.br/consultapublica" class="state-published">
+            
+            Consultar Nota Fiscal
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/mei-e-demais-empresas/codigos-de-tributacao-nacional-nbs" class="state-published">
+            
+            Lista de Serviços Anexa à Lei Complementar nº 116, de 31 de julho de 2003
+        </a>
+
+        
+    
+</li>
+                </ul>
+            </li><li class="plain dropdown-submenu"><a href="https://www.gov.br/nfse/pt-br/consumidor-dos-servicos" class="plain">Consumidor dos serviços</a>
+                <ul class="submenu">
+                    <li>
+
+    
+
+        <a href="http://www.nfse.gov.br/consultapublica" class="state-published">
+            
+            Consultar Nota Fiscal
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/pt-br/apps/nfse-mobile" class="state-published">
+            
+            Apps NFSe Mobile
+        </a>
+
+        
+    
+</li>
+                </ul>
+            </li><li class="plain dropdown-submenu"><a href="https://www.gov.br/nfse/pt-br/municipios" class="plain">Municípios</a>
+                <ul class="submenu">
+                    <li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/conheca" class="state-published hasDropDown">
+            
+            Conheça a NFS-e
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/conheca/copy_of_o-que-e-a-nfs-e" class="state-published">
+            
+            O que é a NFS-e
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/conheca/historico-da-nfs-e" class="state-published">
+            
+            Histórico da NFS-e
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/conheca/o-projeto-nfs-e" class="state-published">
+            
+            O padrão nacional da NFS-e
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/conheca/o-que-e-sped" class="state-published">
+            
+            O que é SPED
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/beneficios" class="state-published">
+            
+            Benefícios
+        </a>
+
+        
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/produtos-disponiveis" class="state-published hasDropDown">
+            
+            Produtos disponíveis
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/produtos-disponiveis/ambiente-de-dados-nacional-adn" class="state-published">
+            
+            Ambiente de Dados Nacional
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/produtos-disponiveis/emissor-publico-de-nfs-e" class="state-published">
+            
+            Emissor NFS-e WEB
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/produtos-disponiveis/app-emissor-de-nfs-e" class="state-published">
+            
+            APP emissor de NFS-e
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/produtos-disponiveis/app-cidadao" class="state-published">
+            
+            APP Cidadão (NFSe Cidadao)
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/produtos-disponiveis/secretaria-de-financas-nacional-virtual" class="state-published">
+            
+            Secretaria de Finanças Nacional
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/produtos-disponiveis/guia-de-recolhimento" class="state-published">
+            
+            Guia de Recolhimento
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/produtos-disponiveis/portal-nfs-e" class="state-published">
+            
+            Portal NFS-e
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/produtos-disponiveis/webservices-municipais" class="state-published">
+            
+            Webservices Municipais
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/produtos-disponiveis/webservices-empresariais" class="state-published">
+            
+            Webservices empresariais
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/produtos-disponiveis/webservices-conveniados" class="state-published">
+            
+            Webservices conveniados
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/produtos-disponiveis/efd-iss" class="state-published">
+            
+            EFD ISS
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/produtos-disponiveis/api-de-integracao" class="state-published">
+            
+            API de integração
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/produtos-disponiveis/painel-administrativo-municipal" class="state-published">
+            
+            Painel Administrativo Municipal
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/como-conveniar-se" class="state-published hasDropDown">
+            
+            Como conveniar-se
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/como-conveniar-se/como-conveniar-se" class="state-published">
+            
+            Como conveniar-se
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/como-implementar-a-nfs-e-1" class="state-published hasDropDown">
+            
+            Como implementar a NFS-e
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/como-implementar-a-nfs-e-1/implementacao-da-nfs-e-adn" class="state-published">
+            
+            Implementação da NFS-e - ADN
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/como-implementar-a-nfs-e-1/implementacao-da-nfs-e-emissores-publicos" class="state-published">
+            
+            Implementação da NFS-e - Emissores Públicos
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/monitoramento-adesoes" class="state-published">
+            
+            Monitoramento das Adesões à NFS-e
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/cronograma-de-implantacao-da-nfs-e" class="state-published">
+            
+            Plano de Implantação da NFS-e
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.nfse.gov.br/PainelMunicipal" class="state-published">
+            
+            Painel Municipal (parametrização)
+        </a>
+
+        
+    
+</li>
+                </ul>
+            </li><li class="plain dropdown-submenu"><a href="https://www.gov.br/nfse/pt-br/nfs-e-via" class="plain">NFS-e Via</a>
+                <ul class="submenu">
+                    <li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/nfs-e-via/solicitacao-de-cadastro-no-portal-das-concessionarias" class="state-published">
+            
+            Solicitação de cadastro no Portal das Concessionárias de Exploração de Vias
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/nfs-e-via/documentacao-tecnica" class="state-published">
+            
+            Documentação técnica
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/nfs-e-via/links" class="state-published">
+            
+            Links
+        </a>
+
+        
+    
+</li>
+                </ul>
+            </li><li class="plain"><a href="https://www.gov.br/nfse/pt-br/canais_atendimento" class="plain">Canais de Atendimento</a></li><li class="plain dropdown-submenu"><a href="https://www.gov.br/nfse/pt-br/biblioteca" class="plain">Biblioteca</a>
+                <ul class="submenu">
+                    <li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/biblioteca/portarias-e-resolucoes-cgnfs-e" class="state-published">
+            
+            Portarias e Resoluções do CGNFS-e
+        </a>
+
+        
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/biblioteca/documentacao-tecnica" class="state-published hasDropDown">
+            
+            Documentação técnica
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/biblioteca/documentacao-tecnica/atualizacoes-e-implantacoes" class="state-published">
+            
+            Atualizações e Implantações
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/biblioteca/documentacao-tecnica/documentacao-atual" class="state-published">
+            
+            Documentação Atual (Produção)
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/biblioteca/documentacao-tecnica/producao-restrita" class="state-published">
+            
+            Produção Restrita (Piloto RTC)
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/biblioteca/documentacao-tecnica/apis-prod-restrita-e-producao" class="state-published">
+            
+            APIs - Prod. Restrita e Produção
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/biblioteca/documentacao-tecnica/rtc" class="state-published">
+            
+            RTC
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/biblioteca/documentacao-tecnica/leiaute-e-esquemas-antigos" class="state-published">
+            
+            Leiaute e esquemas antigos (julho de 2022 a 28/09/2025)
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/biblioteca/documentacao-tecnica/logos-da-nfs-e" class="state-published">
+            
+            Logos da NFS-e
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/biblioteca/copy_of_perguntas-frequentes" class="state-published hasDropDown">
+            
+            Perguntas frequentes
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/biblioteca/copy_of_perguntas-frequentes/copy_of_faq-nfs-e" class="state-published">
+            
+            FAQ NFS-e
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/biblioteca/links-com-passo-a-passo" class="state-published">
+            
+            Links com Passo a Passo
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/biblioteca/legislacao-aplicavel-ao-mei" class="state-published">
+            
+            Legislação Aplicável ao MEI
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/biblioteca/eventos_NFS-e" class="state-published">
+            
+            Eventos NFS-e
+        </a>
+
+        
+    
+</li>
+                </ul>
+            </li><li class="plain"><a href="https://www.gov.br/nfse/pt-br/copy_of_perguntas-frequentes" class="plain">Perguntas frequentes</a></li><li class="plain"><a href="https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/lgpd" class="plain">Privacidade e Proteção de Dados</a></li><li id="portaltab-govbr-root" class="plain dropdown-submenu menu-govbr-root">
+            <a class="plain" href="https://www.gov.br/nfse/pt-br/copy2_of_pagina-inicial">
+                <span>GOV.BR</span>
+            </a>
+            <!-- Menu nivel1 -->
+            <ul class="submenu navTree">
+                
+                    <li class="dropdown-submenu">
+                        <a href="https://www.gov.br/pt-br/servicos" class="hasDropDown">Serviços</a>
+                        
+                            
+    <ul class="submenu navTree">
+        
+            <li class="dropdown-submenu">
+                <a href="https://www.gov.br/pt-br/servicos/buscar-servicos-por">Buscar serviços por</a>
+                
+                    
+    <ul class="submenu navTree">
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/categorias">Categorias</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/servicos/listar_orgaos">Órgãos</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/servicos-estaduais">Estados</a>
+                
+            </li>
+        
+    </ul>
+
+                
+            </li>
+        
+            <li class="dropdown-submenu">
+                <a href="https://www.gov.br/pt-br/servicos/servicos-por-publico-alvo">Serviços por público alvo</a>
+                
+                    
+    <ul class="submenu navTree">
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/servicos/listar_servicos_segmento?segmento=publico_alvo_cidadaos">Cidadãos</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/servicos/listar_servicos_segmento?segmento=publico_alvo_empresas">Empresas</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/servicos/listar_servicos_segmento?segmento=publico_alvo_orgaos">Órgãos e Entidades Públicas</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/servicos/listar_servicos_segmento?segmento=publico_alvo_outros">Demais segmentos (ONGs, organizações sociais, etc)</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/servicos/listar_servicos_segmento?segmento=publico_alvo_servidor">Servidor Público</a>
+                
+            </li>
+        
+    </ul>
+
+                
+            </li>
+        
+    </ul>
+
+                        
+                    </li>
+                
+                    <li class="dropdown-submenu">
+                        <a href="https://www.gov.br/pt-br/temas-em-destaque" class="hasDropDown">Temas em Destaque</a>
+                        
+                            
+    <ul class="submenu navTree">
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/temas/transparencia-fiscal-orcamento-nacional">Orçamento Nacional</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/temas/redes-civis-de-unidades-de-atendimento-do-governo-federal">Redes de Atendimento do Governo Federal</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/temas/protecao-de-dados-pessoais">Proteção de Dados Pessoais</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/temas/servicos-para-imigrantes">Serviços para Imigrantes</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/temas/politica-e-orcamento-educacional">Política e Orçamento Educacionais</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/temas/educacao-profissional-e-tecnologica-1">Educação Profissional e Tecnológica</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/temas/habilidades-online-para-jovens-e-adultos">Educação Profissional para Jovens e Adultos</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/temas/trabalho-emprego">Trabalho e Emprego</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/temas/acesso-a-educacao-para-pessoas-com-deficiencia">Serviços para Pessoas com Deficiência</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/temas/politica-e-legislacao-contra-a-discriminacao-racial">Combate à Discriminação Racial</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/temas/politica-e-orcamento-de-protecao-social">Política de Proteção Social</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/temas/politica-para-mulheres">Política para Mulheres</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/temas/saude-reprodutiva-da-mulher">Saúde Reprodutiva da Mulher</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/temas/desenvolvimento-cuidados-e-educacao-pre-escolar">Cuidados na Primeira Infância</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/temas/habitacao-popular">Habitação Popular</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/temas/controle-da-poluicao-e-outras-medidas-de-precaucao">Controle de Poluição e Resíduos Sólidos</a>
+                
+            </li>
+        
+    </ul>
+
+                        
+                    </li>
+                
+                    <li class="dropdown-submenu">
+                        <a href="https://www.gov.br/pt-br/noticias" class="hasDropDown">Notícias</a>
+                        
+                            
+    <ul class="submenu navTree">
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/noticias/servicos-para-o-cidadao">Serviços para o cidadão</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/noticias/saude-e-vigilancia-sanitaria">Saúde</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/noticias/agricultura-e-pecuaria">Agricultura e Pecuária</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/noticias/assistencia-social">Cidadania e Assistência Social</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/noticias/ciencia-e-tecnologia">Ciência e Tecnologia</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/noticias/comunicacao">Comunicação</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/noticias/cultura-artes-historia-e-esportes">Cultura e Esporte</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/noticias/financas-impostos-e-gestao-publica">Economia e Gestão Pública</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/noticias/educacao-e-pesquisa">Educação e Pesquisa</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/noticias/energia-minerais-e-combustiveis">Energia</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/noticias/forcas-armadas">Forças Armadas e Defesa Civil</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/noticias/transito-e-transportes">Infraestrutura</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/noticias/justica-e-seguranca">Justiça e Segurança</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/noticias/meio-ambiente-e-clima">Meio Ambiente</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/noticias/trabalho-e-previdencia">Trabalho e Previdência</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/noticias/viagens-e-turismo">Turismo</a>
+                
+            </li>
+        
+    </ul>
+
+                        
+                    </li>
+                
+                    <li class="plain">
+                        <a href="https://www.gov.br/pt-br/apps/@@galeria-de-aplicativos" class="hasDropDown">Galeria de Aplicativos</a>
+                        
+                    </li>
+                
+                    <li class="plain">
+                        <a href="/planalto" class="hasDropDown">Acompanhe o Planalto</a>
+                        
+                    </li>
+                
+                    <li class="dropdown-submenu">
+                        <a href="https://www.gov.br/pt-br/navegacao" class="hasDropDown">Navegação</a>
+                        
+                            
+    <ul class="submenu navTree">
+        
+            <li class="plain">
+                <a href="https://www.gov.br/governodigital/pt-br/acessibilidade-digital">Acessibilidade</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/sitemap">Mapa do Site</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="/pt-br/termos-de-uso">Termo de Uso e Aviso de Privacidade</a>
+                
+            </li>
+        
+    </ul>
+
+                        
+                    </li>
+                
+                    <li class="plain">
+                        <a href="https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/atendimento-gov.br/duvidas-na-plataforma-de-automacao/cidadao/consultar-as-minhas-solicitacoes" class="hasDropDown">Consultar minhas solicitações</a>
+                        
+                    </li>
+                
+                    <li class="plain">
+                        <a href="https://www.gov.br/pt-br/orgaos-do-governo" class="hasDropDown">Órgãos do Governo</a>
+                        
+                    </li>
+                
+                    <li class="dropdown-submenu">
+                        <a href="https://www.gov.br/pt-br/por-dentro-do-govbr" class="hasDropDown">Por dentro do Gov.br</a>
+                        
+                            
+    <ul class="submenu navTree">
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/por-dentro-do-govbr/perguntas-frequentes">Dúvidas Frequentes em relação ao Portal gov.br</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="http://faq-login-unico.servicos.gov.br/en/latest/">Dúvidas Frequentes da conta gov.br</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/por-dentro-do-govbr/ajuda-para-navegar-o-portal">Ajuda para Navegar o Portal</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/por-dentro-do-govbr/conheca-os-elementos-do-portal">Conheça os elementos do Portal</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/participamaisbrasil/sobre">Política de e-participação</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="/pt-br/termos-de-uso">Termos de Uso</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/governodigital/pt-br">Governo Digital</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/pt-br/guia-de-edicao-de-servicos-do-gov.br/bem-vindo-editor">Guia de Edição de Serviços do Portal Gov.br</a>
+                
+            </li>
+        
+    </ul>
+
+                        
+                    </li>
+                
+                    <li class="plain">
+                        <a href="https://www.gov.br/pt-br/canais-do-executivo-federal" class="hasDropDown">Canais do Executivo Federal</a>
+                        
+                    </li>
+                
+                    <li class="dropdown-submenu">
+                        <a href="https://www.gov.br/pt-br/dados-do-governo-federal" class="hasDropDown">Dados do Governo Federal</a>
+                        
+                            
+    <ul class="submenu navTree">
+        
+            <li class="plain">
+                <a href="/governodigital/pt-br/dados-abertos">Dados Abertos</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/gestao/pt-br/acesso-a-informacao/servidores/servidores-publicos/painel-estatistico-de-pessoal">Painel Estatístico de Pessoal</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="http://paineldecompras.economia.gov.br">Painel de Compras do Governo Federal</a>
+                
+            </li>
+        
+            <li class="plain">
+                <a href="https://www.gov.br/acessoainformacao/pt-br">Acesso à Informação</a>
+                
+            </li>
+        
+    </ul>
+
+                        
+                    </li>
+                
+                    <li class="plain">
+                        <a href="https://www.gov.br/empresas-e-negocios/pt-br" class="hasDropDown">Empresas e Negócios</a>
+                        
+                    </li>
+                
+            </ul>
+        </li></ul>
+                </div>
+            </div>
+
+            <div class="navigation-content-extra">
+                <div class="links-redes-wrap">
+            <div class="links-uteis">
+              <div class="titulo">Links Úteis</div>
+              <ul>
+                <!-- <li>
+                  <a href="#">Órgãos do Governo</a>
+                </li> -->
+                <li>
+                  <a href="https://www.gov.br/pt-br/apps/@@galeria-de-aplicativos">Galeria de Aplicativos</a>
+                </li>
+                <li>
+                  <a href="https://www.gov.br/pt-br/participacao-social">Participe</a>
+                </li>
+              </ul>
+            </div>
+            <div class="header-accessibility">
+              <ul>
+                <!--li>
+                  <a
+                    href="https://www.gov.br/pt-br/orgaos-do-governo"
+                    class="orgaos-de-governo"
+                    i18n:translate="orgaos_do_governo"
+                    >Órgãos do Governo</a
+                  >
+                </li-->
+                <li>
+                  <a href="https://www.gov.br/pt-br/apps/@@galeria-de-aplicativos">Galeria de Aplicativos</a>
+                </li>
+                <!--li>
+                  <a href="http://www4.planalto.gov.br/legislacao" i18n:translate="legislacao"
+                    >Legislação</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.gov.br/acessoainformacao/pt-br" i18n:translate="acesso_a_informacao"
+                    >Acesso à Informação</a
+                  >
+                </li-->
+                <li>
+                  <a href="https://www.gov.br/pt-br/participacao-social">Participe</a>
+                </li>
+              </ul>
+            </div>
+          
+                    <div class="redes-sociais">
+                        <div class="titulo">Redes sociais</div>
+                    <ul class="portal-redes">
+            
+                <li class="portalredes-twitter portalredes-item">
+                    <a href="https://www.twitter.com/twitter">Twitter</a>
+                </li>
+            
+                <li class="portalredes-youtube portalredes-item">
+                    <a href="https://www.youtube.com/youtube">YouTube</a>
+                </li>
+            
+                <li class="portalredes-facebook portalredes-item">
+                    <a href="https://www.facebook.com/facebook">Facebook</a>
+                </li>
+            
+                <li class="portalredes-flickr portalredes-item">
+                    <a href="https://www.flickr.com/flickr">Flickr</a>
+                </li>
+            
+        </ul></div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Menu -->
+        
+    </header><div id="portal-breadcrumbs-wrapper"></div><!-- <div class="video"></div> --><div id="wrapper">
+        <!-- Columns -->
+
+        <div id="main">
+            
+
+            <div class="viewlet-institucionais-servicos-govbr linha-recom">
+
+    <script type="text/javascript">window.mais_acessados=["10796","13151","10942","10966","10418","12350"];</script>
+
+    <script type="text/javascript">window.destaques=["22190","13350","23014","13362","839"];</script>
+
+    <script type="text/javascript">window.quantidade_servicos_destaque="5";</script>
+
+    <script type="text/javascript">window.quantidade_mais_acessados="6";</script>
+
+    <div class="desktop">
+        <div class="row links-destaque-desktop headerDestaquesSwiper">
+            <div class="row-content">
+                <div class="column col-md-4">
+                    <a class="desktop-toggle-btn tile-name recomendado" href="#" data-slider="0">Serviços recomendados para você</a>
+                </div>
+
+                <div class="column col-md-4">
+                    <a class="desktop-toggle-btn tile-name mais-acessados" href="#" data-slider="1">Serviços mais acessados do govbr</a>
+                </div>
+
+                <div class="column col-md-4">
+                    <a class="desktop-toggle-btn tile-name destaque" href="#" data-slider="2">Serviços em destaque do govbr</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="swiper-container headerDestaquesSwiper swiper-mobile-recom">
+        <div class="swiper-wrapper">            
+            <a class="tile-name swiper-slide mobile-recom-toggle-btn recomendado" href="#" data-slider="0">Serviços recomendados para você</a>
+            <a class="tile-name swiper-slide mobile-recom-toggle-btn mais-acessados" href="#" data-slider="1">Serviços mais acessados do govbr</a>
+            <a class="tile-name swiper-slide mobile-recom-toggle-btn destaque" href="#" data-slider="2">Serviços em destaque do govbr</a>
+            <div class="swiper-slide fillin"></div>
+        </div>
+    </div>
+    
+    <div class="swiper-container headerDestaquesSwiper swiper-mobile-no-recom">
+        <div class="swiper-wrapper">                
+            <a class="tile-name swiper-slide mobile-no-recom-toggle-btn mais-acessados" href="#" data-slider="1">Serviços mais acessados do govbr</a>
+            <a class="tile-name swiper-slide mobile-no-recom-toggle-btn destaque" href="#" data-slider="2">Serviços em destaque do govbr</a>
+        </div>
+    </div>    
+
+    <div class="row linha-recom swiper-container destaquesSwiper">
+        <div class="row-content swiper-wrapper">
+            <div class="column col-md-4 swiper-slide govbr-recom-wrapper">
+                <div class="tile tile-default">
+                    <div class="govbr-recom-render" data-recom-title="Serviços recomendados para você" data-recom-size="6">
+                        <div class="header-mobile"><span>Serviços recomendados para você</span></div>
+                        <div class="govbr-recom-api" data-recom-uri="https://api.recomgov.df-1.estaleiro.serpro.gov.br/api/v1" data-recom-url-portal="https://www.gov.br" data-recom-timeout="3000">
+                        </div>
+
+                    </div>  
+                </div>
+            </div>
+
+            <div class="column col-md-4 swiper-slide">
+                <div class="tile tile-default">
+                    <div class="cover-list-tile tile-content servicos-mais-acessados">
+                        <div class="tile-header header-mobile">
+                            <span>Serviços mais acessados do govbr</span>
+                        </div>
+                        <div class="itens">
+                            
+                                <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/assinatura-eletronica?origem=maisacessado_inst">
+                                    <span class="ranking">1</span>
+                                    <span class="texto">Assinatura Eletrônica</span>
+                                </a>
+                            
+                                <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/consultar-meu-imposto-de-renda?origem=maisacessado_inst">
+                                    <span class="ranking">2</span>
+                                    <span class="texto">Consultar Meu Imposto de Renda</span>
+                                </a>
+                            
+                                <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/declarar-meu-imposto-de-renda?origem=maisacessado_inst">
+                                    <span class="ranking">3</span>
+                                    <span class="texto">Entregar Meu Imposto de Renda</span>
+                                </a>
+                            
+                                <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/consultar-restituicao-de-imposto-de-renda?origem=maisacessado_inst">
+                                    <span class="ranking">4</span>
+                                    <span class="texto">Consultar restituição do imposto de renda</span>
+                                </a>
+                            
+                                <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/consultar-cadastro-de-pessoas-fisicas?origem=maisacessado_inst">
+                                    <span class="ranking">5</span>
+                                    <span class="texto">Consultar CPF</span>
+                                </a>
+                            
+                                <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/consultar-dados-do-cadastro-unico-cadunico?origem=maisacessado_inst">
+                                    <span class="ranking">6</span>
+                                    <span class="texto">Consultar dados do Cadastro Único</span>
+                                </a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>                
+
+            <div class="column col-md-4 swiper-slide">
+                <div class="tile tile-default">
+                    <div class="cover-list-tile tile-content servicos-em-destaque-govbr">
+                        <div class="tile-header header-mobile">
+                            <span>Serviços em destaque do govbr</span>
+                        </div>
+
+                        <div class="itens">
+                            
+                                <a class="item-tile-servico-destaque" href="https://www.gov.br/pt-br/servicos/cadastrar-caes-e-gatos?origem=destaque_inst">
+                                    <span class="categoria-container">
+                                        <span class="categoria">Registros e Cadastros</span>
+                                        
+                                    </span>
+                                    <span class="texto">Cadastrar Cães e Gatos</span>
+                                    <span> (SinPatinhas)</span>
+                                </a>
+                            
+                                <a class="item-tile-servico-destaque" href="https://www.gov.br/pt-br/servicos/realizar-inscricao-no-concurso-publico-nacional-unificado?origem=destaque_inst">
+                                    <span class="categoria-container">
+                                        <span class="categoria">Para o cidadão</span>
+                                        
+                                    </span>
+                                    <span class="texto">Concurso Público Nacional Unificado 2</span>
+                                    <span> (CPNU2)</span>
+                                </a>
+                            
+                                <a class="item-tile-servico-destaque" href="https://www.gov.br/pt-br/servicos/consultar-dados-de-imoveis-rurais-na-plataforma-meu-imovel-rural?origem=destaque_inst">
+                                    <span class="categoria-container">
+                                        <span class="categoria">Imóveis</span>
+                                        <span class="badge novo">Novo</span>
+                                    </span>
+                                    <span class="texto">Consultar dados e baixar documentos de imóveis rurais na plataforma Meu Imóvel Rural</span>
+                                    
+                                </a>
+                            
+                                <a class="item-tile-servico-destaque" href="https://www.gov.br/pt-br/servicos/comunicar-roubo-furto-de-aparelho-pelo-aplicativo-celular-seguro?origem=destaque_inst">
+                                    <span class="categoria-container">
+                                        <span class="categoria">Crimes</span>
+                                        
+                                    </span>
+                                    <span class="texto">Celular Seguro</span>
+                                    
+                                </a>
+                            
+                                <a class="item-tile-servico-destaque" href="https://www.gov.br/pt-br/servicos/fazer-o-exame-nacional-do-ensino-medio?origem=destaque_inst">
+                                    <span class="categoria-container">
+                                        <span class="categoria">Educação Básica</span>
+                                        
+                                    </span>
+                                    <span class="texto">Fazer o Exame Nacional do Ensino Médio</span>
+                                    <span> (Enem)</span>
+                                </a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination-destaques"></div>
+
+        <nav class="close-btn desktop-close-btn">
+            <a href="#">
+                <span class="fa fa-chevron-up">
+                    <span class="sr-only">Fechar</span>
+                </span>
+            </a>
+        </nav>
+
+        <nav class="close-btn mobile-close-btn">
+            <a href="#">
+                <span class="fa fa-chevron-up">
+                    <span class="sr-only">Fechar</span>
+                </span>            
+            </a>
+        </nav>
+
+        <nav class="close-btn mobile-close-btn-no-recom">
+            <a href="#">
+                <span class="fa fa-chevron-up">
+                    <span class="sr-only">Fechar</span>
+                </span>
+            </a>
+        </nav>
+
+        <div class="linha-no-recom-btn-close-mobile"></div>
+        <div class="linha-recom-btn-close-mobile"></div>
+    </div>
+</div><main id="main-content">
+
+            <div id="viewlet-above-content">
+
+
+
+
+
+<div id="viewlet-tileshare" data-title-fb="Compartilhar no Facebook (abre em nova janela)" data-title-twitter="Tweet (abre em nova janela)" data-title-linkedin="Compartilhar no Linkedin  (abre em nova janela)" data-title-gplus="Compartilhar no Google+  (abre em nova janela)" data-title-link="Copiar para área de transferência" data-title-more="Mais opções">
+</div>
+
+
+
+    
+</div>
+
+            
+                <div class="">
+
+                    
+
+                    
+
+    <dl class="portalMessage info" id="kssPortalMessage" style="display:none">
+        <dt>Info</dt>
+        <dd></dd>
+    </dl>
+
+    
+
+
+                    
+                        <div id="content">
+
+                            
+
+                            
+    
+    
+        
+            
+                
+
+
+    
+
+        
+            
+            
+                <div class="row">
+                    <div class="row-content">
+
+                        
+                            
+    
+        
+            
+                
+                
+                    <div class="column col-md-12 " data-panel="">
+
+                        
+                            
+    
+        
+
+            
+                
+                    
+
+                    <div class="tile tile-default" id="d293d93b-3a09-47f2-8870-e5d6f7f65843">
+                        
+
+  
+
+  <div class="cover-carousel-tile-swiper tile-content" tabindex="0" data-autoplay="True">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        
+          <div class="swiper-slide">
+
+            <a href="https://www.gov.br/nfse/pt-br/noticias/publicada-nota-tecnica-se-cgnfs-e-no-007-com-atualizacoes-e-esclarecimentos">
+              <img src="https://www.gov.br/nfse/pt-br/noticias/publicada-nota-tecnica-se-cgnfs-e-no-007-com-atualizacoes-e-esclarecimentos/NT007.JPG/@@images/1a466221-fd86-4605-9325-19d89cd72fca.jpeg" width="800" height="250" alt="Publicada Nota Técnica SE/CGNFS-e nº 007 com Atualizações e Esclarecimentos" data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/publicada-nota-tecnica-se-cgnfs-e-no-007-com-atualizacoes-e-esclarecimentos'&gt;Publicada Nota Técnica SE/CGNFS-e nº 007 com Atualizações e Esclarecimentos&lt;/a&gt;" data-description="" data-link="https://www.gov.br/nfse/pt-br/noticias/publicada-nota-tecnica-se-cgnfs-e-no-007-com-atualizacoes-e-esclarecimentos" data-content-uuid="17c75d6237fe4854a22ed75119c5cf82" data-content-type="collective.nitf.content" data-has-subitem="True" />
+            </a>
+            <span class="pause-overlay fas fa-pause-circle"></span>
+            <div class="swiper-pagination-cover"></div>
+            <div class="info-title">Publicada Nota Técnica SE/CGNFS-e nº 007 com Atualizações e Esclarecimentos</div>
+            <div class="info-description"></div>
+          </div>
+        
+          <div class="swiper-slide">
+
+            <a href="https://www.gov.br/nfse/pt-br/noticias/nfs-e-nova-nota-tecnica">
+              <img src="https://www.gov.br/nfse/pt-br/noticias/nfs-e-nova-nota-tecnica/noticia-piloto-10122025-2.jpg/@@images/3449347c-18f7-4565-8fe4-5f6e89391c6b.jpeg" width="898" height="463" alt="Publicada Nova Nota Técnica com Novidades acerca do Ambiente RTC da NFS-e" data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/nfs-e-nova-nota-tecnica'&gt;Publicada Nova Nota Técnica com Novidades acerca do Ambiente RTC da NFS-e&lt;/a&gt;" data-description="" data-link="https://www.gov.br/nfse/pt-br/noticias/nfs-e-nova-nota-tecnica" data-content-uuid="9eaf82ea92154b24bf963a46f2246ab5" data-content-type="collective.nitf.content" data-has-subitem="True" />
+            </a>
+            <span class="pause-overlay fas fa-pause-circle"></span>
+            <div class="swiper-pagination-cover"></div>
+            <div class="info-title">Publicada Nova Nota Técnica com Novidades acerca do Ambiente RTC da NFS-e</div>
+            <div class="info-description"></div>
+          </div>
+        
+          <div class="swiper-slide">
+
+            <a href="https://www.gov.br/nfse/pt-br/noticias/nfs-e-implantacao-de-evolucoes">
+              <img src="https://www.gov.br/nfse/pt-br/noticias/nfs-e-implantacao-de-evolucoes/noticia-2.jpg/@@images/4f89db97-052a-4d70-b6cf-47f4aa00e084.jpeg" width="768" height="492" alt="NFS-e: implantação de evoluções" data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/nfs-e-implantacao-de-evolucoes'&gt;NFS-e: implantação de evoluções&lt;/a&gt;" data-description="" data-link="https://www.gov.br/nfse/pt-br/noticias/nfs-e-implantacao-de-evolucoes" data-content-uuid="551409d346f94fd4a8d708d0ea622e89" data-content-type="collective.nitf.content" data-has-subitem="True" />
+            </a>
+            <span class="pause-overlay fas fa-pause-circle"></span>
+            <div class="swiper-pagination-cover"></div>
+            <div class="info-title">NFS-e: implantação de evoluções</div>
+            <div class="info-description"></div>
+          </div>
+        
+      </div>
+
+    </div>
+  </div>
+
+                    </div>
+                
+            
+
+            
+
+            
+
+        
+    
+
+
+                        
+                            
+    
+        
+
+            
+                
+                    
+
+                    <div class="tile cabecalho-linha" id="e7d70379-72bb-405d-9ec5-19eae734362c">
+                        
+
+    <div class="outstanding-header tile-content">
+    
+
+      
+
+      
+
+        
+
+            
+            <h2 class="outstanding-title">EM DESTAQUE</h2>
+            
+            
+
+        
+
+      
+
+      
+    
+
+    </div>
+
+
+                    </div>
+                
+            
+
+            
+
+            
+
+        
+    
+
+
+                        
+                            
+    
+        
+
+            
+                
+                    
+
+                    <div class="tile tile-default" id="a0e43141-e91a-4b29-a91a-40dc6a40d37b">
+                        
+
+    <div class="outstanding-header tile-content">
+    
+
+      
+
+      
+
+        
+
+            
+            <h2 class="outstanding-title">Serviços NFS-e</h2>
+            
+            
+
+        
+
+      
+
+      
+    
+
+    </div>
+
+
+                    </div>
+                
+            
+
+            
+
+            
+
+        
+    
+
+
+                        
+
+                    </div>
+                
+            
+        
+    
+
+
+                        
+
+                    </div>
+                </div>
+            
+        
+
+    
+
+
+
+            
+                
+
+
+    
+
+        
+            
+            
+                <div class="row tile-default">
+                    <div class="row-content">
+
+                        
+                            
+    
+        
+            
+                
+                
+                    <div class="column col-md-2 " data-panel="">
+
+                        
+                            
+    
+        
+
+            
+                
+                    
+
+                    <div class="tile foto-sobreposta-pequena" id="c351c36d-865b-41b0-ab83-d6c850196a41">
+                        
+  
+  <div class="nitf-basic-tile tile-content">
+
+    
+
+    
+      <div class="tile-subtitle sem-categoria-subtitle-com-imagem"></div>
+    
+
+    
+      
+
+      
+
+      
+
+      
+
+      
+        <a class="imag" href="https://www.nfse.gov.br/EmissorNacional/Login?ReturnUrl=%2fEmissorNacional">
+          <img src="https://www.gov.br/nfse/pt-br/copy2_of_pagina-inicial/@@govbr.institucional.tile.nitf/c351c36d-865b-41b0-ab83-d6c850196a41/@@images/42b29e7f-2d5e-4a21-abc7-fb85825879a8.png" width="1024" height="1024" class="" alt="Emitir Nota Fiscal" />
+        </a>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+    
+      
+        <h2><a href="https://www.nfse.gov.br/EmissorNacional/Login?ReturnUrl=%2fEmissorNacional">Emitir Nota Fiscal</a></h2>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+    
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <div class="visualClear"><!-- --></div>
+      
+    
+  </div>
+
+                    </div>
+                
+            
+
+            
+
+            
+
+        
+    
+
+
+                        
+
+                    </div>
+                
+            
+        
+    
+
+
+                        
+                            
+    
+        
+            
+                
+                
+                    <div class="column col-md-2 " data-panel="">
+
+                        
+                            
+    
+        
+
+            
+                
+                    
+
+                    <div class="tile foto-sobreposta-pequena" id="af267bec-2b5f-4a5a-9729-87b69b17a558">
+                        
+  
+  <div class="nitf-basic-tile tile-content">
+
+    
+
+    
+      <div class="tile-subtitle sem-categoria-subtitle-com-imagem"></div>
+    
+
+    
+      
+
+      
+
+      
+
+      
+
+      
+        <a class="imag" href="https://www.nfse.gov.br/PainelMunicipal">
+          <img src="https://www.gov.br/nfse/pt-br/copy2_of_pagina-inicial/@@govbr.institucional.tile.nitf/af267bec-2b5f-4a5a-9729-87b69b17a558/@@images/b8bce19b-bcbf-46ff-a373-652764d16453.png" width="1024" height="1024" class="" alt="Acesso ao Município" />
+        </a>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+    
+      
+        <h2><a href="https://www.nfse.gov.br/PainelMunicipal">Acesso ao Município</a></h2>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+    
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <div class="visualClear"><!-- --></div>
+      
+    
+  </div>
+
+                    </div>
+                
+            
+
+            
+
+            
+
+        
+    
+
+
+                        
+
+                    </div>
+                
+            
+        
+    
+
+
+                        
+                            
+    
+        
+            
+                
+                
+                    <div class="column col-md-2 " data-panel="">
+
+                        
+                            
+    
+        
+
+            
+                
+                    
+
+                    <div class="tile foto-sobreposta-pequena" id="d06ea762-dca9-4261-b051-2bcf6c44ad4f">
+                        
+  
+  <div class="nitf-basic-tile tile-content">
+
+    
+
+    
+      <div class="tile-subtitle sem-categoria-subtitle-com-imagem"></div>
+    
+
+    
+      
+
+      
+
+      
+
+      
+
+      
+        <a class="imag" href="https://www.nfse.gov.br/EmissorNacional/Login?ReturnUrl=%2fEmissorNacional">
+          <img src="https://www.gov.br/nfse/pt-br/copy2_of_pagina-inicial/@@govbr.institucional.tile.nitf/d06ea762-dca9-4261-b051-2bcf6c44ad4f/@@images/fa8cf4fe-4660-4031-9874-279654d281a8.png" width="1024" height="1024" class="" alt="Acesso ao Cidadão" />
+        </a>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+    
+      
+        <h2><a href="https://www.nfse.gov.br/EmissorNacional/Login?ReturnUrl=%2fEmissorNacional">Acesso ao Cidadão</a></h2>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+    
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <div class="visualClear"><!-- --></div>
+      
+    
+  </div>
+
+                    </div>
+                
+            
+
+            
+
+            
+
+        
+    
+
+
+                        
+
+                    </div>
+                
+            
+        
+    
+
+
+                        
+                            
+    
+        
+            
+                
+                
+                    <div class="column col-md-2 " data-panel="">
+
+                        
+                            
+    
+        
+
+            
+                
+                    
+
+                    <div class="tile foto-sobreposta-pequena" id="e850f120-2f98-4bd6-9d4c-2cfd04ebf3bd">
+                        
+  
+  <div class="nitf-basic-tile tile-content">
+
+    
+
+    
+      <div class="tile-subtitle sem-categoria-subtitle-com-imagem"></div>
+    
+
+    
+      
+
+      
+
+      
+
+      
+
+      
+        <a class="imag" href="https://www.nfse.gov.br/consultapublica">
+          <img src="https://www.gov.br/nfse/pt-br/copy2_of_pagina-inicial/@@govbr.institucional.tile.nitf/e850f120-2f98-4bd6-9d4c-2cfd04ebf3bd/@@images/e80d3fb2-0683-43ca-9a24-d7f4d7aff85b.png" width="1024" height="1024" class="" alt="Consultar Nota Fiscal" />
+        </a>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+    
+      
+        <h2><a href="https://www.nfse.gov.br/consultapublica">Consultar Nota Fiscal</a></h2>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+    
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <div class="visualClear"><!-- --></div>
+      
+    
+  </div>
+
+                    </div>
+                
+            
+
+            
+
+            
+
+        
+    
+
+
+                        
+
+                    </div>
+                
+            
+        
+    
+
+
+                        
+                            
+    
+        
+            
+                
+                
+                    <div class="column col-md-2 tile-default " data-panel="">
+
+                        
+                            
+    
+        
+
+            
+                
+                    
+
+                    <div class="tile foto-sobreposta-pequena" id="fc018bd2-8550-44b1-86d1-343868a88e35">
+                        
+  
+  <div class="nitf-basic-tile tile-content">
+
+    
+
+    
+      <div class="tile-subtitle sem-categoria-subtitle-com-imagem"></div>
+    
+
+    
+      
+
+      
+
+      
+
+      
+
+      
+        <a class="imag" href="https://www.gov.br/nfse/pt-br/biblioteca/documentacao-tecnica">
+          <img src="https://www.gov.br/nfse/pt-br/copy2_of_pagina-inicial/@@govbr.institucional.tile.nitf/fc018bd2-8550-44b1-86d1-343868a88e35/@@images/fa9a6008-e0db-42c3-9b11-15bfe9de6bb4.png" width="1024" height="1024" class="" alt="Documentação Técnica" />
+        </a>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+    
+      
+        <h2><a href="https://www.gov.br/nfse/pt-br/biblioteca/documentacao-tecnica">Documentação Técnica</a></h2>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+    
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <div class="visualClear"><!-- --></div>
+      
+    
+  </div>
+
+                    </div>
+                
+            
+
+            
+
+            
+
+        
+    
+
+
+                        
+
+                    </div>
+                
+            
+        
+    
+
+
+                        
+                            
+    
+        
+            
+                
+                
+                    <div class="column col-md-2 tile-default " data-panel="">
+
+                        
+                            
+    
+        
+
+            
+                
+                    
+
+                    <div class="tile foto-sobreposta-pequena" id="e0a9588f-2aea-4511-94c4-42ab047d5706">
+                        
+  
+  <div class="nitf-basic-tile tile-content">
+
+    
+
+    
+      <div class="tile-subtitle sem-categoria-subtitle-com-imagem"></div>
+    
+
+    
+      
+
+      
+
+      
+
+      
+
+      
+        <a class="imag" href="https://www.gov.br/nfse/pt-br/nfs-e-via">
+          <img src="https://www.gov.br/nfse/pt-br/copy2_of_pagina-inicial/@@govbr.institucional.tile.nitf/e0a9588f-2aea-4511-94c4-42ab047d5706/@@images/d0fa6020-bde6-4ed8-aaab-0504f7471c41.jpeg" width="75" height="103" class="" alt="NFS-e Via" />
+        </a>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+    
+      
+        <h2><a href="https://www.gov.br/nfse/pt-br/nfs-e-via">NFS-e Via</a></h2>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+    
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <div class="visualClear"><!-- --></div>
+      
+    
+  </div>
+
+                    </div>
+                
+            
+
+            
+
+            
+
+        
+    
+
+
+                        
+
+                    </div>
+                
+            
+        
+    
+
+
+                        
+
+                    </div>
+                </div>
+            
+        
+
+    
+
+
+
+            
+                
+
+
+    
+
+        
+            
+            
+                <div class="row linha-discreta">
+                    <div class="row-content">
+
+                        
+                            
+    
+        
+            
+                
+                
+                    <div class="column col-md-12 tile-default " data-panel="">
+
+                        
+                            
+    
+        
+
+            
+                
+                    
+
+                    <div class="tile tile-default" id="ecd2ce97-5c98-464c-9169-d5d375beac02">
+                        
+        
+            <div class="tile-cards">
+                <h2 class="tile-header">A NFS-e</h2>
+                
+                <div class="govbr-cards tile-content linha-cards-4c centralizar-cars">
+                    <div class="wrapper">
+                        
+                            <div class="card great-cards">
+                                <a class="govbr-card-content" href="https://www.gov.br/nfse/pt-br/municipios/como-conveniar-se/como-conveniar-se">
+                                    <span class="front">
+                                        
+                                            <span aria-hidden="true" class="fas fa-city icone"></span>
+                                            
+                                        
+                                        <span class="titulo">Como conveniar-se</span>
+                                    </span>
+                                    
+                                        <span class="back descricao">
+                                            <span>Informações aos municípios que desejem aderir ao projeto da NFS-e.</span>
+                                        </span>
+                                    
+                                </a>
+                            </div>
+                        
+                            <div class="card great-cards">
+                                <a class="govbr-card-content" href="https://www.gov.br/nfse/pt-br/biblioteca/copy_of_perguntas-frequentes">
+                                    <span class="front">
+                                        
+                                            <span aria-hidden="true" class="fas fa-question icone"></span>
+                                            
+                                        
+                                        <span class="titulo">Perguntas frequentes</span>
+                                    </span>
+                                    
+                                        
+                                    
+                                </a>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        
+        
+    
+                    </div>
+                
+            
+
+            
+
+            
+
+        
+    
+
+
+                        
+
+                    </div>
+                
+            
+        
+    
+
+
+                        
+
+                    </div>
+                </div>
+            
+        
+
+    
+
+
+
+            
+                
+
+
+    
+
+        
+            
+            
+                <div class="row tile-default">
+                    <div class="row-content">
+
+                        
+                            
+    
+        
+            
+                
+                
+                    <div class="column col-md-12 " data-panel="">
+
+                        
+                            
+    
+        
+
+            
+                
+                    
+
+                    <div class="tile cabecalho-linha" id="fc4de003-3a5f-4bea-891d-e99d24fa3c75">
+                        
+
+    <div class="outstanding-header tile-content">
+    
+
+      
+
+      
+
+        
+
+      
+
+      
+    
+
+    </div>
+
+
+                    </div>
+                
+            
+
+            
+
+            
+
+        
+    
+
+
+                        
+
+                    </div>
+                
+            
+        
+    
+
+
+                        
+
+                    </div>
+                </div>
+            
+        
+
+    
+
+
+
+            
+                
+
+
+    
+
+        
+            
+            
+                <div class="row">
+                    <div class="row-content">
+
+                        
+                            
+    
+        
+            
+                
+                
+                    <div class="column col-md-6 tile-noticia-destaque " data-panel="">
+
+                        
+                            
+    
+        
+
+            
+                
+                    
+
+                    <div class="tile tile-default" id="ece6a7d0-3c72-49c3-addf-29b331bafff7">
+                        
+  
+  <div class="nitf-basic-tile tile-content">
+
+    
+      <div class="tile-subtitle sem-categoria-subtitle-image"></div>
+    
+
+    
+
+    
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <div class="visualClear"><!-- --></div>
+      
+    
+  </div>
+
+                    </div>
+                
+            
+
+            
+
+            
+
+        
+    
+
+
+                        
+
+                    </div>
+                
+            
+        
+    
+
+
+                        
+
+                    </div>
+                </div>
+            
+        
+
+    
+
+
+
+            
+                
+
+
+    
+
+        
+            
+            
+                <div class="row">
+                    <div class="row-content">
+
+                        
+                            
+    
+        
+            
+                
+                
+                    <div class="column col-md-12 tile-default " data-panel="">
+
+                        
+                            
+    
+        
+
+            
+                
+                    
+
+                    <div class="tile tile-default" id="ddadbf3a-9c5c-46e6-a2c7-6a1e7f2a9511">
+                        
+
+  
+
+  
+
+                    </div>
+                
+            
+
+            
+
+            
+
+        
+    
+
+
+                        
+
+                    </div>
+                
+            
+        
+    
+
+
+                        
+
+                    </div>
+                </div>
+            
+        
+
+    
+
+
+
+            
+                
+
+
+    
+
+        
+            
+            
+                <div class="row">
+                    <div class="row-content">
+
+                        
+                            
+    
+        
+            
+                
+                
+                    <div class="column col-md-12 " data-panel="">
+
+                        
+                            
+    
+        
+
+            
+                
+                    
+
+                    <div class="tile tile-default" id="af076173-6c46-404c-9604-2688ea76f62d">
+                        
+
+    <div class="outstanding-header tile-content">
+    
+
+      
+
+          <a class="outstanding-link" href="https://www.gov.br/nfse/pt-br/noticias">Últimas Notícias</a>
+
+      
+
+      
+
+      
+
+        
+
+      
+    
+
+      
+
+      
+
+      
+
+        
+
+      
+    
+
+      
+
+      
+
+      
+
+        
+
+      
+    
+
+    </div>
+
+
+                    </div>
+                
+            
+
+            
+
+            
+
+        
+    
+
+
+                        
+
+                    </div>
+                
+            
+        
+    
+
+
+                        
+
+                    </div>
+                </div>
+            
+        
+
+    
+
+
+
+            
+                
+
+
+    
+
+        
+            
+            
+                <div class="row">
+                    <div class="row-content">
+
+                        
+                            
+    
+        
+            
+                
+                
+                    <div class="column col-md-12 " data-panel="">
+
+                        
+                            
+    
+        
+
+            
+                
+                    
+
+                    <div class="tile tile-default" id="fd3554c5-c086-461e-a97a-ab814151ee39">
+                        
+        
+        <div class="canais-atendimento">
+
+            <div class="title">
+                Canais de Atendimento
+            </div>
+            <div class="tile-header">
+                <h2>
+                    Você pode realizar manifestações nos seguintes canais
+                </h2>
+            </div>
+
+            <ul class="cards">
+                <li>
+                    <a href="https://falabr.cgu.gov.br/Login/Identificacao/Identificacao.aspx?idFormulario=4&amp;tipo=1&amp;ReturnUrl=%2fpublico%2fManifestacao%2fRegistrarManifestacao.aspx%3fidFormulario%3d4%26tipo%3d1%26origem%3didp%26modo%3d">
+                        <span class="fas fa-bullhorn"></span>
+                        <div class="title">Denúncia</div>
+                        
+                    </a>
+                </li>
+                <li>
+                    <a href="https://falabr.cgu.gov.br/Login/Identificacao/Identificacao.aspx?idFormulario=1&amp;tipo=5&amp;ReturnUrl=%2fpublico%2fManifestacao%2fRegistrarManifestacao.aspx%3fidFormulario%3d1%26tipo%3d5%26origem%3didp%26modo%3d">
+                        <span class="fa fa-comments"></span>
+                        <div class="title">Solicitação</div>
+                        
+                    </a>
+                </li>
+                <li>
+                    <a href="https://falabr.cgu.gov.br/Login/Identificacao/Identificacao.aspx?idFormulario=1&amp;tipo=4&amp;ReturnUrl=%2fpublico%2fManifestacao%2fRegistrarManifestacao.aspx%3fidFormulario%3d1%26tipo%3d4%26origem%3didp%26modo%3d">
+                        <span class="fas fa-comment"></span>
+                        <div class="title">Sugestão</div>
+                        
+                    </a>
+                </li>
+                <li>
+                    <a href="https://falabr.cgu.gov.br/Login/Identificacao/Identificacao.aspx?idFormulario=1&amp;tipo=3&amp;ReturnUrl=%2fpublico%2fManifestacao%2fRegistrarManifestacao.aspx%3fidFormulario%3d1%26tipo%3d3%26origem%3didp%26modo%3d">
+                        <span class="fa fa-thumbs-up"></span>
+                        <div class="title">Elogio</div>
+                        
+                    </a>
+                </li>
+            </ul>
+        </div>
+    
+                    </div>
+                
+            
+
+            
+
+            
+
+        
+    
+
+
+                        
+
+                    </div>
+                
+            
+        
+    
+
+
+                        
+
+                    </div>
+                </div>
+            
+        
+
+    
+
+
+
+            
+        
+    
+
+
+
+                        </div>
+                    
+
+                    
+                </div>
+            
+
+            <div id="viewlet-below-content">
+
+
+
+
+
+
+    
+        <script class="social-links-script">
+        document.addEventListener("DOMContentLoaded", function() {
+            var containers = document.getElementsByClassName("nitf-basic-tile");
+            for (var i = 0; i < containers.length; i++) {
+                var ulElements = containers[i].getElementsByClassName("share");
+                while (ulElements.length > 0) {
+                    ulElements[0].parentNode.removeChild(ulElements[0]);
+                }
+            }
+        });
+        $(document).ready(function () {
+            for (let tile of $('.nitf-basic-tile')) {
+                if (!$(tile).find('.social-links').length) {
+                    var url = '#'
+                    $(tile).find('a').each(function(){
+                        url = $(this).attr('href');
+                    });
+                    var titulo = '#'
+                    $(tile).find('a').each(function(){
+                        titulo = $(this).text();
+                    });
+                    var imagem = url+'/logo.png'
+                    $(tile).find('img').each(function(){
+                        imagem = $(this).attr('src');
+                    });
+                    var link_telegram = $('<a title="Telegram" class="link-whatsapp"><span class="fab fa-telegram-plane"></span></a>');
+                    $(link_telegram).attr('href', 'https://telegram.me/share/url?url='+url);
+                    var link_whatsapp = $('<a title="WhatsApp" class="link-whatsapp"><span class="fab fa-whatsapp"></span></a>');
+                    $(link_whatsapp).attr('href', 'https://api.whatsapp.com/send?text='+url);
+                    var link_facebook = $('<a title="Facebook"><span class="fab fa-facebook-f"></span></a>');
+                    $(link_facebook).attr('href', 'http://www.facebook.com/sharer.php?u='+url);
+                    var link_twitter = $('<a title="Twitter"><span class="fab fa-x-twitter"></span></a>');
+                    $(link_twitter).attr('href', 'https://twitter.com/share?text='+titulo+'&url='+url);
+                    var link_linkedin = $('<a title="LinkedIn"><span class="fab fa-linkedin-in"></span></a>');
+                    $(link_linkedin).attr('href', 'https://www.linkedin.com/shareArticle?mini=true&title='+titulo+'&url='+url);
+                    var link_google = $('<a title="Google+"><span class="fab fa-google-plus-g"></span></a>');
+                    $(link_google).attr('href', 'https://plus.google.com/share?url='+url);
+                    var link_email = $('<a title="E-mail"><span class="fas fa-at"></span></a>');
+                    $(link_email).attr('href', url+'/sendto_form');
+                    var link_pinterest = $('<a title="Pinterest"><span class="fab fa-pinterest-p"></span></a>');
+                    $(link_pinterest).attr('href', 'https://pinterest.com/pin/create/button/?url='+url+'&media='+imagem+'&description='+titulo);
+                    var link_clipboard = $('<a class="link-clipboard" onclick="event.preventDefault()"><span class="fas fa-link"></span></a>');
+                    $(link_clipboard).attr('href', url);
+                    $(link_clipboard).attr('title', $('#viewlet-tileshare')[0].dataset.titleLink);
+                    var link_x = $('<a href="#" class="toggle-social-links"><span class="fas fa-share-alt"></span><span class="fas fa-times"></span></a>');
+                    var div_principal = $('<div class="social-links"></div>');
+                    $(div_principal).append(link_facebook);$(div_principal).append(link_twitter);$(div_principal).append(link_linkedin);$(div_principal).append(link_whatsapp);
+                    $(div_principal).append(link_clipboard);
+                    $(div_principal).prepend(link_x);
+
+                    var container = $(tile).children('.tile-subtitle');
+                    $(container).append(div_principal);
+                }
+            }
+            new ClipboardJS('.link-clipboard', {
+                text: function (trigger) {
+                    return trigger.getAttribute('href');
+                }
+            });
+        });
+        </script>
+    
+    
+
+
+    
+        <script class="social-links-script">
+        document.addEventListener("DOMContentLoaded", function() {
+            var containers = document.getElementsByClassName("nitf-basic-tile");
+            for (var i = 0; i < containers.length; i++) {
+                var ulElements = containers[i].getElementsByClassName("share");
+                while (ulElements.length > 0) {
+                    ulElements[0].parentNode.removeChild(ulElements[0]);
+                }
+            }
+        });
+        $(document).ready(function () {
+            for (let tile of $('.nitf-basic-tile')) {
+                if (!$(tile).find('.social-links').length) {
+                    var url = '#'
+                    $(tile).find('a').each(function(){
+                        url = $(this).attr('href');
+                    });
+                    var titulo = '#'
+                    $(tile).find('a').each(function(){
+                        titulo = $(this).text();
+                    });
+                    var imagem = url+'/logo.png'
+                    $(tile).find('img').each(function(){
+                        imagem = $(this).attr('src');
+                    });
+                    var link_telegram = $('<a title="Telegram" class="link-whatsapp"><span class="fab fa-telegram-plane"></span></a>');
+                    $(link_telegram).attr('href', 'https://telegram.me/share/url?url='+url);
+                    var link_whatsapp = $('<a title="WhatsApp" class="link-whatsapp"><span class="fab fa-whatsapp"></span></a>');
+                    $(link_whatsapp).attr('href', 'https://api.whatsapp.com/send?text='+url);
+                    var link_facebook = $('<a title="Facebook"><span class="fab fa-facebook-f"></span></a>');
+                    $(link_facebook).attr('href', 'http://www.facebook.com/sharer.php?u='+url);
+                    var link_twitter = $('<a title="Twitter"><span class="fab fa-x-twitter"></span></a>');
+                    $(link_twitter).attr('href', 'https://twitter.com/share?text='+titulo+'&url='+url);
+                    var link_linkedin = $('<a title="LinkedIn"><span class="fab fa-linkedin-in"></span></a>');
+                    $(link_linkedin).attr('href', 'https://www.linkedin.com/shareArticle?mini=true&title='+titulo+'&url='+url);
+                    var link_google = $('<a title="Google+"><span class="fab fa-google-plus-g"></span></a>');
+                    $(link_google).attr('href', 'https://plus.google.com/share?url='+url);
+                    var link_email = $('<a title="E-mail"><span class="fas fa-at"></span></a>');
+                    $(link_email).attr('href', url+'/sendto_form');
+                    var link_pinterest = $('<a title="Pinterest"><span class="fab fa-pinterest-p"></span></a>');
+                    $(link_pinterest).attr('href', 'https://pinterest.com/pin/create/button/?url='+url+'&media='+imagem+'&description='+titulo);
+                    var link_clipboard = $('<a class="link-clipboard" onclick="event.preventDefault()"><span class="fas fa-link"></span></a>');
+                    $(link_clipboard).attr('href', url);
+                    $(link_clipboard).attr('title', $('#viewlet-tileshare')[0].dataset.titleLink);
+                    var link_x = $('<a href="#" class="toggle-social-links"><span class="fas fa-share-alt"></span><span class="fas fa-times"></span></a>');
+                    var div_principal = $('<div class="social-links"></div>');
+                    $(div_principal).append(link_facebook);$(div_principal).append(link_twitter);$(div_principal).append(link_linkedin);$(div_principal).append(link_whatsapp);
+                    $(div_principal).append(link_clipboard);
+                    $(div_principal).prepend(link_x);
+
+                    var container = $(tile).children('.tile-subtitle');
+                    $(container).append(div_principal);
+                }
+            }
+            new ClipboardJS('.link-clipboard', {
+                text: function (trigger) {
+                    return trigger.getAttribute('href');
+                }
+            });
+        });
+        </script>
+    
+    
+
+
+  
+
+
+<div class="govbr-recom-config" data-recom-history-title="Serviços que você acessou">
+
+
+            
+    
+
+</div>
+
+
+
+
+</div>
+        </main>
+
+            
+        </div>
+
+        <div class="conteudo-relacionado"></div>
+
+        <div class="govbr-history-render"></div>
+
+        <footer id="portal-footer" class="portal-footer">
+            <div class="footer-wrapper">
+                <div class="govbr-logo"></div>
+                <!--<div class="colunas-rodape">
+              <div class="coluna-menu">-->
+                <ul class="list-navigation"><li class="plain dropdown-submenu"><a href="https://www.gov.br/nfse/pt-br/mei-e-demais-empresas" class="plain">MEI e demais empresas</a>
+                <ul class="submenu">
+                    <li>
+
+    
+
+        <a href="https://www.nfse.gov.br/EmissorNacional" class="state-published">
+            
+            Emissor de NFS-e WEB
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="http://www.nfse.gov.br/consultapublica" class="state-published">
+            
+            Consultar Nota Fiscal
+        </a>
+
+        
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/mei-e-demais-empresas/acesso-aos-sistemas" class="state-published hasDropDown">
+            
+            Acesso aos Sistemas
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/mei-e-demais-empresas/acesso-aos-sistemas/consultar-nota-fiscal" class="state-published">
+            
+            Consultar Nota Fiscal
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.nfse.gov.br/EmissorNacional" class="state-published">
+            
+            Prestador de Serviços
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.nfse.gov.br/PainelMunicipal" class="state-published">
+            
+            Município
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/mei-e-demais-empresas/acesso-aos-sistemas/cidadao" class="state-published">
+            
+            Cidadão
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.nfse.gov.br/consultapublica" class="state-published">
+            
+            Consultar Nota Fiscal
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/mei-e-demais-empresas/codigos-de-tributacao-nacional-nbs" class="state-published">
+            
+            Lista de Serviços Anexa à Lei Complementar nº 116, de 31 de julho de 2003
+        </a>
+
+        
+    
+</li>
+                </ul>
+            </li><li class="plain dropdown-submenu"><a href="https://www.gov.br/nfse/pt-br/consumidor-dos-servicos" class="plain">Consumidor dos serviços</a>
+                <ul class="submenu">
+                    <li>
+
+    
+
+        <a href="http://www.nfse.gov.br/consultapublica" class="state-published">
+            
+            Consultar Nota Fiscal
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/pt-br/apps/nfse-mobile" class="state-published">
+            
+            Apps NFSe Mobile
+        </a>
+
+        
+    
+</li>
+                </ul>
+            </li><li class="plain dropdown-submenu"><a href="https://www.gov.br/nfse/pt-br/municipios" class="plain">Municípios</a>
+                <ul class="submenu">
+                    <li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/conheca" class="state-published hasDropDown">
+            
+            Conheça a NFS-e
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/conheca/copy_of_o-que-e-a-nfs-e" class="state-published">
+            
+            O que é a NFS-e
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/conheca/historico-da-nfs-e" class="state-published">
+            
+            Histórico da NFS-e
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/conheca/o-projeto-nfs-e" class="state-published">
+            
+            O padrão nacional da NFS-e
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/conheca/o-que-e-sped" class="state-published">
+            
+            O que é SPED
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/beneficios" class="state-published">
+            
+            Benefícios
+        </a>
+
+        
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/produtos-disponiveis" class="state-published hasDropDown">
+            
+            Produtos disponíveis
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/produtos-disponiveis/ambiente-de-dados-nacional-adn" class="state-published">
+            
+            Ambiente de Dados Nacional
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/produtos-disponiveis/emissor-publico-de-nfs-e" class="state-published">
+            
+            Emissor NFS-e WEB
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/produtos-disponiveis/app-emissor-de-nfs-e" class="state-published">
+            
+            APP emissor de NFS-e
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/produtos-disponiveis/app-cidadao" class="state-published">
+            
+            APP Cidadão (NFSe Cidadao)
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/produtos-disponiveis/secretaria-de-financas-nacional-virtual" class="state-published">
+            
+            Secretaria de Finanças Nacional
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/produtos-disponiveis/guia-de-recolhimento" class="state-published">
+            
+            Guia de Recolhimento
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/produtos-disponiveis/portal-nfs-e" class="state-published">
+            
+            Portal NFS-e
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/produtos-disponiveis/webservices-municipais" class="state-published">
+            
+            Webservices Municipais
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/produtos-disponiveis/webservices-empresariais" class="state-published">
+            
+            Webservices empresariais
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/produtos-disponiveis/webservices-conveniados" class="state-published">
+            
+            Webservices conveniados
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/produtos-disponiveis/efd-iss" class="state-published">
+            
+            EFD ISS
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/produtos-disponiveis/api-de-integracao" class="state-published">
+            
+            API de integração
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/produtos-disponiveis/painel-administrativo-municipal" class="state-published">
+            
+            Painel Administrativo Municipal
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/como-conveniar-se" class="state-published hasDropDown">
+            
+            Como conveniar-se
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/como-conveniar-se/como-conveniar-se" class="state-published">
+            
+            Como conveniar-se
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/como-implementar-a-nfs-e-1" class="state-published hasDropDown">
+            
+            Como implementar a NFS-e
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/como-implementar-a-nfs-e-1/implementacao-da-nfs-e-adn" class="state-published">
+            
+            Implementação da NFS-e - ADN
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/como-implementar-a-nfs-e-1/implementacao-da-nfs-e-emissores-publicos" class="state-published">
+            
+            Implementação da NFS-e - Emissores Públicos
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/monitoramento-adesoes" class="state-published">
+            
+            Monitoramento das Adesões à NFS-e
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/municipios/cronograma-de-implantacao-da-nfs-e" class="state-published">
+            
+            Plano de Implantação da NFS-e
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.nfse.gov.br/PainelMunicipal" class="state-published">
+            
+            Painel Municipal (parametrização)
+        </a>
+
+        
+    
+</li>
+                </ul>
+            </li><li class="plain dropdown-submenu"><a href="https://www.gov.br/nfse/pt-br/nfs-e-via" class="plain">NFS-e Via</a>
+                <ul class="submenu">
+                    <li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/nfs-e-via/solicitacao-de-cadastro-no-portal-das-concessionarias" class="state-published">
+            
+            Solicitação de cadastro no Portal das Concessionárias de Exploração de Vias
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/nfs-e-via/documentacao-tecnica" class="state-published">
+            
+            Documentação técnica
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/nfs-e-via/links" class="state-published">
+            
+            Links
+        </a>
+
+        
+    
+</li>
+                </ul>
+            </li><li class="plain"><a href="https://www.gov.br/nfse/pt-br/canais_atendimento" class="plain">Canais de Atendimento</a></li><li class="plain dropdown-submenu"><a href="https://www.gov.br/nfse/pt-br/biblioteca" class="plain">Biblioteca</a>
+                <ul class="submenu">
+                    <li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/biblioteca/portarias-e-resolucoes-cgnfs-e" class="state-published">
+            
+            Portarias e Resoluções do CGNFS-e
+        </a>
+
+        
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/biblioteca/documentacao-tecnica" class="state-published hasDropDown">
+            
+            Documentação técnica
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/biblioteca/documentacao-tecnica/atualizacoes-e-implantacoes" class="state-published">
+            
+            Atualizações e Implantações
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/biblioteca/documentacao-tecnica/documentacao-atual" class="state-published">
+            
+            Documentação Atual (Produção)
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/biblioteca/documentacao-tecnica/producao-restrita" class="state-published">
+            
+            Produção Restrita (Piloto RTC)
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/biblioteca/documentacao-tecnica/apis-prod-restrita-e-producao" class="state-published">
+            
+            APIs - Prod. Restrita e Produção
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/biblioteca/documentacao-tecnica/rtc" class="state-published">
+            
+            RTC
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/biblioteca/documentacao-tecnica/leiaute-e-esquemas-antigos" class="state-published">
+            
+            Leiaute e esquemas antigos (julho de 2022 a 28/09/2025)
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/biblioteca/documentacao-tecnica/logos-da-nfs-e" class="state-published">
+            
+            Logos da NFS-e
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li class="dropdown-submenu">
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/biblioteca/copy_of_perguntas-frequentes" class="state-published hasDropDown">
+            
+            Perguntas frequentes
+        </a>
+
+        <ul class="submenu navTree navTreeLevel1">
+            
+
+
+
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/biblioteca/copy_of_perguntas-frequentes/copy_of_faq-nfs-e" class="state-published">
+            
+            FAQ NFS-e
+        </a>
+
+        
+    
+</li>
+
+
+
+
+        </ul>
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/biblioteca/links-com-passo-a-passo" class="state-published">
+            
+            Links com Passo a Passo
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/biblioteca/legislacao-aplicavel-ao-mei" class="state-published">
+            
+            Legislação Aplicável ao MEI
+        </a>
+
+        
+    
+</li>
+
+<li>
+
+    
+
+        <a href="https://www.gov.br/nfse/pt-br/biblioteca/eventos_NFS-e" class="state-published">
+            
+            Eventos NFS-e
+        </a>
+
+        
+    
+</li>
+                </ul>
+            </li><li class="plain"><a href="https://www.gov.br/nfse/pt-br/copy_of_perguntas-frequentes" class="plain">Perguntas frequentes</a></li><li class="plain"><a href="https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/lgpd" class="plain">Privacidade e Proteção de Dados</a></li></ul>
+                <!--</div>
+            </div>-->
+
+                
+        <div class="lgpd-reset-cookies">
+        <a href="#" class="reset-cookies" onclick="_redefinirCookies(); return false;">Redefinir Cookies</a>
+    </div>
+    <div class="redes-e-logos">
+                    <div class="redes-sociais">
+                        <div class="titulo">Redes sociais</div>
+                    <ul class="portal-redes">
+            
+                <li class="portalredes-twitter portalredes-item">
+                    <a href="https://www.twitter.com/twitter">Twitter</a>
+                </li>
+            
+                <li class="portalredes-youtube portalredes-item">
+                    <a href="https://www.youtube.com/youtube">YouTube</a>
+                </li>
+            
+                <li class="portalredes-facebook portalredes-item">
+                    <a href="https://www.facebook.com/facebook">Facebook</a>
+                </li>
+            
+                <li class="portalredes-flickr portalredes-item">
+                    <a href="https://www.flickr.com/flickr">Flickr</a>
+                </li>
+            
+        </ul></div>
+                    <div id="footer-govbr">
+                        <div id="wrapper-footer-brasil">
+                            <a class="logo-acesso-footer" href="https://www.gov.br/acessoainformacao/pt-br" title="Acesse o portal sobre o acesso à informação">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 117 49" height="49" width="117" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"><defs><style type="text/css"><![CDATA[.a {font: normal bold 11px Open Sans, sans-serif;}]]></style></defs><circle cx="22" cy="23" r="22" fill="#222"></circle><path style="stroke:#fff;stroke-width:9;stroke-linecap:round;" d="m 22,23 v 13"></path><path style="stroke:#222;stroke-width:4;stroke-linejoin:round;" d="m 4,43 3,-6 4,3 z"></path><circle r="4.5" cy="11" cx="22" fill="#fff"></circle><g fill="#222"><text x="47" y="22"><tspan class="a" y="18">Acesso à</tspan><tspan class="a" x="47" y="31">Informação</tspan></text></g></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="texto-copyright">
+    Todo o conteúdo deste site está publicado sob a licença <a rel="license" href="https://creativecommons.org/licenses/by-nd/3.0/deed.pt_BR">Creative Commons Atribuição-SemDerivações 3.0 Não Adaptada</a>.
+  </div>
+        </footer>
+
+        <nav class="back-to-top" aria-label="Voltar ao topo da página">
+            <a href="#wrapper">
+                <span class="fa fa-chevron-up"></span>
+                <span class="sr-only">Voltar ao topo da página</span>
+            </a>
+        </nav>
+    <div id="govbr-busca-input-data" style="display: none" data-autocomplete-api="https://portalunico.estaleiro.serpro.gov.br/api/" data-autocomplete-index="//www.gov.br/nfse" data-autocomplete-orgao="" data-autocomplete-search="https://www.gov.br/nfse/pt-br" data-autocomplete-portal="https://www.gov.br" data-historico-title="Histórico de buscas" data-servicos-title="Serviços e Apps" data-sugestoes-title="Você quis dizer?" data-input-placeholder="O que você procura?"></div></div><div id="main-navigation-overlay"></div><div class="redefinir-cookies">
+
+    
+
+</div><div class="dsgov">
+    <div class="br-cookiebar default d-none" tabindex="-1">
+      <div class="br-modal">
+        <div class="br-card">
+          <div class="container">
+            <div class="wrapper">
+              <div class="br-modal-header entry-content">
+                <div class="br-modal-title"></div>
+                <div class="last-update"></div>
+                <div class="entry-text"></div>
+              </div>
+              <div class="br-modal-body">
+                <div class="info-text"></div>
+                <div class="br-list main-content">
+                </div>
+              </div>
+            </div>
+            <div class="br-modal-footer actions">
+              <button class="br-button small btn-manage" type="button" aria-label="Definir Cookies"></button>
+              <button class="br-button secondary small reject-all" type="button" aria-label="Rejeitar cookies">Rejeitar</button>
+              <button class="br-button secondary small btn-accept" type="button" aria-label="Aceitar"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><script id="lgpd-cookie-handling" type="text/javascript" src="https://www.gov.br/nfse/++resource++govbr.policy/lgpd_cookie_handling_1_3_91.js"></script><div id="govbr-login-overlay-wrapper"></div><div id="govbr-busca-por-voz-overlay-wrapper">
+        <div class="busca-por-voz">
+            <span class="transcpt-text">Fale Agora</span>
+            <a href="#" id="btn-refazer-busca" class="refazer-busca">
+                Refazer a busca
+            </a>
+            
+            <a href="#" id="btn-ouvindo" class="btn-microfone ouvindo">
+                <span class="fas fa-microphone"></span>
+            </a>
+
+            <a href="#" id="btn-nao-entendi" class="btn-microfone nao-entendi">
+                <span class="fas fa-microphone"></span>
+            </a>
+
+            <a href="#" id="btn-fechar">
+                <span class="fas fa-times"></span>
+            </a>
+        </div>
+    </div><div vw="" class="enabled">
+        <div vw-access-button="" class="active"></div>
+        <div vw-plugin-wrapper="">
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div><!-- relato 4118176 --><script>
+        window.onbeforeunload = null;
+    </script><script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script><script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app', 'https://vlibras.gov.br/config/default_logo.json');
+    </script><script>        
+        window.addEventListener('troca-contraste', function() {            
+            if ($("body").hasClass("contraste")) {
+                setCookie("contraste", "");
+                $("body").removeClass("contraste");
+                $("barra-govbr").attr('contrastActive', 'false');
+            } else {
+                setCookie("contraste", "on");
+                $("body").addClass("contraste");
+                $("barra-govbr").attr('contrastActive', 'true');
+            }
+            return false;
+        });
+        window.addEventListener('abrir-cookie-config', function() {
+            _redefinirCookies(); return false;
+        });
+        window.addEventListener('ACCESSTOKEN_ERROR', function() {
+            window.location.href = "/govbrportal/logout.html";
+        });
+    </script><script type="text/javascript" src="/nfse/++theme++padrao_govbr/govbrtheme-432cf0d.js"></script><div id="plone-analytics"></div></body>
+</html>

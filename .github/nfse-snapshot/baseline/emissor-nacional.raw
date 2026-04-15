@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>NFS-e | Portal Contribuinte</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <link href="/EmissorNacional/Content/Base?v=PNNgqFMeiX_JCCYDv-3Z3MCHsfnKA_V8oEHE8c3GJic1" rel="stylesheet"/>
+
+    <link href="/EmissorNacional/Content/Login?v=sQpjaIRR9G5ynhXjYkuDQVKmyKFtq78zC9uXGNzbjmU1" rel="stylesheet"/>
+
+    
+    <script src="/EmissorNacional/Scripts/Base?v=9aYlZCGNwOnQ9M-uWKF6qWROrguA9sBYeGWayB9cXLg1"></script>
+
+    <script src="/EmissorNacional/Scripts/Login?v=K7eOcuzKV9iAyksdLUfME3_OARg7r0ZOEZgrMrsFOtE1"></script>
+
+    
+</head>
+<body>
+    <section class="login-page">
+        <div class="container">
+            <div class="login-box">
+                <div class="login-box-header">
+                    <h1>Portal de Gestão NFS-e - Contribuinte</h1>
+                </div>
+
+                <div style="padding: 0 20px;">
+                    
+
+<div class="row">
+    <div class="col-sm-offset-0 col-sm-6 col-md-offset-2 col-md-8">
+        
+    </div>
+</div>
+
+<div class="row" style="margin: 0 25px;">
+    <div class="col-lg-4 descricao">
+        <div class="login-section autenticacao">
+            <h2>Acesso com Usuário/Senha</h2>
+<form action="/EmissorNacional/Login?ReturnUrl=%2FEmissorNacional%2F" class="" method="post"><input name="__RequestVerificationToken" type="hidden" value="GhbAcsTa0EdQFNcDjVZwgvEdbUaWJ7Hj6bZFQLG6GuBJkEVs8zkHRyEd0rp9tP8yJfP676rxKVVruj4C3qWCl6zyaX1QOltWi_3er0TKaPI1" />                <div class="form-group">
+                    <input class="form-control input-lg cpfcnpj" data-val="true" data-val-length="The field CPF/CNPJ must be a string with a maximum length of 18." data-val-length-max="18" id="Inscricao" maxlength="18" name="Inscricao" placeholder="CPF/CNPJ" type="text" value="" />
+                    <span class="field-validation-valid text-danger" data-valmsg-for="Inscricao" data-valmsg-replace="true"></span>
+                </div>
+                <div class="form-group">
+                    <input class="input-lg form-control" data-val="true" data-val-length="The field Senha must be a string with a maximum length of 30." data-val-length-max="30" id="Senha" name="Senha" placeholder="Senha" type="password" />
+                    <span class="field-validation-valid text-danger" data-valmsg-for="Senha" data-valmsg-replace="true"></span>
+                </div>
+                <div class="comandos">
+                    <button type="submit" class="btn btn-lg btn-primary">Entrar</button>
+                    <div class="links">
+                        <a href="/EmissorNacional/Acesso/PrimeiroAcesso" class="link">Fazer primeiro acesso</a>
+                        <a href="/EmissorNacional/Acesso/RedefinirSenha" class="link">Esqueci a minha senha</a>
+                    </div>
+                </div>
+</form>        </div>
+    </div>
+    <div class="col-lg-4 acesso">
+        <div class="login-section certificado">
+            <h2>Acesso com Certificado Digital</h2>
+            <p class="text-center">Se você já possui certificado digital, clique na imagem abaixo</p>
+            <a class="img-certificado" href="/EmissorNacional/Certificado" title="Acesso via certificado digital">Acesso via certificado digital</a>
+            <p id="info-certificado" class="text-center">
+                <a href="http://idg.receita.fazenda.gov.br/orientacao/tributaria/senhas-e-procuracoes/senhas/certificados-digitais">Saiba como obter o certificado digital</a>
+            </p>
+        </div>
+    </div>
+    <div class="col-lg-4 acesso">
+        <div class="login-section certificado">
+            <h2>Acesso via GOVBR</h2>
+            <p class="text-center">
+                O GovBR é um serviço online de identificação e autenticação digital do cidadão em único meio,
+                para acesso aos diversos serviços públicos digitais.
+            </p>
+            <a class="img-govbr" href="/EmissorNacional/AcessoGovBR/AcessarGovBR" title="Acesso via GOVBR">Acesso via GOVBR</a>
+            <p id="info-certificado" class="text-center">
+                <a href="http://receita.economia.gov.br/interface/atendimento-virtual/acesso-ao-portal-e-cac-atraves-do-gov.br">Saiba mais sobre GOV.BR</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+                </div>
+
+                <div class="row parceiros">
+                    <div class="col-md-offset-1 col-md-2">
+                        <a href="http://idg.receita.fazenda.gov.br/" target="_blank">
+                            <img src="/EmissorNacional/img/logo-rfb.png" class="logo" alt="Receita Federal do Brasil">
+                        </a>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="http://www.sebrae.com.br/" target="_blank">
+                            <img src="/EmissorNacional/img/logo-sebrae.png" class="logo" alt="Sebrae">
+                        </a>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="http://www.cnm.org.br/" target="_blank">
+                            <img src="/EmissorNacional/img/logo-cnm.png" class="logo" alt="Confederação Nacional dos Municípios">
+                        </a>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="http://www.abrasf.org.br/" target="_blank">
+                            <img src="/EmissorNacional/img/logo-abrasf.png" class="logo" alt="Associação Brasileira das Secretarias de Finanças das Capitais">
+                        </a>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="http://portal.siscomex.gov.br/legislacao/orgaos/secretaria-de-comercio-exterior-secex" target="_blank">
+                            <img src="/EmissorNacional/img/logo-secex.png" class="logo" alt="Secretaria de Comércio Exterior" />
+                        </a>
+                    </div>
+                </div>
+                <div class="row versao">
+                    <div class="col-md-12">
+                        Portal de Gestão NFS-e - Contribuinte | Versão 1.4.0.27
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
