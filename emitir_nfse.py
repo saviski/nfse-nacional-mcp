@@ -62,16 +62,112 @@ SKILL_DIR = Path(__file__).parent
 # ─── Config ──────────────────────────────────────────────────────────────────
 
 def load_config() -> dict:
-    with open(SKILL_DIR / "config.json") as f:
-        return json.load(f)
+    """Lê config.json. Retorna {} se o arquivo ainda não existe
+    (permite que o setup conversacional rode antes da configuração)."""
+    path = SKILL_DIR / "config.json"
+    return json.load(open(path)) if path.exists() else {}
 
 def load_secrets() -> dict:
     path = SKILL_DIR / "secrets.json"
     return json.load(open(path)) if path.exists() else {}
 
 def load_clientes() -> dict:
-    with open(SKILL_DIR / "clientes.json") as f:
-        return json.load(f)
+    """Lê clientes.json. Retorna {} se o arquivo ainda não existe."""
+    path = SKILL_DIR / "clientes.json"
+    return json.load(open(path)) if path.exists() else {}
+
+def inferir_config_de_xml(xml_path: str) -> dict:
+    """
+    Lê uma NFS-e (ou DPS) já emitida e extrai os campos de config
+    e um cliente (tomador) sugerido. Não grava nada — apenas devolve
+    um dict com duas chaves: `config` e `cliente`, prontos para revisão.
+
+    Útil no setup: se você tem uma nota válida emitida pela interface
+    web, pode passar o XML para pré-popular config.json sem ficar
+    digitando CNPJ/série/município à mão.
+
+    O XML pode estar em qualquer nível: um DPS isolado, um envelope
+    NFSe contendo o DPS, ou uma nota completa com assinatura.
+    """
+    tree = etree.parse(xml_path)
+    root = tree.getroot()
+
+    # Mapa de namespace: aceita o XML com ou sem prefixo
+    ns = {"n": NS_NFSE}
+
+    def first_text(xpath_local: str) -> str | None:
+        # Tenta com namespace explícito (prefixando cada segmento) e sem
+        # namespace (fallback tolerante para XMLs sem xmlns)
+        with_ns = ".//" + "/".join(f"n:{seg}" for seg in xpath_local.split("/"))
+        without_ns = f".//{xpath_local}"
+        for xp in (with_ns, without_ns):
+            try:
+                el = root.xpath(xp, namespaces=ns)
+            except etree.XPathEvalError:
+                continue
+            if el:
+                txt = (el[0].text or "").strip()
+                if txt:
+                    return txt
+        return None
+
+    config_inferida: dict = {}
+
+    cnpj = first_text("prest/CNPJ") or first_text("CNPJEmit")
+    if cnpj:
+        config_inferida["cnpj"] = cnpj
+
+    cloc = first_text("cLocEmi")
+    if cloc:
+        config_inferida["cLocEmi"] = cloc
+
+    serie = first_text("serie")
+    if serie:
+        # Leiaute guarda `00900`, config.json usa `900`
+        config_inferida["serie"] = serie.lstrip("0") or "0"
+
+    versao = root.get("versao") or first_text("versao")
+    if versao:
+        config_inferida["versao_leiaute"] = versao
+
+    ptotfed = first_text("pTotTribFed")
+    if ptotfed:
+        config_inferida["pTotTribFed"] = ptotfed
+
+    # Tomador — vira um cliente sugerido
+    cliente_inferido: dict = {}
+    xnome = first_text("toma/xNome") or first_text("xNomeToma")
+    if xnome:
+        cliente_inferido["xNome"] = xnome
+
+        # Tipo: se tem cNaoNIF é exterior; se tem CNPJ ou CPF é BR
+        cnao = first_text("toma/cNaoNIF")
+        if cnao:
+            cliente_inferido["cNaoNIF"] = cnao
+        tom_cnpj = first_text("toma/CNPJ")
+        if tom_cnpj:
+            cliente_inferido["cnpj"] = tom_cnpj
+        tom_cpf = first_text("toma/CPF")
+        if tom_cpf:
+            cliente_inferido["cpf"] = tom_cpf
+
+        end: dict = {}
+        for campo in ("cPais", "cEndPost", "xCidade", "xEstProvReg",
+                      "xLgr", "nro", "xCpl", "xBairro"):
+            val = first_text(f"toma/end/endExt/{campo}") or first_text(f"toma/end/{campo}")
+            if val:
+                end[campo] = val
+        if end:
+            cliente_inferido["end"] = end
+
+        # Sugere alias a partir do nome (primeira palavra, minúscula)
+        cliente_inferido["aliases"] = [xnome.split()[0].lower()] if xnome else []
+
+    return {
+        "config":  config_inferida,
+        "cliente": cliente_inferido,
+    }
+
 
 def resolver_cliente(nome: str, clientes: dict) -> tuple:
     """Resolve o nome do cliente para a chave do clientes.json.
@@ -172,12 +268,45 @@ def parse_remessa_online(msg) -> dict:
         "cliente_nome": cliente_nome,
     }
 
-# Mapa de parsers por remetente
-PARSERS = {
-    "cambioonline@mail-rendimento.com.br": parse_rendimento,
-    "nao-responder@remessaonline.com.br":  parse_remessa_online,
-    "noreply@remessaonline.com.br":        parse_remessa_online,
+# Registry built-in de parsers por nome — referenciados em config.json
+# via `email_parsers: [{sender, parser}]`. Adicionar um novo parser =
+# escrever a função aqui e adicionar ao BUILTIN_PARSERS.
+BUILTIN_PARSERS = {
+    "remessa_online": parse_remessa_online,
+    "rendimento":     parse_rendimento,
 }
+
+# Default: só Remessa Online — é a corretora mais comum em conjunto com AdSense.
+# Usuários que usam Banco Rendimento ou outra fonte devem configurar
+# `email_parsers` em config.json explicitamente.
+DEFAULT_EMAIL_PARSERS = [
+    {"sender": "nao-responder@remessaonline.com.br", "parser": "remessa_online"},
+    {"sender": "noreply@remessaonline.com.br",       "parser": "remessa_online"},
+]
+
+
+def _resolver_parsers(config: dict) -> list[tuple]:
+    """
+    Resolve a lista de (sender, callable) a partir de `config.email_parsers`.
+
+    Cada entrada é um dict {sender, parser} onde `parser` é o nome de um
+    parser em BUILTIN_PARSERS. Se a config não tiver `email_parsers`, usa
+    DEFAULT_EMAIL_PARSERS (Remessa Online).
+    """
+    entries = config.get("email_parsers") or DEFAULT_EMAIL_PARSERS
+    resolved = []
+    for entry in entries:
+        sender = entry.get("sender")
+        pname  = entry.get("parser")
+        if not sender or not pname:
+            continue
+        fn = BUILTIN_PARSERS.get(pname)
+        if not fn:
+            print(f"   ⚠️  Parser '{pname}' desconhecido (sender={sender}). "
+                  f"Built-ins: {list(BUILTIN_PARSERS.keys())}")
+            continue
+        resolved.append((sender, fn))
+    return resolved
 
 # ─── Gmail OAuth2 ────────────────────────────────────────────────────────────
 
@@ -230,8 +359,9 @@ def buscar_pagamentos_mes(config: dict, secrets: dict, mes: str) -> list:
     imap.select("INBOX")
 
     transferencias = []
+    parsers = _resolver_parsers(config)
 
-    for remetente, parser in PARSERS.items():
+    for remetente, parser in parsers:
         criteria = (
             f'(FROM "{remetente}" '
             f'SINCE "{imap_ini}" '
@@ -263,7 +393,7 @@ def buscar_ultimo_pagamento(config: dict, secrets: dict) -> dict:
     imap.select("INBOX")
 
     candidatos = []
-    for remetente, parser in PARSERS.items():
+    for remetente, parser in _resolver_parsers(config):
         _, msgs = imap.search(None, "FROM", f'"{remetente}"')
         ids = msgs[0].split()
         if not ids:

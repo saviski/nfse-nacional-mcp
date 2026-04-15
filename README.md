@@ -18,12 +18,24 @@ tools deste repositório.
 - Download da DANFSE (PDF) via `GET https://adn.nfse.gov.br/danfse/{chave}`
 - Descoberta automática do próximo `nDPS` (combinação API `/DFe/0` + scan local + cache)
 - Envio de XML+PDF para a contabilidade via **Mailgun** (um e-mail por nota **ou** um único e-mail com todas as notas do lote)
-- Leitura de e-mails da contabilidade via **Gmail IMAP + XOAUTH2** com categorização (fiscal, contábil, pessoal, financeiro)
-- **Servidor MCP** expondo 4 tools ao Claude Desktop:
-  - `emitir_nota` — emite uma nota individual
-  - `emitir_notas_mes` — emite um lote e opcionalmente envia tudo em um único e-mail
-  - `verificar_emails_contabilidade` — lê caixa de entrada e categoriza pendências
-  - `encaminhar_nota_contabilidade` — encaminha XML+PDF já salvos em disco
+- Leitura de e-mails via **Gmail IMAP + XOAUTH2**:
+  - Parsers **configuráveis** via `config.json → email_parsers`. Built-ins: `remessa_online` (default — combinação mais comum com AdSense) e `rendimento` (Banco Rendimento). Adicionar uma nova corretora = escrever uma função e registrá-la em `BUILTIN_PARSERS` — ver `emitir_nfse.py`.
+  - Categorização de e-mails da contabilidade (fiscal / contábil / pessoal / financeiro)
+- **Watcher automatizado** via GitHub Actions: verifica semanalmente se a API oficial mudou e abre PR via Claude Code (ver `.github/workflows/check-nfse-changes.yml`)
+- **Servidor MCP** expondo 11 tools ao Claude Desktop:
+  - **Setup conversacional** — deixe o Claude te configurar passo a passo:
+    - `status_setup` — diagnóstico do que falta em config/secrets/clientes
+    - `inferir_de_xml` — lê uma NFS-e antiga e pré-popula CNPJ/município/série/cliente (atalho ⭐)
+    - `escrever_config` — merge de campos em config.json
+    - `escrever_secrets` — merge de campos em secrets.json (permissão 0600)
+    - `adicionar_cliente` — cadastra tomador de serviço em clientes.json
+    - `testar_certificado` — valida .pfx + senha e retorna titular/validade
+  - **Produção**:
+    - `listar_pagamentos` — lê Gmail e lista transferências de um mês
+    - `emitir_nota` — emite uma nota individual
+    - `emitir_notas_mes` — emite um lote e opcionalmente envia tudo em um único e-mail
+    - `verificar_emails_contabilidade` — lê caixa de entrada e categoriza pendências
+    - `encaminhar_nota_contabilidade` — encaminha XML+PDF já salvos em disco
 
 ---
 
@@ -31,54 +43,126 @@ tools deste repositório.
 
 ```
 nfse-nacional-mcp/
-├── emitir_nfse.py           # script principal (CLI + lib)
-├── nfse_mcp_server.py       # servidor MCP para Claude Desktop
-├── setup_gmail_oauth.py     # gera refresh_token OAuth2 do Gmail
-├── config.example.json      # → copie para config.json
-├── secrets.example.json     # → copie para secrets.json
-├── clientes.example.json    # → copie para clientes.json
+├── emitir_nfse.py            # script principal (CLI + lib)
+├── nfse_mcp_server.py        # servidor MCP para Claude Desktop
+├── setup_claude_desktop.py   # bootstrap: registra o MCP no Claude Desktop
+├── setup_gmail_oauth.py      # gera refresh_token OAuth2 do Gmail
+├── config.example.json       # → copie para config.json
+├── secrets.example.json      # → copie para secrets.json
+├── clientes.example.json     # → copie para clientes.json
 ├── requirements.txt
 ├── .gitignore
 ├── README.md
-└── certs/                   # coloque seu .pfx aqui (não versionado)
+├── certs/                    # coloque seu .pfx aqui (não versionado)
+└── .github/
+    ├── workflows/
+    │   └── check-nfse-changes.yml   # watcher semanal da API oficial
+    └── scripts/
+        └── check_nfse_changes.py    # snapshot + diff das URLs oficiais
 ```
 
 ---
 
 ## 🚀 Setup
 
-### 1. Clone e instale dependências
+Existem **dois caminhos**. O conversacional é o recomendado — você não precisa editar JSON à mão.
+
+### Caminho A — Setup conversacional (recomendado) ⭐
+
+#### A1. Clone e registre o MCP no Claude Desktop
+
+```bash
+git clone git@github.com:SEU_USUARIO/nfse-nacional-mcp.git
+cd nfse-nacional-mcp
+python3 setup_claude_desktop.py
+```
+
+O script detecta seu SO e escreve a entrada `nfse-nacional` no
+`claude_desktop_config.json`. Depois reinicie o Claude Desktop (⌘Q no macOS).
+
+> Pré-requisito: ter [`uv`](https://docs.astral.sh/uv/) instalado
+> (`curl -LsSf https://astral.sh/uv/install.sh | sh`). O `uv` baixa as
+> dependências Python (mcp, cryptography, signxml…) automaticamente na
+> primeira chamada — você não precisa rodar `pip install`.
+
+#### A2. Peça ao Claude para configurar
+
+Em uma conversa nova no Claude Desktop:
+
+> **Você:** configure o NFS-e Nacional pra mim
+
+O Claude vai chamar `status_setup`, ver que falta tudo, e começar a te
+perguntar campo a campo. Você pode **acelerar muito** o processo se já tem
+uma nota emitida (mesmo que pela interface web do EmissorNacional):
+
+> **Você:** já emiti uma nota antes, o XML está em `/Users/me/notas/nota5.xml`
+
+> **Claude:** \[chama `inferir_de_xml`\] Extraí:
+>  - CNPJ: **22.705.078/0001-44**
+>  - Município: **4205407** (Florianópolis)
+>  - Série: **900**
+>  - pTotTribFed: **7.68%**
+>  - Cliente sugerido: **Venatus Media Ltd** (GB)
+>
+>  Posso gravar isso em config.json e cadastrar Venatus como cliente?
+
+Você confirma, o Claude chama `escrever_config` + `adicionar_cliente`,
+e pergunta os campos restantes (certificado, Mailgun, Gmail…) um de cada vez.
+
+#### A3. Coloque o certificado .pfx no disco
+
+Essa parte o Claude não faz — você precisa copiar o arquivo manualmente:
+
+```bash
+mkdir -p certs
+cp /caminho/do/seu_certificado.pfx certs/
+```
+
+Aí diga ao Claude: *"certificado é `certs/meu_cert.pfx`, senha é `XXX`"*. Ele
+chama `escrever_config` + `escrever_secrets` (senha nunca volta no chat) e
+depois `testar_certificado` para validar — retorna titular, emissor e validade.
+
+#### A4. (Opcional) Gmail e Mailgun
+
+Se quiser `listar_pagamentos` e envio automático para a contabilidade:
+
+```bash
+# Gmail OAuth2 — one-time
+python3 setup_gmail_oauth.py       # abre browser, grava refresh_token em secrets.json
+```
+
+Depois peça ao Claude para gravar `gmail_user`, `mailgun_domain`,
+`mailgun_from` e `email_contabilidade` — ele usa `escrever_config` /
+`escrever_secrets`.
+
+---
+
+### Caminho B — Setup manual
+
+Se preferir editar JSON à mão:
 
 ```bash
 git clone git@github.com:SEU_USUARIO/nfse-nacional-mcp.git
 cd nfse-nacional-mcp
 
-# Opção A — uv (recomendado, isola dependências)
-uv venv
-source .venv/bin/activate
-uv pip install -r requirements.txt
+# Dependências (uv OU pip)
+uv venv && source .venv/bin/activate && uv pip install -r requirements.txt
+# ─ ou ─
+python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
 
-# Opção B — pip tradicional
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-```
-
-### 2. Configure sua empresa
-
-```bash
+# Arquivos de config
 cp config.example.json   config.json
 cp secrets.example.json  secrets.json
 cp clientes.example.json clientes.json
 ```
 
-Edite cada um dos arquivos:
+Edite cada um:
 
 - **`config.json`** — CNPJ, razão social, cLocEmi, série, regime tributário, domínio Mailgun, e-mail da contabilidade, `output_dir`, etc.
-- **`secrets.json`** — senha do certificado A1, API key do Mailgun, credenciais OAuth2 do Gmail (opcional, só se quiser usar leitura de e-mails)
-- **`clientes.json`** — dados dos tomadores (remova os exemplos e adicione os seus)
+- **`secrets.json`** — senha do certificado A1, API key do Mailgun, credenciais OAuth2 do Gmail (opcional)
+- **`clientes.json`** — dados dos tomadores
 
-### 3. Coloque o certificado digital
+Coloque o certificado:
 
 ```bash
 mkdir -p certs
@@ -86,27 +170,23 @@ cp /caminho/do/seu_certificado.pfx certs/
 # Atualize config.json → "cert_path": "certs/seu_certificado.pfx"
 ```
 
-### 4. (Opcional) Configure OAuth2 do Gmail para leitura
-
-Só necessário se quiser usar `verificar_emails_contabilidade`.
+Gmail OAuth2 (opcional, só se quiser `listar_pagamentos` ou `verificar_emails_contabilidade`):
 
 ```bash
 # 1. Crie credenciais OAuth "Desktop app" em https://console.cloud.google.com/
 # 2. Habilite Gmail API no projeto
 # 3. Coloque client_id / client_secret em secrets.json
-# 4. Rode o setup e siga o fluxo no navegador
-python3 setup_gmail_oauth.py
+python3 setup_gmail_oauth.py     # grava refresh_token em secrets.json
 ```
 
-O refresh_token é salvo automaticamente em `secrets.json`.
-
-### 5. (Opcional) Mailgun
-
-Só necessário se quiser envio automático para a contabilidade.
+Mailgun (opcional, só se quiser envio automático):
 
 1. Crie uma conta em https://mailgun.com e registre/verifique seu domínio.
 2. Copie a **Private API key** em Account → API Keys.
 3. Coloque em `secrets.json → mailgun_api_key` e configure `mailgun_domain` / `mailgun_from` em `config.json`.
+
+Finalmente, registre o MCP no Claude Desktop com `python3 setup_claude_desktop.py`
+(ou edite `claude_desktop_config.json` manualmente — ver seção *Usando via MCP* abaixo).
 
 ---
 
@@ -143,15 +223,10 @@ python3 emitir_nfse.py \
 
 ## 🧰 Usando via MCP (Claude Desktop)
 
-### 1. Configure o `claude_desktop_config.json`
+### Registro manual (se você não usou `setup_claude_desktop.py`)
 
-No macOS:
-`~/Library/Application Support/Claude/claude_desktop_config.json`
-
-No Windows:
-`%APPDATA%\Claude\claude_desktop_config.json`
-
-Adicione:
+No macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
+No Windows: `%APPDATA%\Claude\claude_desktop_config.json`
 
 ```json
 {
@@ -165,6 +240,7 @@ Adicione:
         "--with", "cryptography",
         "--with", "lxml",
         "--with", "signxml",
+        "--with", "google-auth",
         "--with", "google-auth-oauthlib",
         "python3",
         "/CAMINHO/ABSOLUTO/nfse-nacional-mcp/nfse_mcp_server.py"
@@ -174,22 +250,77 @@ Adicione:
 }
 ```
 
-Substitua `/CAMINHO/ABSOLUTO/nfse-nacional-mcp` pelo caminho real onde você clonou o repositório.
+Substitua `/CAMINHO/ABSOLUTO/nfse-nacional-mcp` pelo caminho real e reinicie o Claude Desktop.
 
-### 2. Reinicie o Claude Desktop
+---
 
-### 3. Peça ao Claude
+## 💡 Exemplo: fluxo mensal AdSense
+
+Cenário: todo mês você recebe depósitos via **Remessa Online** (a corretora
+mais comum em conjunto com AdSense) e precisa emitir uma NFS-e para cada um.
+
+### Primeira vez — fluxo completo
 
 ```
-Emita uma NFS-e para o cliente X no valor de USD 1000 / BRL 5500,
-competência 15/03/2026, e encaminhe para a contabilidade.
+Você:    emite as notas da minha conta AdSense do mês de março/2026
+
+Claude:  [chama listar_pagamentos com mes="2026-03"]
+         Encontrei 2 pagamentos no Gmail (Remessa Online, março/2026):
+
+           1. 03/03 — Google Inc — USD 1697.29 → BRL  8898.73
+           2. 23/03 — Google Inc — USD 3206.19 → BRL 16265.32
+
+         Vou emitir 2 NFS-e a partir de nDPS=6 (sequencial).
+         Confirma emissão e envio para fiscal@suacontabilidade.com.br?
+
+Você:    confirmo
+
+Claude:  [chama emitir_notas_mes com encaminhar_contabilidade=true]
+         ✅ 2 notas emitidas e enviadas em um único e-mail:
+           - nNFSe=6, chave 42054072227...0006
+           - nNFSe=7, chave 42054072227...0007
 ```
 
-Claude vai:
-1. Exibir um resumo da nota.
-2. Pedir confirmação.
-3. Chamar `emitir_nota` (ou `emitir_notas_mes` se for um lote).
-4. Opcionalmente enviar XML+PDF para a contabilidade via Mailgun.
+### O que o Claude faz por trás
+
+1. `listar_pagamentos` — conecta no Gmail via OAuth2, busca e-mails de
+   `nao-responder@remessaonline.com.br` no mês pedido, parseia USD/BRL/data
+   de cada um.
+2. Você confere a lista e confirma.
+3. `emitir_notas_mes`:
+   - Descobre o próximo `nDPS` via API `/DFe/0`
+   - Para cada pagamento: constrói DPS v1.01 → assina (XMLDSig) → POST mTLS → baixa DANFSE
+   - No final, junta todas as notas em UM e-mail para a contabilidade via Mailgun
+4. XML + PDF de cada nota salvos em `config.output_dir`.
+
+### Outras corretoras / AdSense via PIX Internacional
+
+Se você recebe por outra corretora (p.ex. Banco Rendimento), adicione em
+`config.json`:
+
+```json
+"email_parsers": [
+  { "sender": "nao-responder@remessaonline.com.br", "parser": "remessa_online" },
+  { "sender": "cambioonline@mail-rendimento.com.br", "parser": "rendimento" }
+]
+```
+
+Parsers built-in disponíveis: **`remessa_online`** e **`rendimento`**. Para
+uma corretora nova, escreva uma função em `emitir_nfse.py` (veja
+`parse_remessa_online` e `parse_rendimento` como referência — recebem um
+`email.message.Message` e devolvem `{vUSD, vBRL, dCompet, cliente_nome}`)
+e registre em `BUILTIN_PARSERS`.
+
+### Nota avulsa (sem Gmail)
+
+Se você prefere dar os valores direto:
+
+```
+Você:    emita uma NFS-e para google, USD 1000, BRL 5500,
+         competência 15/03/2026, encaminha pra contabilidade
+```
+
+O Claude mostra o resumo, pede confirmação e chama `emitir_nota`.
 
 ---
 

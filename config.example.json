@@ -45,6 +45,12 @@
     "financeiro":"💰 Financeiro (cobranças e faturas)"
   },
 
+  "_comentario_email_parsers": "Remetentes de pagamentos a parsear via Gmail IMAP para o fluxo AdSense/similar. Default (se omitido) = Remessa Online, que é a corretora mais comum em conjunto com AdSense. Parsers built-in disponíveis: 'remessa_online' (detecta 'Valor em reais BRL X' / 'Valor em moeda estrangeira USD Y') e 'rendimento' (Banco Rendimento: 'Valor Recebido US$ X' / 'Total R$ Y'). Para adicionar outra corretora, escreva um parser em emitir_nfse.py e registre em BUILTIN_PARSERS.",
+  "email_parsers": [
+    { "sender": "nao-responder@remessaonline.com.br", "parser": "remessa_online" },
+    { "sender": "noreply@remessaonline.com.br",       "parser": "remessa_online" }
+  ],
+
   "_comentario_output": "Pasta onde os XMLs/PDFs das notas emitidas serão salvos. Caminho absoluto.",
   "output_dir": "/caminho/absoluto/para/notas"
 }
