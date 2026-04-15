@@ -1,0 +1,107 @@
+name: Check NFS-e API changes
+
+# Roda toda segunda-feira às 10:00 BRT (13:00 UTC) e também sob demanda
+# via "Run workflow" na aba Actions do GitHub.
+on:
+  schedule:
+    - cron: '0 13 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write   # commit do baseline atualizado
+  issues:   write   # abertura/atualização do issue de notificação
+
+concurrency:
+  group: check-nfse-changes
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run snapshot check
+        id: check
+        run: python3 .github/scripts/check_nfse_changes.py
+
+      - name: Open or update issue
+        if: steps.check.outputs.has_changes == 'true'
+        uses: actions/github-script@v7
+        env:
+          REPORT: ${{ steps.check.outputs.report }}
+        with:
+          script: |
+            const today = new Date().toISOString().slice(0, 10);
+            const title = `🔔 NFS-e API: mudança detectada em ${today}`;
+            const report = process.env.REPORT || '(sem detalhes)';
+
+            const body = [
+              '## Mudança detectada na documentação/API oficial do NFS-e Nacional',
+              '',
+              'Este issue foi aberto automaticamente por',
+              '`.github/workflows/check-nfse-changes.yml`.',
+              '',
+              report,
+              '',
+              '---',
+              '',
+              '@claude — analisa por favor o diff do commit mais recente em',
+              '`.github/nfse-snapshot/baseline/` (feito pelo `github-actions[bot]`',
+              'logo antes deste issue) e responda:',
+              '',
+              '1. **O que mudou de fato?** Ignore ruído (timestamps, CSRF tokens,',
+              '   IDs de sessão, reordenação de campos sem significado). Foque em:',
+              '   - novos/removidos endpoints no Swagger',
+              '   - mudanças no schema DPS v1.01 (campos, tipos, obrigatoriedade)',
+              '   - novas regras tributárias, CSTs ou alíquotas',
+              '   - mudanças em autenticação mTLS / headers obrigatórios',
+              '2. **Isso afeta este projeto?** Cruze com o código em',
+              '   `emitir_nfse.py` — especialmente `build_dps_xml`, `emitir_via_api`,',
+              '   `baixar_pdf`, `descobrir_proximo_ndps`, `consultar_ultimo_nnfse_via_api`.',
+              '3. **Se afeta:** abra um PR com as correções. Se não afeta ou é só',
+              '   cosmético, comente explicando e feche este issue.',
+              '',
+              'Se o diff for enorme e não couber na sua análise, priorize o Swagger',
+              '(`swagger-contribuinte-issqn.raw`) — as outras URLs são só sinalizadoras.',
+            ].join('\n');
+
+            const existing = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo:  context.repo.repo,
+              state: 'open',
+              labels:'nfse-api-change',
+            });
+
+            if (existing.data.length > 0) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo:  context.repo.repo,
+                issue_number: existing.data[0].number,
+                body: `### Novo run — ${today}\n\n${report}`,
+              });
+              core.info(`Comentário adicionado ao issue #${existing.data[0].number}`);
+            } else {
+              const created = await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo:  context.repo.repo,
+                title,
+                body,
+                labels: ['nfse-api-change', 'automated'],
+              });
+              core.info(`Issue #${created.data.number} criado`);
+            }
+
+      - name: Commit baseline updates
+        if: always()
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .github/nfse-snapshot/
+          if git diff --staged --quiet; then
+            echo "Baseline inalterado — nada a commitar"
+          else
+            git commit -m "chore: update NFS-e API baseline snapshot"
+            git push
+          fi
