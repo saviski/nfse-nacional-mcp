@@ -1,0 +1,50 @@
+{
+  "_comentario": "Configurações do Emissor NFS-e Nacional. Copie este arquivo para config.json e preencha com os dados da sua empresa.",
+
+  "_comentario_empresa": "Dados do prestador do serviço (sua empresa)",
+  "cnpj": "00000000000000",
+  "razao_social": "Minha Empresa LTDA",
+  "cLocEmi": "4205407",
+  "serie": "900",
+
+  "_comentario_trib": "Alíquota aproximada do tributo federal conforme regime tributário da sua empresa. Ex.: Lucro Presumido, exportação de serviços — IRPJ 4,80% + CSLL 2,88% = 7,68% (PIS/COFINS = 0% por exportação)",
+  "pTotTribFed": "7.68",
+
+  "versao_leiaute": "1.01",
+
+  "_comentario_cert": "Caminho (relativo ao projeto) do certificado digital A1 no formato PFX. A senha vai em secrets.json.",
+  "cert_path": "certs/meu_certificado.pfx",
+
+  "_comentario_api": "Endpoints oficiais do Sistema Nacional NFS-e — não alterar em produção",
+  "api_base_url": "https://sefin.nfse.gov.br/SefinNacional",
+  "adn_base_url": "https://adn.nfse.gov.br/contribuintes",
+
+  "_comentario_email": "Configurações de envio de e-mail via Mailgun. A API key vai em secrets.json.",
+  "mailgun_domain": "exemplo.com.br",
+  "mailgun_from": "Financeiro <financeiro@exemplo.com.br>",
+  "email_remetente_cc": "seu-email-pessoal@exemplo.com",
+  "email_contabilidade": "fiscal@suacontabilidade.com.br",
+
+  "_comentario_assinatura": "Bloco de assinatura incluído no corpo dos e-mails para a contabilidade",
+  "assinatura_email": "Nome Responsável\nMinha Empresa LTDA",
+
+  "_comentario_gmail": "Conta Gmail usada para leitura de e-mails da contabilidade via IMAP (OAuth2). Credenciais em secrets.json.",
+  "gmail_user": "seu-email@gmail.com",
+
+  "_comentario_contab_remetentes": "Lista de domínios/e-mails dos remetentes da contabilidade — usada pela busca IMAP para detectar solicitações.",
+  "contab_remetentes": [
+    "contato@suacontabilidade.com.br",
+    "fiscal@suacontabilidade.com.br"
+  ],
+
+  "_comentario_contab_categorias": "Mapa de categorias para organizar e-mails da contabilidade. Chave é o identificador interno, valor é o rótulo exibido.",
+  "contab_categorias": {
+    "fiscal":    "📑 Fiscal (documentos NFS-e)",
+    "contabil":  "📊 Contábil (extratos e movimentações)",
+    "pessoal":   "👥 Pessoal (folha, recibos, DARF)",
+    "financeiro":"💰 Financeiro (cobranças e faturas)"
+  },
+
+  "_comentario_output": "Pasta onde os XMLs/PDFs das notas emitidas serão salvos. Caminho absoluto.",
+  "output_dir": "/caminho/absoluto/para/notas"
+}

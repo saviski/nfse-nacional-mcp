@@ -1,0 +1,48 @@
+{
+  "_comentario": "Dados fixos dos tomadores de serviço (clientes). Copie este arquivo para clientes.json, remova estes exemplos e adicione os seus. O 'alias' (chave do objeto) é como o cliente é referenciado na linha de comando e nas tools MCP.",
+
+  "_comentario_campos": {
+    "xNome":       "Razão social do tomador (aparece no XML)",
+    "cNaoNIF":     "Motivo de não informar NIF (tomador no exterior): 1=Não possui, 2=Outros. Omita para clientes BR.",
+    "cnpj":        "Para clientes brasileiros — incluir em vez de cNaoNIF. Ex.: '00000000000000'",
+    "end.cPais":   "Código ISO do país. 'BR' para nacional, 'US', 'GB', etc. para exterior",
+    "end.cEndPost":"CEP/ZIP (somente dígitos/letras)",
+    "end.xCidade": "Cidade",
+    "end.xEstProvReg": "Estado/província/região",
+    "end.xLgr":    "Logradouro (rua/avenida)",
+    "end.nro":     "Número do endereço",
+    "end.xBairro": "Bairro (use '-' se não houver)",
+    "end.xCpl":    "Complemento (opcional)",
+    "aliases":     "Lista de strings usadas por busca fuzzy para detectar o cliente em e-mails/planilhas"
+  },
+
+  "cliente_exterior": {
+    "xNome": "Exemplo Cliente Inc",
+    "cNaoNIF": "2",
+    "end": {
+      "cPais": "US",
+      "cEndPost": "00000",
+      "xCidade": "Cidade",
+      "xEstProvReg": "CA",
+      "xLgr": "Rua Exemplo",
+      "nro": "100",
+      "xBairro": "-"
+    },
+    "aliases": ["exemplo", "exemplo cliente", "exemplo inc"]
+  },
+
+  "cliente_brasileiro": {
+    "xNome": "Exemplo Brasil LTDA",
+    "cnpj": "00000000000000",
+    "end": {
+      "cPais": "BR",
+      "cEndPost": "01310100",
+      "xCidade": "São Paulo",
+      "xEstProvReg": "SP",
+      "xLgr": "Avenida Paulista",
+      "nro": "1000",
+      "xBairro": "Bela Vista"
+    },
+    "aliases": ["exemplo brasil", "exemplo br"]
+  }
+}
