@@ -8,8 +8,9 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write   # commit do baseline atualizado
-  issues:   write   # abertura/atualização do issue de notificação
+  contents:      write   # commit do baseline atualizado + branches do Claude
+  issues:        write   # abertura/atualização do issue de notificação
+  pull-requests: write   # Claude abre PR quando detecta mudança material
 
 concurrency:
   group: check-nfse-changes
@@ -94,6 +95,7 @@ jobs:
             }
 
       - name: Commit baseline updates
+        id: baseline-commit
         if: always()
         run: |
           git config user.name  "github-actions[bot]"
@@ -101,7 +103,82 @@ jobs:
           git add .github/nfse-snapshot/
           if git diff --staged --quiet; then
             echo "Baseline inalterado — nada a commitar"
+            echo "committed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "chore: update NFS-e API baseline snapshot"
             git push
+            echo "committed=true" >> "$GITHUB_OUTPUT"
           fi
+
+      # ── Análise autônoma pelo Claude ────────────────────────────────────────
+      # Roda SOMENTE quando há mudança material e o commit de baseline foi
+      # publicado (pra Claude poder inspecionar o diff via `git show HEAD`).
+      # Modelo: Sonnet 4.6 (5× mais barato que Opus, suficiente pra diff de API).
+      - name: Claude — analisa diff e propõe PR
+        if: steps.check.outputs.has_changes == 'true' && steps.baseline-commit.outputs.committed == 'true'
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            Um snapshot de URLs oficiais do Sistema Nacional NFS-e mudou.
+            Relatório do watcher semanal:
+
+            ${{ steps.check.outputs.report }}
+
+            O diff completo do baseline está no último commit do branch `main`
+            com a mensagem `chore: update NFS-e API baseline snapshot`. Inspecione
+            com `git show HEAD -- .github/nfse-snapshot/baseline/`. O arquivo
+            principal é `swagger-contribuinte-issqn.raw` (Swagger JSON) — as
+            outras URLs são apenas sinalizadoras.
+
+            ## Sua missão
+
+            **1. Classifique a mudança** em uma destas categorias:
+
+               a) **RUÍDO** — timestamps, IDs de build, CSRF tokens, reordenação
+                  sem efeito semântico, diferenças de whitespace/encoding.
+                  → **Ação**: comente no issue aberto (label `nfse-api-change`)
+                  explicando que é ruído e **feche o issue**. Não mexa no código.
+
+               b) **MATERIAL mas ambíguo** — mudança clara na documentação/API
+                  mas impacto no código é incerto ou depende de decisão humana
+                  (ex: novo campo opcional, endpoint adicionado que não usamos,
+                  mudança de regime tributário hipotética).
+                  → **Ação**: atualize o issue com análise detalhada pedindo
+                  revisão humana. **Não abra PR.**
+
+               c) **MATERIAL e claro** — mudança concreta que quebra ou exige
+                  atualização imediata do código (ex: endpoint renomeado,
+                  campo obrigatório novo, formato de resposta mudou).
+                  → **Ação**: crie um branch `claude/nfse-api-update-<data>`,
+                  atualize o código, abra PR referenciando o issue, e comente
+                  no issue com link do PR.
+
+            **2. Onde olhar no código** (foco em `emitir_nfse.py`):
+
+               - `build_dps_xml` — geração do XML DPS v1.01
+               - `assinar_dps` — XMLDSig
+               - `emitir_via_api` — POST /SefinNacional/nfse
+               - `baixar_pdf` — GET /danfse/{chave}
+               - `descobrir_proximo_ndps` + `consultar_ultimo_nnfse_via_api`
+                 — descoberta do próximo nDPS via /DFe/0
+               - `session_mtls` — autenticação mTLS
+
+            **3. Contexto fiscal fixo** (não sugira mudar, é do regime do usuário):
+
+               - Regime: Lucro Presumido
+               - Operação: Exportação de serviços (tribISSQN=3)
+               - PIS/COFINS CST=08 (alíquota zero)
+               - pTotTribFed = 7.68% (IRPJ + CSLL)
+
+            **4. Ferramentas**: use o `gh` CLI (já autenticado) para `gh issue
+            comment`, `gh issue close`, `gh pr create`. Use `git` normalmente
+            para branches e commits. Rode `python3 -m py_compile emitir_nfse.py`
+            antes de commitar qualquer alteração de código.
+
+            Seja conservador: em caso de dúvida, prefira categoria (b) e peça
+            revisão humana a fazer uma alteração insegura em código fiscal.
+          claude_args: |
+            --max-turns 12
+            --model claude-sonnet-4-6
+            --allowedTools Bash,Read,Write,Edit,Grep,Glob
