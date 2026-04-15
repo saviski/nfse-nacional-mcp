@@ -44,8 +44,8 @@ tools deste repositório.
 ```
 nfse-nacional-mcp/
 ├── emitir_nfse.py            # script principal (CLI + lib)
-├── nfse_mcp_server.py        # servidor MCP para Claude Desktop
-├── setup_claude_desktop.py   # bootstrap: registra o MCP no Claude Desktop
+├── nfse_mcp_server.py        # servidor MCP (stdio) — compatível com qualquer cliente MCP
+├── setup_mcp.py              # bootstrap: detecta agentes instalados e registra o MCP
 ├── setup_gmail_oauth.py      # gera refresh_token OAuth2 do Gmail
 ├── config.example.json       # → copie para config.json
 ├── secrets.example.json      # → copie para secrets.json
@@ -53,6 +53,7 @@ nfse-nacional-mcp/
 ├── requirements.txt
 ├── .gitignore
 ├── README.md
+├── AGENTS.md                 # guia de registro manual em Claude Desktop, Cursor, Zed, etc.
 ├── certs/                    # coloque seu .pfx aqui (não versionado)
 └── .github/
     ├── workflows/
@@ -69,21 +70,42 @@ Existem **dois caminhos**. O conversacional é o recomendado — você não prec
 
 ### Caminho A — Setup conversacional (recomendado) ⭐
 
-#### A1. Clone e registre o MCP no Claude Desktop
+#### A1. Clone e registre o MCP no seu agente
 
 ```bash
 git clone git@github.com:SEU_USUARIO/nfse-nacional-mcp.git
 cd nfse-nacional-mcp
-python3 setup_claude_desktop.py
+python3 setup_mcp.py
 ```
 
-O script detecta seu SO e escreve a entrada `nfse-nacional` no
-`claude_desktop_config.json`. Depois reinicie o Claude Desktop (⌘Q no macOS).
+O `setup_mcp.py` detecta quais agentes MCP estão instalados no seu sistema
+(**Claude Desktop, Claude Code, Cursor, Windsurf, Cline**) e pergunta em
+quais você quer registrar. Você pode escolher um, vários ou todos — a
+mesma entrada `nfse-nacional` vai para os arquivos de config corretos.
 
-> Pré-requisito: ter [`uv`](https://docs.astral.sh/uv/) instalado
+```
+📍 Agentes MCP detectados:
+  [1] Claude Desktop
+      └─ ~/Library/Application Support/Claude/claude_desktop_config.json
+  [2] Claude Code (CLI, user scope)
+      └─ via `claude` CLI
+
+Registrar em quais? [ex: 1,3 ou 'all', Enter=cancelar]: all
+```
+
+Depois reinicie os agentes afetados (GUI apps: ⌘Q e reabra).
+
+> **Outros agentes** (Zed, Continue, Claude Agent SDK, ou registro manual):
+> veja **[AGENTS.md](AGENTS.md)** para o JSON exato de cada um.
+>
+> **Pré-requisito:** ter [`uv`](https://docs.astral.sh/uv/) instalado
 > (`curl -LsSf https://astral.sh/uv/install.sh | sh`). O `uv` baixa as
 > dependências Python (mcp, cryptography, signxml…) automaticamente na
 > primeira chamada — você não precisa rodar `pip install`.
+>
+> **Flags úteis:** `--list` (só detecta, não grava) · `--all` (pula o prompt) ·
+> `--only cursor,cline` (registra só nesses) · `--project-scoped` (cria um
+> `.mcp.json` na raiz do repo, portátil entre máquinas).
 
 #### A2. Peça ao Claude para configurar
 
@@ -185,8 +207,9 @@ Mailgun (opcional, só se quiser envio automático):
 2. Copie a **Private API key** em Account → API Keys.
 3. Coloque em `secrets.json → mailgun_api_key` e configure `mailgun_domain` / `mailgun_from` em `config.json`.
 
-Finalmente, registre o MCP no Claude Desktop com `python3 setup_claude_desktop.py`
-(ou edite `claude_desktop_config.json` manualmente — ver seção *Usando via MCP* abaixo).
+Finalmente, registre o MCP nos seus agentes com `python3 setup_mcp.py`
+(detecta Claude Desktop, Claude Code, Cursor, Windsurf, Cline automaticamente —
+ou edite os arquivos de config manualmente seguindo **[AGENTS.md](AGENTS.md)**).
 
 ---
 
@@ -221,9 +244,14 @@ python3 emitir_nfse.py \
 
 ---
 
-## 🧰 Usando via MCP (Claude Desktop)
+## 🧰 Usando via MCP
 
-### Registro manual (se você não usou `setup_claude_desktop.py`)
+O servidor funciona em **qualquer cliente MCP** — Claude Desktop, Claude Code,
+Cursor, Windsurf, Cline, Zed, Continue ou via Claude Agent SDK. O modo mais
+simples é rodar `python3 setup_mcp.py`; para instruções por agente (ou se o
+seu não está na lista automática), veja **[AGENTS.md](AGENTS.md)**.
+
+### Registro manual rápido — Claude Desktop
 
 No macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
 No Windows: `%APPDATA%\Claude\claude_desktop_config.json`
