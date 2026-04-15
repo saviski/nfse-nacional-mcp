@@ -73,7 +73,7 @@ Existem **dois caminhos**. O conversacional é o recomendado — você não prec
 #### A1. Clone e registre o MCP no seu agente
 
 ```bash
-git clone git@github.com:SEU_USUARIO/nfse-nacional-mcp.git
+git clone https://github.com/saviski/nfse-nacional-mcp
 cd nfse-nacional-mcp
 python3 setup_mcp.py
 ```
@@ -164,7 +164,7 @@ Depois peça ao Claude para gravar `gmail_user`, `mailgun_domain`,
 Se preferir editar JSON à mão:
 
 ```bash
-git clone git@github.com:SEU_USUARIO/nfse-nacional-mcp.git
+git clone https://github.com/saviski/nfse-nacional-mcp
 cd nfse-nacional-mcp
 
 # Dependências (uv OU pip)
