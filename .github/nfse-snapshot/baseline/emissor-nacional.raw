@@ -37,7 +37,7 @@
     <div class="col-lg-4 descricao">
         <div class="login-section autenticacao">
             <h2>Acesso com Usuário/Senha</h2>
-<form action="/EmissorNacional/Login?ReturnUrl=%2FEmissorNacional%2F" class="" method="post"><input name="__RequestVerificationToken" type="hidden" value="GhbAcsTa0EdQFNcDjVZwgvEdbUaWJ7Hj6bZFQLG6GuBJkEVs8zkHRyEd0rp9tP8yJfP676rxKVVruj4C3qWCl6zyaX1QOltWi_3er0TKaPI1" />                <div class="form-group">
+<form action="/EmissorNacional/Login?ReturnUrl=%2FEmissorNacional%2F" class="" method="post"><input name="__RequestVerificationToken" type="hidden" value="H__YB2zBzO3iEvRKk2FywrBS8Lr1KUAWwN6uz8Rmc6BkvsEYJo9-1DTzyO9MHbXwtG9oE_FLw9PgpNLD3LiddpXK3jXseFK7-8IyqEOlRMU1" />                <div class="form-group">
                     <input class="form-control input-lg cpfcnpj" data-val="true" data-val-length="The field CPF/CNPJ must be a string with a maximum length of 18." data-val-length-max="18" id="Inscricao" maxlength="18" name="Inscricao" placeholder="CPF/CNPJ" type="text" value="" />
                     <span class="field-validation-valid text-danger" data-valmsg-for="Inscricao" data-valmsg-replace="true"></span>
                 </div>
@@ -110,7 +110,7 @@
                 </div>
                 <div class="row versao">
                     <div class="col-md-12">
-                        Portal de Gestão NFS-e - Contribuinte | Versão 1.4.0.27
+                        Portal de Gestão NFS-e - Contribuinte | Versão 1.6.0.0
                     </div>
                 </div>
             </div>
