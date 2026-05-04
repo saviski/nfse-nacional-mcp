@@ -164,7 +164,7 @@
 
 
 
-    <link rel="search" href="https://www.gov.br/nfse/@@search" title="Buscar neste site" />
+    <link rel="search" href="https://www.gov.br/nfse/pt-br/@@search" title="Buscar neste site" />
 
 
 
@@ -1914,6 +1914,28 @@
         
           <div class="swiper-slide">
 
+            <a href="https://www.gov.br/nfse/pt-br/noticias/nfs-e-e-simples-nacional-obrigatoriedade-de-emissao-atraves-do-emissor-nacional">
+              <img src="https://www.gov.br/nfse/pt-br/noticias/nfs-e-e-simples-nacional-obrigatoriedade-de-emissao-atraves-do-emissor-nacional/banner-nfse.jpg/@@images/46b327d2-614e-4044-8745-e43f2fc7e9ce.jpeg" width="960" height="345" alt="ME e EPP optantes pelo Simples Nacional deverão usar obrigatoriamente o Emissor Nacional a partir de 01/09/2026." data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/nfs-e-e-simples-nacional-obrigatoriedade-de-emissao-atraves-do-emissor-nacional'&gt;NFS-e e Simples Nacional: obrigatoriedade de emissão através do Emissor Nacional&lt;/a&gt;" data-description="ME e EPP optantes pelo Simples Nacional deverão usar obrigatoriamente o Emissor Nacional a partir de 01/09/2026." data-link="https://www.gov.br/nfse/pt-br/noticias/nfs-e-e-simples-nacional-obrigatoriedade-de-emissao-atraves-do-emissor-nacional" data-content-uuid="a7e6709b90e643ab9fc15272ecc9edda" data-content-type="collective.nitf.content" data-has-subitem="True" />
+            </a>
+            <span class="pause-overlay fas fa-pause-circle"></span>
+            <div class="swiper-pagination-cover"></div>
+            <div class="info-title">NFS-e e Simples Nacional: obrigatoriedade de emissão através do Emissor Nacional</div>
+            <div class="info-description">ME e EPP optantes pelo Simples Nacional deverão usar obrigatoriamente o Emissor Nacional a partir de 01/09/2026.</div>
+          </div>
+        
+          <div class="swiper-slide">
+
+            <a href="https://www.gov.br/nfse/pt-br/noticias/cgsn-autoriza-uso-do-das-para-recolhimento-do-iss-no-regime-geral-pelo-man-ate-2032">
+              <img src="https://www.gov.br/nfse/pt-br/noticias/cgsn-autoriza-uso-do-das-para-recolhimento-do-iss-no-regime-geral-pelo-man-ate-2032/imagem-3.png/@@images/972f5a17-8f52-4f7a-b300-b23288eb5d6a.png" width="1920" height="692" alt="As apurações do ISS em regime geral realizadas pelo MAN irão utilizar o DAS como documento de arrecadação." data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/cgsn-autoriza-uso-do-das-para-recolhimento-do-iss-no-regime-geral-pelo-man-ate-2032'&gt;CGSN autoriza uso do DAS para recolhimento do ISS no Regime Geral pelo MAN até 2032&lt;/a&gt;" data-description="As apurações do ISS em regime geral realizadas pelo MAN irão utilizar o DAS como documento de arrecadação." data-link="https://www.gov.br/nfse/pt-br/noticias/cgsn-autoriza-uso-do-das-para-recolhimento-do-iss-no-regime-geral-pelo-man-ate-2032" data-content-uuid="6a9c3992a65c40e69cedad5d8654e2c1" data-content-type="collective.nitf.content" data-has-subitem="True" />
+            </a>
+            <span class="pause-overlay fas fa-pause-circle"></span>
+            <div class="swiper-pagination-cover"></div>
+            <div class="info-title">CGSN autoriza uso do DAS para recolhimento do ISS no Regime Geral pelo MAN até 2032</div>
+            <div class="info-description">As apurações do ISS em regime geral realizadas pelo MAN irão utilizar o DAS como documento de arrecadação.</div>
+          </div>
+        
+          <div class="swiper-slide">
+
             <a href="https://www.gov.br/nfse/pt-br/noticias/modulo-de-apuracao-nacional-para-o-issqn-e-disponibilizado-no-ambiente-de-producao-restrita-da-nfs-e">
               <img src="https://www.gov.br/nfse/pt-br/noticias/modulo-de-apuracao-nacional-para-o-issqn-e-disponibilizado-no-ambiente-de-producao-restrita-da-nfs-e/nfse.jpeg/@@images/03a8d2ee-2048-4bb0-aa08-08af27c55f9b.jpeg" width="768" height="276" alt="Municípios já podem iniciar seus testes e pilotos com seus contribuintes" data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/modulo-de-apuracao-nacional-para-o-issqn-e-disponibilizado-no-ambiente-de-producao-restrita-da-nfs-e'&gt;Módulo de Apuração Nacional para o ISSQN é disponibilizado no ambiente de Produção Restrita da NFS-e&lt;/a&gt;" data-description="Municípios já podem iniciar seus testes e pilotos com seus contribuintes" data-link="https://www.gov.br/nfse/pt-br/noticias/modulo-de-apuracao-nacional-para-o-issqn-e-disponibilizado-no-ambiente-de-producao-restrita-da-nfs-e" data-content-uuid="a5cd36c29bf84600b7f2bdc9c0c00ac2" data-content-type="collective.nitf.content" data-has-subitem="True" />
             </a>
@@ -1921,17 +1943,6 @@
             <div class="swiper-pagination-cover"></div>
             <div class="info-title">Módulo de Apuração Nacional para o ISSQN é disponibilizado no ambiente de Produção Restrita da NFS-e</div>
             <div class="info-description">Municípios já podem iniciar seus testes e pilotos com seus contribuintes</div>
-          </div>
-        
-          <div class="swiper-slide">
-
-            <a href="https://www.gov.br/nfse/pt-br/noticias/publicada-nota-tecnica-se-cgnfs-e-no-007-com-atualizacoes-e-esclarecimentos">
-              <img src="https://www.gov.br/nfse/pt-br/noticias/publicada-nota-tecnica-se-cgnfs-e-no-007-com-atualizacoes-e-esclarecimentos/NT007.JPG/@@images/1a466221-fd86-4605-9325-19d89cd72fca.jpeg" width="800" height="250" alt="Publicada Nota Técnica SE/CGNFS-e nº 007 com Atualizações e Esclarecimentos" data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/publicada-nota-tecnica-se-cgnfs-e-no-007-com-atualizacoes-e-esclarecimentos'&gt;Publicada Nota Técnica SE/CGNFS-e nº 007 com Atualizações e Esclarecimentos&lt;/a&gt;" data-description="" data-link="https://www.gov.br/nfse/pt-br/noticias/publicada-nota-tecnica-se-cgnfs-e-no-007-com-atualizacoes-e-esclarecimentos" data-content-uuid="17c75d6237fe4854a22ed75119c5cf82" data-content-type="collective.nitf.content" data-has-subitem="True" />
-            </a>
-            <span class="pause-overlay fas fa-pause-circle"></span>
-            <div class="swiper-pagination-cover"></div>
-            <div class="info-title">Publicada Nota Técnica SE/CGNFS-e nº 007 com Atualizações e Esclarecimentos</div>
-            <div class="info-description"></div>
           </div>
         
       </div>
