@@ -59,21 +59,31 @@ NS_NFSE    = "http://www.sped.fazenda.gov.br/nfse"
 
 SKILL_DIR = Path(__file__).parent
 
+# DATA_DIR: diretório onde ficam config.json, secrets.json, clientes.json e certs/.
+# Por padrão é o mesmo diretório do script. Para separar código de dados
+# (ex: código no repo git, dados em outra pasta) defina a variável de ambiente
+# NFSE_DATA_DIR apontando para o diretório de dados.
+#
+# Exemplo no claude_desktop_config.json:
+#   "env": { "NFSE_DATA_DIR": "/Users/você/nfse-adsense" }
+#
+DATA_DIR = Path(os.environ.get("NFSE_DATA_DIR", SKILL_DIR)).expanduser().resolve()
+
 # ─── Config ──────────────────────────────────────────────────────────────────
 
 def load_config() -> dict:
     """Lê config.json. Retorna {} se o arquivo ainda não existe
     (permite que o setup conversacional rode antes da configuração)."""
-    path = SKILL_DIR / "config.json"
+    path = DATA_DIR / "config.json"
     return json.load(open(path)) if path.exists() else {}
 
 def load_secrets() -> dict:
-    path = SKILL_DIR / "secrets.json"
+    path = DATA_DIR / "secrets.json"
     return json.load(open(path)) if path.exists() else {}
 
 def load_clientes() -> dict:
     """Lê clientes.json. Retorna {} se o arquivo ainda não existe."""
-    path = SKILL_DIR / "clientes.json"
+    path = DATA_DIR / "clientes.json"
     return json.load(open(path)) if path.exists() else {}
 
 def inferir_config_de_xml(xml_path: str) -> dict:
@@ -642,7 +652,7 @@ def consultar_ultimo_nnfse_local(config: dict) -> int:
     Fallback quando a API não responde. Lê o atributo Id de <infNFSe> ou a
     primeira ChaveAcesso presente no arquivo.
     """
-    output_dir = Path(config.get("output_dir", str(SKILL_DIR / "notas")))
+    output_dir = Path(config.get("output_dir", str(DATA_DIR / "notas")))
     if not output_dir.exists():
         return 0
     cnpj = config["cnpj"]
@@ -680,7 +690,7 @@ def consultar_ultimo_nnfse_local(config: dict) -> int:
 
 
 def _cache_ndps_path() -> Path:
-    return SKILL_DIR / "ultimo_ndps.json"
+    return DATA_DIR / "ultimo_ndps.json"
 
 
 def ler_cache_ndps() -> int:
@@ -1077,7 +1087,7 @@ def emitir_uma_nota(config, secrets, clientes, session, dados, cliente_chave,
                                dps_id)
 
     if dry_run:
-        out = SKILL_DIR / f"dryrun_{dps_id[:40]}.xml"
+        out = DATA_DIR / f"dryrun_{dps_id[:40]}.xml"
         out.write_bytes(xml_assinado)
         print(f"  ⚠️  Dry-run: XML salvo em {out.name}")
         return {"dps_id": dps_id, "dry_run": True, "xml_bytes": xml_assinado,
@@ -1096,7 +1106,7 @@ def emitir_uma_nota(config, secrets, clientes, session, dados, cliente_chave,
     pdf_bytes = baixar_pdf(session, config, chave) if chave else None
 
     # Salva os arquivos localmente
-    output_dir = Path(config.get("output_dir", str(SKILL_DIR / "notas")))
+    output_dir = Path(config.get("output_dir", str(DATA_DIR / "notas")))
     output_dir.mkdir(parents=True, exist_ok=True)
     tag  = dados["dCompet"][:7].replace("-", "_")
     nome = cliente["xNome"].lower().replace(" ", "_")

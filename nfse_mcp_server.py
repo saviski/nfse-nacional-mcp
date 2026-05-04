@@ -29,11 +29,19 @@ Substitua /CAMINHO/COMPLETO pelo caminho absoluto da pasta do projeto.
 
 import asyncio
 import json
+import os
 import sys
 from pathlib import Path
 
 SKILL_DIR = Path(__file__).parent
 sys.path.insert(0, str(SKILL_DIR))
+
+# DATA_DIR: onde ficam config.json, secrets.json, clientes.json e certs/.
+# Por padrão = mesmo diretório do script. Para separar código de dados
+# (repo git num lugar, dados em outro) defina NFSE_DATA_DIR no ambiente.
+# Exemplo no claude_desktop_config.json:
+#   "env": { "NFSE_DATA_DIR": "/Users/você/nfse-adsense" }
+DATA_DIR = Path(os.environ.get("NFSE_DATA_DIR", SKILL_DIR)).expanduser().resolve()
 
 import emitir_nfse as nfse
 
@@ -48,9 +56,9 @@ server = Server("nfse-nacional")
 # Helpers do setup conversacional
 # ═════════════════════════════════════════════════════════════════════════════
 
-CONFIG_PATH   = SKILL_DIR / "config.json"
-SECRETS_PATH  = SKILL_DIR / "secrets.json"
-CLIENTES_PATH = SKILL_DIR / "clientes.json"
+CONFIG_PATH   = DATA_DIR / "config.json"
+SECRETS_PATH  = DATA_DIR / "secrets.json"
+CLIENTES_PATH = DATA_DIR / "clientes.json"
 
 # Campos obrigatórios em config.json para conseguir emitir uma nota.
 CONFIG_OBRIGATORIOS = {
@@ -202,7 +210,7 @@ def _diagnostico_setup() -> dict:
     cert_path_rel = config.get("cert_path")
     cert_status: dict = {"caminho_configurado": cert_path_rel, "arquivo_existe": False, "validado": False}
     if cert_path_rel:
-        cert_abs = SKILL_DIR / cert_path_rel
+        cert_abs = DATA_DIR / cert_path_rel
         cert_status["arquivo_existe"] = cert_abs.exists()
 
     # Pronto para emitir?
@@ -666,7 +674,7 @@ async def call_tool(name: str, arguments: dict) -> list[types.TextContent]:
         senha = (secrets.get("cert_password") or "").encode()
         if not senha:
             return _text_reply("Erro: `cert_password` ainda não está em secrets.json. Use `escrever_secrets` primeiro.")
-        pfx_abs = SKILL_DIR / cert_rel
+        pfx_abs = DATA_DIR / cert_rel
         return _json_reply(_testar_pfx(pfx_abs, senha))
 
     # ═══════════════════════════════════════════════════════════════════════
@@ -683,9 +691,9 @@ async def call_tool(name: str, arguments: dict) -> list[types.TextContent]:
             "com os valores perguntados ao usuário."
         )
 
-    # Garante que cert_path é absoluto (config.json guarda caminho relativo)
+    # Garante que cert_path é absoluto (config.json guarda caminho relativo a DATA_DIR)
     if config.get("cert_path"):
-        config["cert_path"] = str(SKILL_DIR / config["cert_path"])
+        config["cert_path"] = str(DATA_DIR / config["cert_path"])
 
     # ── listar_pagamentos ────────────────────────────────────────────────────
     if name == "listar_pagamentos":
