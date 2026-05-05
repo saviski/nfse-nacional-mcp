@@ -942,18 +942,61 @@ def extrair_chave_acesso(nfse_xml):
     return None
 
 def baixar_pdf(session, config, chave):
-    """Baixa o DANFSE em PDF. Endpoint oficial: https://adn.nfse.gov.br/danfse/{chave}
+    """Baixa o DANFSE em PDF.
 
-    O serviço /danfse retorna 502 intermitente (upstream gateway). Faz retries curtos.
+    Estratégia (em ordem de tentativa):
+
+    1. **Portal EmissorNacional via mTLS + sessão** (preferida, retorna o
+       DANFSE oficial assinado):
+
+         GET https://www.nfse.gov.br/EmissorNacional/Certificado     (login)
+         GET https://www.nfse.gov.br/EmissorNacional/Notas/Download/DANFSe/{chave}
+
+       O primeiro request, feito com o cert mTLS, estabelece a sessão e
+       redireciona para `/Dashboard`. A cookie jar da `session` mantém o
+       cookie `ARRAffinity` para o segundo request.
+
+    2. **Fallback** `https://adn.nfse.gov.br/danfse/{chave}` — endpoint
+       público sem login que retornou 502 intermitente nos testes mas
+       pode voltar a funcionar.
+
+    Retorna `bytes` do PDF, ou `None` se nenhuma rota deu PDF.
     """
-    adn_base = config.get("adn_base_url","https://adn.nfse.gov.br").split("/contribuintes")[0]
+    portal_base = config.get("portal_base_url", "https://www.nfse.gov.br/EmissorNacional")
+
+    # ── Rota 1: portal com login via cert ────────────────────────────────────
+    try:
+        # Login: GET /Certificado redireciona para Dashboard se cert válido.
+        r_login = session.get(
+            f"{portal_base}/Certificado",
+            allow_redirects=True,
+            timeout=30,
+        )
+        # Sucesso = chegou no Dashboard (ou qualquer página que não seja /Login)
+        if r_login.ok and "/Login" not in r_login.url:
+            r_pdf = session.get(
+                f"{portal_base}/Notas/Download/DANFSe/{chave}",
+                headers={"Accept": "application/pdf"},
+                allow_redirects=True,
+                timeout=60,
+            )
+            ct = r_pdf.headers.get("content-type", "")
+            if r_pdf.ok and ct.startswith("application/pdf"):
+                return r_pdf.content
+            # Se voltou HTML, o cert pode não ter permissão na chave
+            # (ex: nota emitida por outro CNPJ).
+    except requests.RequestException:
+        pass  # Tenta o fallback
+
+    # ── Rota 2: fallback /adn/danfse (502 intermitente) ──────────────────────
+    adn_base = config.get("adn_base_url", "https://adn.nfse.gov.br").split("/contribuintes")[0]
     url = f"{adn_base}/danfse/{chave}"
-    for _ in range(6):
+    for _ in range(3):
         try:
-            r = session.get(url, headers={"Accept":"application/pdf"}, timeout=30)
-            if r.ok and r.headers.get("content-type","").startswith("application/pdf"):
+            r = session.get(url, headers={"Accept": "application/pdf"}, timeout=30)
+            if r.ok and r.headers.get("content-type", "").startswith("application/pdf"):
                 return r.content
-            if r.status_code == 502:
+            if r.status_code in (502, 503, 504):
                 time.sleep(2)
                 continue
             return None

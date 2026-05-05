@@ -527,6 +527,36 @@ async def list_tools() -> list[types.Tool]:
             },
         ),
         types.Tool(
+            name="baixar_pdf_nota",
+            description=(
+                "Baixa o DANFSE (PDF oficial) de uma NFS-e já emitida, usando a "
+                "chave de acesso (50 dígitos). Faz login via mTLS no portal "
+                "EmissorNacional (www.nfse.gov.br/EmissorNacional/Certificado) "
+                "e baixa o PDF com a sessão estabelecida. Útil para: (a) re-baixar "
+                "PDF de uma nota que falhou no download durante a emissão, ou "
+                "(b) baixar PDF de notas emitidas pela própria interface web "
+                "(antes deste script). Salva o PDF em output_dir com nome "
+                "padronizado e retorna o caminho."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "chave": {
+                        "type": "string",
+                        "description": "Chave de acesso (50 dígitos) da NFS-e",
+                    },
+                    "nome_arquivo": {
+                        "type": "string",
+                        "description": (
+                            "Nome do arquivo PDF a salvar (sem extensão). Se "
+                            "omitido, usa 'nfse_<chave>.pdf'. Ex: 'nfse_2026_04_google_inc'"
+                        ),
+                    },
+                },
+                "required": ["chave"],
+            },
+        ),
+        types.Tool(
             name="encaminhar_nota_contabilidade",
             description=(
                 "Encaminha uma NFS-e já emitida (XML+PDF salvos em disco) "
@@ -856,6 +886,47 @@ async def call_tool(name: str, arguments: dict) -> list[types.TextContent]:
                         linhas.append(f"  • {m.get('data','')} — {m.get('assunto','(sem assunto)')}")
 
         return [types.TextContent(type="text", text="\n".join(linhas))]
+
+    # ── baixar_pdf_nota ──────────────────────────────────────────────────────
+    elif name == "baixar_pdf_nota":
+        chave = (arguments.get("chave") or "").strip()
+        if not chave or not chave.isdigit() or len(chave) != 50:
+            return _text_reply(
+                f"Erro: `chave` deve ser uma string com exatamente 50 dígitos. "
+                f"Recebido: {chave!r}"
+            )
+
+        senha   = (secrets.get("cert_password") or "").encode()
+        session = nfse.session_mtls(config["cert_path"], senha)
+        try:
+            pdf_bytes = nfse.baixar_pdf(session, config, chave)
+        finally:
+            nfse.cleanup_session(session)
+
+        if not pdf_bytes:
+            return _text_reply(
+                f"❌ Não foi possível baixar o PDF da chave {chave}.\n"
+                "Possíveis causas:\n"
+                "  - Chave incorreta\n"
+                "  - Nota emitida por outro CNPJ (sem permissão no portal)\n"
+                "  - Portal EmissorNacional fora do ar"
+            )
+
+        nome = (arguments.get("nome_arquivo") or "").strip() or f"nfse_{chave}"
+        if not nome.endswith(".pdf"):
+            nome = f"{nome}.pdf"
+
+        output_dir = Path(config.get("output_dir") or (nfse.DATA_DIR / "notas"))
+        output_dir.mkdir(parents=True, exist_ok=True)
+        pdf_path = output_dir / nome
+        pdf_path.write_bytes(pdf_bytes)
+
+        return _json_reply({
+            "status": "baixado",
+            "chave":  chave,
+            "tamanho_bytes": len(pdf_bytes),
+            "caminho": str(pdf_path),
+        })
 
     # ── encaminhar_nota_contabilidade ────────────────────────────────────────
     elif name == "encaminhar_nota_contabilidade":
