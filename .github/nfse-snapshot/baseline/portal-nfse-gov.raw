@@ -302,9 +302,9 @@
                             </li>
                         
                             <li class="item-termos-mais-buscados">
-                                <a href="https://www.gov.br/nfse/pt-br/search?origem=termos&amp;SearchableText=Simples Nacional">
+                                <a href="https://www.gov.br/nfse/pt-br/search?origem=termos&amp;SearchableText=cnh">
                                    <span class="fa-solid fa-arrow-trend-up"></span>
-                                   Simples Nacional
+                                   cnh
                                 </a>
                             </li>
                         
@@ -1911,6 +1911,17 @@
   <div class="cover-carousel-tile-swiper tile-content" tabindex="0" data-autoplay="True">
     <div class="swiper-container">
       <div class="swiper-wrapper">
+        
+          <div class="swiper-slide">
+
+            <a href="https://www.gov.br/nfse/pt-br/noticias/se-cgnfs-e-publica-nota-tecnica-no-008-2026-com-regras-para-emissao-do-danfse">
+              <img src="https://www.gov.br/nfse/pt-br/noticias/se-cgnfs-e-publica-nota-tecnica-no-008-2026-com-regras-para-emissao-do-danfse/iamgem-04.jpeg/@@images/0bf1838f-5ef2-4bc5-8296-883c5168006e.jpeg" width="768" height="276" alt="Documento tem como principal objetivo facilitar a consulta às informações das notas fiscais" data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/se-cgnfs-e-publica-nota-tecnica-no-008-2026-com-regras-para-emissao-do-danfse'&gt;SE/CGNFS-e publica Nota Técnica nº 008/2026 com regras para emissão do DANFSe&lt;/a&gt;" data-description="Documento tem como principal objetivo facilitar a consulta às informações das notas fiscais" data-link="https://www.gov.br/nfse/pt-br/noticias/se-cgnfs-e-publica-nota-tecnica-no-008-2026-com-regras-para-emissao-do-danfse" data-content-uuid="38fe3204c9144b528157874b77172841" data-content-type="collective.nitf.content" data-has-subitem="True" />
+            </a>
+            <span class="pause-overlay fas fa-pause-circle"></span>
+            <div class="swiper-pagination-cover"></div>
+            <div class="info-title">SE/CGNFS-e publica Nota Técnica nº 008/2026 com regras para emissão do DANFSe</div>
+            <div class="info-description">Documento tem como principal objetivo facilitar a consulta às informações das notas fiscais</div>
+          </div>
         
           <div class="swiper-slide">
 
