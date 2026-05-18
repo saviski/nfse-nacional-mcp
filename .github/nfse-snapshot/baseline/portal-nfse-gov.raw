@@ -1647,7 +1647,7 @@
 
             <div class="viewlet-institucionais-servicos-govbr linha-recom">
 
-    <script type="text/javascript">window.mais_acessados=["10942","10796","13151","12350","10418","10966"];</script>
+    <script type="text/javascript">window.mais_acessados=["10942","10796","13151","12350","10966","10418"];</script>
 
     <script type="text/javascript">window.destaques=["22190","13350","23014","13362","839"];</script>
 
@@ -1730,14 +1730,14 @@
                                     <span class="texto">Consultar dados do Cadastro Único</span>
                                 </a>
                             
-                                <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/consultar-cadastro-de-pessoas-fisicas?origem=maisacessado_inst">
+                                <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/consultar-restituicao-de-imposto-de-renda?origem=maisacessado_inst">
                                     <span class="ranking">5</span>
-                                    <span class="texto">Consultar CPF</span>
+                                    <span class="texto">Consultar restituição do imposto de renda</span>
                                 </a>
                             
-                                <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/consultar-restituicao-de-imposto-de-renda?origem=maisacessado_inst">
+                                <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/consultar-cadastro-de-pessoas-fisicas?origem=maisacessado_inst">
                                     <span class="ranking">6</span>
-                                    <span class="texto">Consultar restituição do imposto de renda</span>
+                                    <span class="texto">Consultar CPF</span>
                                 </a>
                             
                         </div>
@@ -1914,6 +1914,28 @@
         
           <div class="swiper-slide">
 
+            <a href="https://www.gov.br/nfse/pt-br/noticias/municipios-sem-adesao-ou-parametrizacao-da-nfs-e-ja-estao-sujeitos-a-bloqueio-de-transferencias">
+              <img src="https://www.gov.br/nfse/pt-br/noticias/municipios-sem-adesao-ou-parametrizacao-da-nfs-e-ja-estao-sujeitos-a-bloqueio-de-transferencias/02-imagem-04.png/@@images/65902f11-3a54-4db8-9fad-6f4685343410.png" width="1920" height="690" alt="Lei Complementar nº 214/2025 prêve o bloqueio de transferências voluntárias para os Municípios que não cumprirem suas obrigações com a NFS-e." data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/municipios-sem-adesao-ou-parametrizacao-da-nfs-e-ja-estao-sujeitos-a-bloqueio-de-transferencias'&gt;Municípios sem adesão ou parametrização da NFS-e já estão sujeitos a bloqueio de transferências&lt;/a&gt;" data-description="Lei Complementar nº 214/2025 prêve o bloqueio de transferências voluntárias para os Municípios que não cumprirem suas obrigações com a NFS-e." data-link="https://www.gov.br/nfse/pt-br/noticias/municipios-sem-adesao-ou-parametrizacao-da-nfs-e-ja-estao-sujeitos-a-bloqueio-de-transferencias" data-content-uuid="7b5321af022d40049e76151fac0b2770" data-content-type="collective.nitf.content" data-has-subitem="True" />
+            </a>
+            <span class="pause-overlay fas fa-pause-circle"></span>
+            <div class="swiper-pagination-cover"></div>
+            <div class="info-title">Municípios sem adesão ou parametrização da NFS-e já estão sujeitos a bloqueio de transferências</div>
+            <div class="info-description">Lei Complementar nº 214/2025 prêve o bloqueio de transferências voluntárias para os Municípios que não cumprirem suas obrigações com a NFS-e.</div>
+          </div>
+        
+          <div class="swiper-slide">
+
+            <a href="https://www.gov.br/nfse/pt-br/noticias/atendimento-aos-contribuintes-passa-a-ser-realizado-diretamente-pelos-municipios">
+              <img src="https://www.gov.br/nfse/pt-br/noticias/atendimento-aos-contribuintes-passa-a-ser-realizado-diretamente-pelos-municipios/02-imagem-03.png/@@images/387aaf95-3ea7-4207-9e05-cc1f565256ef.png" width="1920" height="692" alt="A mudança reforça o papel dos Municípios no suporte aos contribuintes em suas administrações tributárias." data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/atendimento-aos-contribuintes-passa-a-ser-realizado-diretamente-pelos-municipios'&gt;Atendimento aos contribuintes passa a ser realizado diretamente pelos Municípios&lt;/a&gt;" data-description="A mudança reforça o papel dos Municípios no suporte aos contribuintes em suas administrações tributárias." data-link="https://www.gov.br/nfse/pt-br/noticias/atendimento-aos-contribuintes-passa-a-ser-realizado-diretamente-pelos-municipios" data-content-uuid="5c704e490d6a4e5e9c2ff2c31d88be1d" data-content-type="collective.nitf.content" data-has-subitem="True" />
+            </a>
+            <span class="pause-overlay fas fa-pause-circle"></span>
+            <div class="swiper-pagination-cover"></div>
+            <div class="info-title">Atendimento aos contribuintes passa a ser realizado diretamente pelos Municípios</div>
+            <div class="info-description">A mudança reforça o papel dos Municípios no suporte aos contribuintes em suas administrações tributárias.</div>
+          </div>
+        
+          <div class="swiper-slide">
+
             <a href="https://www.gov.br/nfse/pt-br/noticias/se-cgnfs-e-publica-nota-tecnica-no-008-2026-com-regras-para-emissao-do-danfse">
               <img src="https://www.gov.br/nfse/pt-br/noticias/se-cgnfs-e-publica-nota-tecnica-no-008-2026-com-regras-para-emissao-do-danfse/iamgem-04.jpeg/@@images/0bf1838f-5ef2-4bc5-8296-883c5168006e.jpeg" width="768" height="276" alt="Documento tem como principal objetivo facilitar a consulta às informações das notas fiscais" data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/se-cgnfs-e-publica-nota-tecnica-no-008-2026-com-regras-para-emissao-do-danfse'&gt;SE/CGNFS-e publica Nota Técnica nº 008/2026 com regras para emissão do DANFSe&lt;/a&gt;" data-description="Documento tem como principal objetivo facilitar a consulta às informações das notas fiscais" data-link="https://www.gov.br/nfse/pt-br/noticias/se-cgnfs-e-publica-nota-tecnica-no-008-2026-com-regras-para-emissao-do-danfse" data-content-uuid="38fe3204c9144b528157874b77172841" data-content-type="collective.nitf.content" data-has-subitem="True" />
             </a>
@@ -1921,39 +1943,6 @@
             <div class="swiper-pagination-cover"></div>
             <div class="info-title">SE/CGNFS-e publica Nota Técnica nº 008/2026 com regras para emissão do DANFSe</div>
             <div class="info-description">Documento tem como principal objetivo facilitar a consulta às informações das notas fiscais</div>
-          </div>
-        
-          <div class="swiper-slide">
-
-            <a href="https://www.gov.br/nfse/pt-br/noticias/nfs-e-e-simples-nacional-obrigatoriedade-de-emissao-atraves-do-emissor-nacional">
-              <img src="https://www.gov.br/nfse/pt-br/noticias/nfs-e-e-simples-nacional-obrigatoriedade-de-emissao-atraves-do-emissor-nacional/banner-nfse.jpg/@@images/46b327d2-614e-4044-8745-e43f2fc7e9ce.jpeg" width="960" height="345" alt="ME e EPP optantes pelo Simples Nacional deverão usar obrigatoriamente o Emissor Nacional a partir de 01/09/2026." data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/nfs-e-e-simples-nacional-obrigatoriedade-de-emissao-atraves-do-emissor-nacional'&gt;NFS-e e Simples Nacional: obrigatoriedade de emissão através do Emissor Nacional&lt;/a&gt;" data-description="ME e EPP optantes pelo Simples Nacional deverão usar obrigatoriamente o Emissor Nacional a partir de 01/09/2026." data-link="https://www.gov.br/nfse/pt-br/noticias/nfs-e-e-simples-nacional-obrigatoriedade-de-emissao-atraves-do-emissor-nacional" data-content-uuid="a7e6709b90e643ab9fc15272ecc9edda" data-content-type="collective.nitf.content" data-has-subitem="True" />
-            </a>
-            <span class="pause-overlay fas fa-pause-circle"></span>
-            <div class="swiper-pagination-cover"></div>
-            <div class="info-title">NFS-e e Simples Nacional: obrigatoriedade de emissão através do Emissor Nacional</div>
-            <div class="info-description">ME e EPP optantes pelo Simples Nacional deverão usar obrigatoriamente o Emissor Nacional a partir de 01/09/2026.</div>
-          </div>
-        
-          <div class="swiper-slide">
-
-            <a href="https://www.gov.br/nfse/pt-br/noticias/cgsn-autoriza-uso-do-das-para-recolhimento-do-iss-no-regime-geral-pelo-man-ate-2032">
-              <img src="https://www.gov.br/nfse/pt-br/noticias/cgsn-autoriza-uso-do-das-para-recolhimento-do-iss-no-regime-geral-pelo-man-ate-2032/imagem-3.png/@@images/972f5a17-8f52-4f7a-b300-b23288eb5d6a.png" width="1920" height="692" alt="As apurações do ISS em regime geral realizadas pelo MAN irão utilizar o DAS como documento de arrecadação." data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/cgsn-autoriza-uso-do-das-para-recolhimento-do-iss-no-regime-geral-pelo-man-ate-2032'&gt;CGSN autoriza uso do DAS para recolhimento do ISS no Regime Geral pelo MAN até 2032&lt;/a&gt;" data-description="As apurações do ISS em regime geral realizadas pelo MAN irão utilizar o DAS como documento de arrecadação." data-link="https://www.gov.br/nfse/pt-br/noticias/cgsn-autoriza-uso-do-das-para-recolhimento-do-iss-no-regime-geral-pelo-man-ate-2032" data-content-uuid="6a9c3992a65c40e69cedad5d8654e2c1" data-content-type="collective.nitf.content" data-has-subitem="True" />
-            </a>
-            <span class="pause-overlay fas fa-pause-circle"></span>
-            <div class="swiper-pagination-cover"></div>
-            <div class="info-title">CGSN autoriza uso do DAS para recolhimento do ISS no Regime Geral pelo MAN até 2032</div>
-            <div class="info-description">As apurações do ISS em regime geral realizadas pelo MAN irão utilizar o DAS como documento de arrecadação.</div>
-          </div>
-        
-          <div class="swiper-slide">
-
-            <a href="https://www.gov.br/nfse/pt-br/noticias/modulo-de-apuracao-nacional-para-o-issqn-e-disponibilizado-no-ambiente-de-producao-restrita-da-nfs-e">
-              <img src="https://www.gov.br/nfse/pt-br/noticias/modulo-de-apuracao-nacional-para-o-issqn-e-disponibilizado-no-ambiente-de-producao-restrita-da-nfs-e/nfse.jpeg/@@images/03a8d2ee-2048-4bb0-aa08-08af27c55f9b.jpeg" width="768" height="276" alt="Municípios já podem iniciar seus testes e pilotos com seus contribuintes" data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/modulo-de-apuracao-nacional-para-o-issqn-e-disponibilizado-no-ambiente-de-producao-restrita-da-nfs-e'&gt;Módulo de Apuração Nacional para o ISSQN é disponibilizado no ambiente de Produção Restrita da NFS-e&lt;/a&gt;" data-description="Municípios já podem iniciar seus testes e pilotos com seus contribuintes" data-link="https://www.gov.br/nfse/pt-br/noticias/modulo-de-apuracao-nacional-para-o-issqn-e-disponibilizado-no-ambiente-de-producao-restrita-da-nfs-e" data-content-uuid="a5cd36c29bf84600b7f2bdc9c0c00ac2" data-content-type="collective.nitf.content" data-has-subitem="True" />
-            </a>
-            <span class="pause-overlay fas fa-pause-circle"></span>
-            <div class="swiper-pagination-cover"></div>
-            <div class="info-title">Módulo de Apuração Nacional para o ISSQN é disponibilizado no ambiente de Produção Restrita da NFS-e</div>
-            <div class="info-description">Municípios já podem iniciar seus testes e pilotos com seus contribuintes</div>
           </div>
         
       </div>
