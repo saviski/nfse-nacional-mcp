@@ -37,7 +37,7 @@
     <div class="col-lg-4 descricao">
         <div class="login-section autenticacao">
             <h2>Acesso com Usuário/Senha</h2>
-<form action="/EmissorNacional/Login?ReturnUrl=%2FEmissorNacional%2F" class="" method="post"><input name="__RequestVerificationToken" type="hidden" value="frsuJy6iaJW4oPoqSe6S3G898k63-1aPOmwv1RMiYG8j76FrIF6CdAspHb-K3kIloD8CSquHN5OqCYaPqHxODutjfjFb4H0Jw2RpsI6jXGM1" />                <div class="form-group">
+<form action="/EmissorNacional/Login?ReturnUrl=%2FEmissorNacional%2F" class="" method="post"><input name="__RequestVerificationToken" type="hidden" value="I1LLu0NmOdr-Yd6vXQodgb3l4AwZ3ay8HGgHKIp9hVG5LDghodyBl2fLx3amK2bIQthJO92O79fCtnWIFabsd8I8Yhmxp9FqLueMzHgJEHM1" />                <div class="form-group">
                     <input class="form-control input-lg cpfcnpj" data-val="true" data-val-length="The field CPF/CNPJ must be a string with a maximum length of 18." data-val-length-max="18" id="Inscricao" maxlength="18" name="Inscricao" placeholder="CPF/CNPJ" type="text" value="" />
                     <span class="field-validation-valid text-danger" data-valmsg-for="Inscricao" data-valmsg-replace="true"></span>
                 </div>

@@ -1647,9 +1647,9 @@
 
             <div class="viewlet-institucionais-servicos-govbr linha-recom">
 
-    <script type="text/javascript">window.mais_acessados=["10942","10796","13151","12350","10966","10418"];</script>
+    <script type="text/javascript">window.mais_acessados=["10942","13151","10796","10966","12350","10418"];</script>
 
-    <script type="text/javascript">window.destaques=["22190","13350","23014","13362","839"];</script>
+    <script type="text/javascript">window.destaques=["24076","13362","12169","3509"];</script>
 
     <script type="text/javascript">window.quantidade_servicos_destaque="5";</script>
 
@@ -1715,24 +1715,24 @@
                                     <span class="texto">Entregar Meu Imposto de Renda</span>
                                 </a>
                             
-                                <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/assinatura-eletronica?origem=maisacessado_inst">
-                                    <span class="ranking">2</span>
-                                    <span class="texto">Assinatura Eletrônica</span>
-                                </a>
-                            
                                 <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/consultar-meu-imposto-de-renda?origem=maisacessado_inst">
-                                    <span class="ranking">3</span>
+                                    <span class="ranking">2</span>
                                     <span class="texto">Consultar Meu Imposto de Renda</span>
                                 </a>
                             
-                                <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/consultar-dados-do-cadastro-unico-cadunico?origem=maisacessado_inst">
-                                    <span class="ranking">4</span>
-                                    <span class="texto">Consultar dados do Cadastro Único</span>
+                                <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/assinatura-eletronica?origem=maisacessado_inst">
+                                    <span class="ranking">3</span>
+                                    <span class="texto">Assinatura Eletrônica</span>
                                 </a>
                             
                                 <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/consultar-restituicao-de-imposto-de-renda?origem=maisacessado_inst">
-                                    <span class="ranking">5</span>
+                                    <span class="ranking">4</span>
                                     <span class="texto">Consultar restituição do imposto de renda</span>
+                                </a>
+                            
+                                <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/consultar-dados-do-cadastro-unico-cadunico?origem=maisacessado_inst">
+                                    <span class="ranking">5</span>
+                                    <span class="texto">Consultar dados do Cadastro Único</span>
                                 </a>
                             
                                 <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/consultar-cadastro-de-pessoas-fisicas?origem=maisacessado_inst">
@@ -1754,30 +1754,12 @@
 
                         <div class="itens">
                             
-                                <a class="item-tile-servico-destaque" href="https://www.gov.br/pt-br/servicos/cadastrar-caes-e-gatos?origem=destaque_inst">
+                                <a class="item-tile-servico-destaque" href="https://www.gov.br/pt-br/servicos/novo-desenrola-brasil-familias?origem=destaque_inst">
                                     <span class="categoria-container">
-                                        <span class="categoria">Registros e Cadastros</span>
-                                        
-                                    </span>
-                                    <span class="texto">Cadastrar Cães e Gatos</span>
-                                    <span> (SinPatinhas)</span>
-                                </a>
-                            
-                                <a class="item-tile-servico-destaque" href="https://www.gov.br/pt-br/servicos/realizar-inscricao-no-concurso-publico-nacional-unificado?origem=destaque_inst">
-                                    <span class="categoria-container">
-                                        <span class="categoria">Para o cidadão</span>
-                                        
-                                    </span>
-                                    <span class="texto">Concurso Público Nacional Unificado 2</span>
-                                    <span> (CPNU2)</span>
-                                </a>
-                            
-                                <a class="item-tile-servico-destaque" href="https://www.gov.br/pt-br/servicos/consultar-dados-de-imoveis-rurais-na-plataforma-meu-imovel-rural?origem=destaque_inst">
-                                    <span class="categoria-container">
-                                        <span class="categoria">Imóveis</span>
+                                        <span class="categoria">Vida Financeira</span>
                                         <span class="badge novo">Novo</span>
                                     </span>
-                                    <span class="texto">Consultar dados e baixar documentos de imóveis rurais na plataforma Meu Imóvel Rural</span>
+                                    <span class="texto">Novo Desenrola Brasil - Famílias</span>
                                     
                                 </a>
                             
@@ -1790,13 +1772,22 @@
                                     
                                 </a>
                             
-                                <a class="item-tile-servico-destaque" href="https://www.gov.br/pt-br/servicos/fazer-o-exame-nacional-do-ensino-medio?origem=destaque_inst">
+                                <a class="item-tile-servico-destaque" href="https://www.gov.br/pt-br/servicos/receber-o-bolsa-familia?origem=destaque_inst">
                                     <span class="categoria-container">
-                                        <span class="categoria">Educação Básica</span>
+                                        <span class="categoria">Assistência Direta</span>
+                                        <span class="badge novo">Novo</span>
+                                    </span>
+                                    <span class="texto">Bolsa Família</span>
+                                    <span> (PBF)</span>
+                                </a>
+                            
+                                <a class="item-tile-servico-destaque" href="https://www.gov.br/pt-br/servicos/obter-classificacao-indicativa?origem=destaque_inst">
+                                    <span class="categoria-container">
+                                        <span class="categoria">Capacitações e Informações</span>
                                         
                                     </span>
-                                    <span class="texto">Fazer o Exame Nacional do Ensino Médio</span>
-                                    <span> (Enem)</span>
+                                    <span class="texto">Obter Classificação indicativa</span>
+                                    <span> (Classind)</span>
                                 </a>
                             
                         </div>
