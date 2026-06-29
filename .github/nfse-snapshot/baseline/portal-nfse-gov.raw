@@ -98,23 +98,22 @@
 
   
   
-    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourceplone.app.jquery-cachekey-99bc41a9f4278ecf11ca30578b3ea3d4.js"></script>
-    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourcegovbr.policybrowser-update-cachekey-1c7e240f20146aa915e39ee1448b3a78.js"></script>
-    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourcegovbr.policyfolder_contents-cachekey-40c4525a54611d9f977695075a619bab.js"></script>
-    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourcegovbr.policycookiebar_1_3_57-cachekey-22e948c51a6b27e97af24d01f76e1732.js"></script>
-    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourcegovbr.policyapplication_cookiebar_1_3_57-cachekey-24db085dbc6d0de1aaa506ede8268a82.js"></script>
-    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/collective.js.jqueryui.custom.min-cachekey-d0909b3111f4bac6643038679b2d3bb5.js"></script>
-    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourceplone.formwidget.recurrencejquery.tmpl-beta1-cachekey-d8372bc88c6263014237c786eb9eee4d.js"></script>
-    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourcecollective.js.bootstrapjsbootstrap.min-cachekey-b87a79cd91f417257142a74da52c4333.js"></script>
-    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourcecollective.coverjsmain-cachekey-0b1fcf42fd6bdc05ae981893a098b634.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourceplone.app.jquery-cachekey-c732923411de9f8c8d94b4ebebca9ed6.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourcegovbr.policyfolder_contents-cachekey-909c2881101cc9ca2eeaa9c8922c2d7a.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourcegovbr.policycookiebar_1_3_57-cachekey-c7023310148d054c8e14e8f88927c9d6.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourcegovbr.policyapplication_cookiebar_1_3_57-cachekey-258a16acee980b5b5b0f07e68859ebd5.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/register_function-cachekey-c35b0d5c025bf7269d2f630c921eb0c9.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourceplone.formwidget.recurrencejquery.tmpl-beta1-cachekey-cb2d384546f97822e6c24cd8cf51b488.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourcecollective.js.bootstrapjsbootstrap.min-cachekey-df0d9164a83849edb08fcad9a598e7a1.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourcecollective.coverjsmain-cachekey-b043d1bb24afa10b2eb39226e310686b.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
-    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourcecollective.nitfnitf-cachekey-53a63b6bb28964a1b23fe54705f62197.js"></script>
-    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourcebrasil.gov.tilesvendorjquery.jplayer.min-cachekey-4867076fccfdf1143f2ce4861ef4e378.js"></script>
-    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourcedropdown-menu-cachekey-a3ff3541219810c53ad6f559693ad85c.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourcecollective.nitfnitf-cachekey-c9c9836142a423fd92d1cafd578aab03.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourcebrasil.gov.tilesvendorjquery.jplayer.min-cachekey-29f0d28ba3fedef6424d36e70e1968b6.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourcedropdown-menu-cachekey-f472172d21a10bbbed3765c8ea71cc13.js"></script>
     <script type="text/javascript"></script>
     <script type="text/javascript"></script>
-    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourcelgpd.pluginchangeCookieImage-cachekey-67eb884ad1ca3a005442524922048749.js"></script>
-    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourcelgpd.pluginblock_cookies-cachekey-1e5265be225214b1050f9d3da87f0f68.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourcelgpd.pluginchangeCookieImage-cachekey-48e022c817c9f758745ae46cae7c7578.js"></script>
+    <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/resourcelgpd.pluginblock_cookies-cachekey-67bc067f3ae1f9e1dbc0d85e59b19d75.js"></script>
     <script type="text/javascript" src="https://www.gov.br/nfse/portal_javascripts/Sunburst%20Theme/++resource++govbr.recomendacao/govbr.recom.c339e72c8ffbb2f6c087.js"></script>
 
 
@@ -164,7 +163,7 @@
 
 
 
-    <link rel="search" href="https://www.gov.br/nfse/pt-br/@@search" title="Buscar neste site" />
+    <link rel="search" href="https://www.gov.br/nfse/@@search" title="Buscar neste site" />
 
 
 
@@ -197,7 +196,7 @@
     
     <script type="module" id="barra-govbr-pro" src="https://barra.sistema.gov.br/v1/barra-govbr-wc.iife.js"></script>
     <script type="module" src="/govbrportal/js/session.js" defer="defer"></script>
-<link href="/nfse/++theme++padrao_govbr/govbrtheme-a719007.css" rel="stylesheet" /></head>
+<link href="/nfse/++theme++padrao_govbr/govbrtheme-37d29fa.css" rel="stylesheet" /></head>
 
 <body id="" class="default-header-template portal-govbr cover-layout-layout-vazio template-view portaltype-collective-cover-content site-pt-br section-copy2_of_pagina-inicial userrole-anonymous" data-base-url="https://www.gov.br/nfse/pt-br/copy2_of_pagina-inicial" data-portal-url="https://www.gov.br/nfse" dir="ltr">
   <!-- Google Tag Manager (noscript) -->
@@ -288,16 +287,16 @@
                             </li>
                         
                             <li class="item-termos-mais-buscados">
-                                <a href="https://www.gov.br/nfse/pt-br/search?origem=termos&amp;SearchableText=inss">
+                                <a href="https://www.gov.br/nfse/pt-br/search?origem=termos&amp;SearchableText=mei">
                                    <span class="fa-solid fa-arrow-trend-up"></span>
-                                   inss
+                                   mei
                                 </a>
                             </li>
                         
                             <li class="item-termos-mais-buscados">
-                                <a href="https://www.gov.br/nfse/pt-br/search?origem=termos&amp;SearchableText=mei">
+                                <a href="https://www.gov.br/nfse/pt-br/search?origem=termos&amp;SearchableText=inss">
                                    <span class="fa-solid fa-arrow-trend-up"></span>
-                                   mei
+                                   inss
                                 </a>
                             </li>
                         
@@ -333,9 +332,9 @@
                             </li>
                         
                             <li class="item-termos-mais-buscados">
-                                <a href="https://www.gov.br/nfse/pt-br/search?origem=termos&amp;SearchableText=inss">
+                                <a href="https://www.gov.br/nfse/pt-br/search?origem=termos&amp;SearchableText=mei">
                                     <span class="fa-solid fa-arrow-trend-up"></span>
-                                    inss
+                                    mei
                                 </a>
                             </li>
                         
@@ -1649,7 +1648,7 @@
 
     <script type="text/javascript">window.mais_acessados=["10942","13151","10796","10966","12350","10418"];</script>
 
-    <script type="text/javascript">window.destaques=["24076","13362","12169","3509"];</script>
+    <script type="text/javascript">window.destaques=["24130","24076","13362","12169"];</script>
 
     <script type="text/javascript">window.quantidade_servicos_destaque="5";</script>
 
@@ -1754,6 +1753,15 @@
 
                         <div class="itens">
                             
+                                <a class="item-tile-servico-destaque" href="https://www.gov.br/pt-br/servicos/assistir-a-obras-audiovisuais-brasileiras-na-plataforma-tela-brasil?origem=destaque_inst">
+                                    <span class="categoria-container">
+                                        <span class="categoria">Outros</span>
+                                        
+                                    </span>
+                                    <span class="texto">Tela Brasil</span>
+                                    
+                                </a>
+                            
                                 <a class="item-tile-servico-destaque" href="https://www.gov.br/pt-br/servicos/novo-desenrola-brasil-familias?origem=destaque_inst">
                                     <span class="categoria-container">
                                         <span class="categoria">Vida Financeira</span>
@@ -1779,15 +1787,6 @@
                                     </span>
                                     <span class="texto">Bolsa Família</span>
                                     <span> (PBF)</span>
-                                </a>
-                            
-                                <a class="item-tile-servico-destaque" href="https://www.gov.br/pt-br/servicos/obter-classificacao-indicativa?origem=destaque_inst">
-                                    <span class="categoria-container">
-                                        <span class="categoria">Capacitações e Informações</span>
-                                        
-                                    </span>
-                                    <span class="texto">Obter Classificação indicativa</span>
-                                    <span> (Classind)</span>
                                 </a>
                             
                         </div>
@@ -1905,6 +1904,39 @@
         
           <div class="swiper-slide">
 
+            <a href="https://www.gov.br/nfse/pt-br/noticias/cgnfs-e-se-reune-para-apresentar-entregas-e-alinhar-os-proximos-passos-da-plataforma">
+              <img src="https://www.gov.br/nfse/pt-br/noticias/cgnfs-e-se-reune-para-apresentar-entregas-e-alinhar-os-proximos-passos-da-plataforma/banner-nfse.jpg/@@images/83898c76-1769-4afe-b435-6be2a4348912.jpeg" width="960" height="345" alt="CGNFS-e se reúne para apresentar entregas e alinhar os próximos passos da plataforma" data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/cgnfs-e-se-reune-para-apresentar-entregas-e-alinhar-os-proximos-passos-da-plataforma'&gt;CGNFS-e se reúne para apresentar entregas e alinhar os próximos passos da plataforma&lt;/a&gt;" data-description="" data-link="https://www.gov.br/nfse/pt-br/noticias/cgnfs-e-se-reune-para-apresentar-entregas-e-alinhar-os-proximos-passos-da-plataforma" data-content-uuid="ce64bbe106b349cfab2a9016f448c3f1" data-content-type="collective.nitf.content" data-has-subitem="True" />
+            </a>
+            <span class="pause-overlay fas fa-pause-circle"></span>
+            <div class="swiper-pagination-cover"></div>
+            <div class="info-title">CGNFS-e se reúne para apresentar entregas e alinhar os próximos passos da plataforma</div>
+            <div class="info-description"></div>
+          </div>
+        
+          <div class="swiper-slide">
+
+            <a href="https://www.gov.br/nfse/pt-br/noticias/comite-gestor-da-nfs-e-realiza-primeira-reuniao-presencial-do-gt-empresas-em-sao-paulo">
+              <img src="https://www.gov.br/nfse/pt-br/noticias/comite-gestor-da-nfs-e-realiza-primeira-reuniao-presencial-do-gt-empresas-em-sao-paulo/nfse-2.jpeg/@@images/bf7d0316-8aef-4678-ae0d-4af6998d6230.jpeg" width="768" height="276" alt="O evento aconteceu na sede da Associação Comercial de São Paulo e abordou evoluções da NFS-e e da Calculadora de Tributos da Reforma Tributária" data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/comite-gestor-da-nfs-e-realiza-primeira-reuniao-presencial-do-gt-empresas-em-sao-paulo'&gt;Comitê Gestor da NFS-e realiza primeira reunião presencial do GT Empresas em São Paulo&lt;/a&gt;" data-description="O evento aconteceu na sede da Associação Comercial de São Paulo e abordou evoluções da NFS-e e da Calculadora de Tributos da Reforma Tributária" data-link="https://www.gov.br/nfse/pt-br/noticias/comite-gestor-da-nfs-e-realiza-primeira-reuniao-presencial-do-gt-empresas-em-sao-paulo" data-content-uuid="25c75c94ef9e405cb5f5feb36381215d" data-content-type="collective.nitf.content" data-has-subitem="True" />
+            </a>
+            <span class="pause-overlay fas fa-pause-circle"></span>
+            <div class="swiper-pagination-cover"></div>
+            <div class="info-title">Comitê Gestor da NFS-e realiza primeira reunião presencial do GT Empresas em São Paulo</div>
+            <div class="info-description">O evento aconteceu na sede da Associação Comercial de São Paulo e abordou evoluções da NFS-e e da Calculadora de Tributos da Reforma Tributária</div>
+          </div>
+        
+          <div class="swiper-slide">
+
+            <a href="https://www.gov.br/nfse/pt-br/noticias/publicada-a-nota-tecnica-009-da-nfs-e">
+              <img src="https://www.gov.br/nfse/pt-br/noticias/publicada-a-nota-tecnica-009-da-nfs-e/02-imagem-01.png/@@images/12630534-8e9d-499e-bd4c-5d820fbc83d4.png" width="1920" height="692" alt="Evoluções da plataforma consolidam adaptações da DPS e das NFS-e geradas pelo sistema" data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/publicada-a-nota-tecnica-009-da-nfs-e'&gt;Publicada a Nota Técnica 009 com evoluções da NFS-e&lt;/a&gt;" data-description="Evoluções da plataforma consolidam adaptações da DPS e das NFS-e geradas pelo sistema" data-link="https://www.gov.br/nfse/pt-br/noticias/publicada-a-nota-tecnica-009-da-nfs-e" data-content-uuid="1180ee6b3f6c4cbab323a1aa89060159" data-content-type="collective.nitf.content" data-has-subitem="True" />
+            </a>
+            <span class="pause-overlay fas fa-pause-circle"></span>
+            <div class="swiper-pagination-cover"></div>
+            <div class="info-title">Publicada a Nota Técnica 009 com evoluções da NFS-e</div>
+            <div class="info-description">Evoluções da plataforma consolidam adaptações da DPS e das NFS-e geradas pelo sistema</div>
+          </div>
+        
+          <div class="swiper-slide">
+
             <a href="https://www.gov.br/nfse/pt-br/noticias/municipios-sem-adesao-ou-parametrizacao-da-nfs-e-ja-estao-sujeitos-a-bloqueio-de-transferencias">
               <img src="https://www.gov.br/nfse/pt-br/noticias/municipios-sem-adesao-ou-parametrizacao-da-nfs-e-ja-estao-sujeitos-a-bloqueio-de-transferencias/02-imagem-04.png/@@images/65902f11-3a54-4db8-9fad-6f4685343410.png" width="1920" height="690" alt="Lei Complementar nº 214/2025 prêve o bloqueio de transferências voluntárias para os Municípios que não cumprirem suas obrigações com a NFS-e." data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/municipios-sem-adesao-ou-parametrizacao-da-nfs-e-ja-estao-sujeitos-a-bloqueio-de-transferencias'&gt;Municípios sem adesão ou parametrização da NFS-e já estão sujeitos a bloqueio de transferências&lt;/a&gt;" data-description="Lei Complementar nº 214/2025 prêve o bloqueio de transferências voluntárias para os Municípios que não cumprirem suas obrigações com a NFS-e." data-link="https://www.gov.br/nfse/pt-br/noticias/municipios-sem-adesao-ou-parametrizacao-da-nfs-e-ja-estao-sujeitos-a-bloqueio-de-transferencias" data-content-uuid="7b5321af022d40049e76151fac0b2770" data-content-type="collective.nitf.content" data-has-subitem="True" />
             </a>
@@ -1923,17 +1955,6 @@
             <div class="swiper-pagination-cover"></div>
             <div class="info-title">Atendimento aos contribuintes passa a ser realizado diretamente pelos Municípios</div>
             <div class="info-description">A mudança reforça o papel dos Municípios no suporte aos contribuintes em suas administrações tributárias.</div>
-          </div>
-        
-          <div class="swiper-slide">
-
-            <a href="https://www.gov.br/nfse/pt-br/noticias/se-cgnfs-e-publica-nota-tecnica-no-008-2026-com-regras-para-emissao-do-danfse">
-              <img src="https://www.gov.br/nfse/pt-br/noticias/se-cgnfs-e-publica-nota-tecnica-no-008-2026-com-regras-para-emissao-do-danfse/iamgem-04.jpeg/@@images/0bf1838f-5ef2-4bc5-8296-883c5168006e.jpeg" width="768" height="276" alt="Documento tem como principal objetivo facilitar a consulta às informações das notas fiscais" data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/se-cgnfs-e-publica-nota-tecnica-no-008-2026-com-regras-para-emissao-do-danfse'&gt;SE/CGNFS-e publica Nota Técnica nº 008/2026 com regras para emissão do DANFSe&lt;/a&gt;" data-description="Documento tem como principal objetivo facilitar a consulta às informações das notas fiscais" data-link="https://www.gov.br/nfse/pt-br/noticias/se-cgnfs-e-publica-nota-tecnica-no-008-2026-com-regras-para-emissao-do-danfse" data-content-uuid="38fe3204c9144b528157874b77172841" data-content-type="collective.nitf.content" data-has-subitem="True" />
-            </a>
-            <span class="pause-overlay fas fa-pause-circle"></span>
-            <div class="swiper-pagination-cover"></div>
-            <div class="info-title">SE/CGNFS-e publica Nota Técnica nº 008/2026 com regras para emissão do DANFSe</div>
-            <div class="info-description">Documento tem como principal objetivo facilitar a consulta às informações das notas fiscais</div>
           </div>
         
       </div>
@@ -4634,5 +4655,5 @@
         window.addEventListener('ACCESSTOKEN_ERROR', function() {
             window.location.href = "/govbrportal/logout.html";
         });
-    </script><script type="text/javascript" src="/nfse/++theme++padrao_govbr/govbrtheme-a719007.js"></script><div id="plone-analytics"></div></body>
+    </script><script type="text/javascript" src="/nfse/++theme++padrao_govbr/govbrtheme-37d29fa.js"></script><div id="plone-analytics"></div></body>
 </html>
