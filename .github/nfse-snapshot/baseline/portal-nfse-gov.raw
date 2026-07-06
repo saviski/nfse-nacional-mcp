@@ -163,7 +163,7 @@
 
 
 
-    <link rel="search" href="https://www.gov.br/nfse/@@search" title="Buscar neste site" />
+    <link rel="search" href="https://www.gov.br/nfse/pt-br/@@search" title="Buscar neste site" />
 
 
 
@@ -1332,94 +1332,8 @@
                         
                     </li>
                 
-                    <li class="dropdown-submenu">
+                    <li class="plain">
                         <a href="https://www.gov.br/pt-br/noticias" class="hasDropDown">Notícias</a>
-                        
-                            
-    <ul class="submenu navTree">
-        
-            <li class="plain">
-                <a href="https://www.gov.br/pt-br/noticias/servicos-para-o-cidadao">Serviços para o cidadão</a>
-                
-            </li>
-        
-            <li class="plain">
-                <a href="https://www.gov.br/pt-br/noticias/saude-e-vigilancia-sanitaria">Saúde</a>
-                
-            </li>
-        
-            <li class="plain">
-                <a href="https://www.gov.br/pt-br/noticias/agricultura-e-pecuaria">Agricultura e Pecuária</a>
-                
-            </li>
-        
-            <li class="plain">
-                <a href="https://www.gov.br/pt-br/noticias/assistencia-social">Cidadania e Assistência Social</a>
-                
-            </li>
-        
-            <li class="plain">
-                <a href="https://www.gov.br/pt-br/noticias/ciencia-e-tecnologia">Ciência e Tecnologia</a>
-                
-            </li>
-        
-            <li class="plain">
-                <a href="https://www.gov.br/pt-br/noticias/comunicacao">Comunicação</a>
-                
-            </li>
-        
-            <li class="plain">
-                <a href="https://www.gov.br/pt-br/noticias/cultura-artes-historia-e-esportes">Cultura e Esporte</a>
-                
-            </li>
-        
-            <li class="plain">
-                <a href="https://www.gov.br/pt-br/noticias/financas-impostos-e-gestao-publica">Economia e Gestão Pública</a>
-                
-            </li>
-        
-            <li class="plain">
-                <a href="https://www.gov.br/pt-br/noticias/educacao-e-pesquisa">Educação e Pesquisa</a>
-                
-            </li>
-        
-            <li class="plain">
-                <a href="https://www.gov.br/pt-br/noticias/energia-minerais-e-combustiveis">Energia</a>
-                
-            </li>
-        
-            <li class="plain">
-                <a href="https://www.gov.br/pt-br/noticias/forcas-armadas">Forças Armadas e Defesa Civil</a>
-                
-            </li>
-        
-            <li class="plain">
-                <a href="https://www.gov.br/pt-br/noticias/transito-e-transportes">Infraestrutura</a>
-                
-            </li>
-        
-            <li class="plain">
-                <a href="https://www.gov.br/pt-br/noticias/justica-e-seguranca">Justiça e Segurança</a>
-                
-            </li>
-        
-            <li class="plain">
-                <a href="https://www.gov.br/pt-br/noticias/meio-ambiente-e-clima">Meio Ambiente</a>
-                
-            </li>
-        
-            <li class="plain">
-                <a href="https://www.gov.br/pt-br/noticias/trabalho-e-previdencia">Trabalho e Previdência</a>
-                
-            </li>
-        
-            <li class="plain">
-                <a href="https://www.gov.br/pt-br/noticias/viagens-e-turismo">Turismo</a>
-                
-            </li>
-        
-    </ul>
-
                         
                     </li>
                 
@@ -1646,9 +1560,9 @@
 
             <div class="viewlet-institucionais-servicos-govbr linha-recom">
 
-    <script type="text/javascript">window.mais_acessados=["10942","13151","10796","10966","12350","10418"];</script>
+    <script type="text/javascript">window.mais_acessados=["13151","10942","10796","10966","24076","12350"];</script>
 
-    <script type="text/javascript">window.destaques=["24130","24076","13362","12169"];</script>
+    <script type="text/javascript">window.destaques=["24130","13362","12169"];</script>
 
     <script type="text/javascript">window.quantidade_servicos_destaque="5";</script>
 
@@ -1709,14 +1623,14 @@
                         </div>
                         <div class="itens">
                             
-                                <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/declarar-meu-imposto-de-renda?origem=maisacessado_inst">
+                                <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/consultar-meu-imposto-de-renda?origem=maisacessado_inst">
                                     <span class="ranking">1</span>
-                                    <span class="texto">Entregar Meu Imposto de Renda</span>
+                                    <span class="texto">Consultar Meu Imposto de Renda</span>
                                 </a>
                             
-                                <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/consultar-meu-imposto-de-renda?origem=maisacessado_inst">
+                                <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/declarar-meu-imposto-de-renda?origem=maisacessado_inst">
                                     <span class="ranking">2</span>
-                                    <span class="texto">Consultar Meu Imposto de Renda</span>
+                                    <span class="texto">Entregar Meu Imposto de Renda</span>
                                 </a>
                             
                                 <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/assinatura-eletronica?origem=maisacessado_inst">
@@ -1729,14 +1643,14 @@
                                     <span class="texto">Consultar restituição do imposto de renda</span>
                                 </a>
                             
-                                <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/consultar-dados-do-cadastro-unico-cadunico?origem=maisacessado_inst">
+                                <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/novo-desenrola-brasil-familias?origem=maisacessado_inst">
                                     <span class="ranking">5</span>
-                                    <span class="texto">Consultar dados do Cadastro Único</span>
+                                    <span class="texto">Novo Desenrola Brasil - Famílias</span>
                                 </a>
                             
-                                <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/consultar-cadastro-de-pessoas-fisicas?origem=maisacessado_inst">
+                                <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/consultar-dados-do-cadastro-unico-cadunico?origem=maisacessado_inst">
                                     <span class="ranking">6</span>
-                                    <span class="texto">Consultar CPF</span>
+                                    <span class="texto">Consultar dados do Cadastro Único</span>
                                 </a>
                             
                         </div>
@@ -1759,15 +1673,6 @@
                                         
                                     </span>
                                     <span class="texto">Tela Brasil</span>
-                                    
-                                </a>
-                            
-                                <a class="item-tile-servico-destaque" href="https://www.gov.br/pt-br/servicos/novo-desenrola-brasil-familias?origem=destaque_inst">
-                                    <span class="categoria-container">
-                                        <span class="categoria">Vida Financeira</span>
-                                        <span class="badge novo">Novo</span>
-                                    </span>
-                                    <span class="texto">Novo Desenrola Brasil - Famílias</span>
                                     
                                 </a>
                             
@@ -1904,8 +1809,30 @@
         
           <div class="swiper-slide">
 
+            <a href="https://www.gov.br/nfse/pt-br/noticias/se-cgnfs-e-prorroga-o-prazo-para-adequacao-ao-novo-leiaute-do-danfse">
+              <img src="https://www.gov.br/nfse/pt-br/noticias/se-cgnfs-e-prorroga-o-prazo-para-adequacao-ao-novo-leiaute-do-danfse/02-imagem-02.png/@@images/584dd174-001e-4d4a-8595-07e73dc084ea.png" width="1920" height="693" alt="A atual API será descontinuada a partir de 15 de julho" data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/se-cgnfs-e-prorroga-o-prazo-para-adequacao-ao-novo-leiaute-do-danfse'&gt;SE/CGNFS-e prorroga o prazo para adequação ao novo leiaute do DANFSE&lt;/a&gt;" data-description="A atual API será descontinuada a partir de 15 de julho" data-link="https://www.gov.br/nfse/pt-br/noticias/se-cgnfs-e-prorroga-o-prazo-para-adequacao-ao-novo-leiaute-do-danfse" data-content-uuid="6bf96573ec0c40a7ab5d45de28acd1ea" data-content-type="collective.nitf.content" data-has-subitem="True" />
+            </a>
+            <span class="pause-overlay fas fa-pause-circle"></span>
+            <div class="swiper-pagination-cover"></div>
+            <div class="info-title">SE/CGNFS-e prorroga o prazo para adequação ao novo leiaute do DANFSE</div>
+            <div class="info-description">A atual API será descontinuada a partir de 15 de julho</div>
+          </div>
+        
+          <div class="swiper-slide">
+
+            <a href="https://www.gov.br/nfse/pt-br/noticias/cgnfs-e-e-entidades-debatem-classificacao-tributaria-de-servicos-funerarios-e-seus-impactos-sobre-o-ibs">
+              <img src="https://www.gov.br/nfse/pt-br/noticias/cgnfs-e-e-entidades-debatem-classificacao-tributaria-de-servicos-funerarios-e-seus-impactos-sobre-o-ibs/02-imagem-01.png/@@images/4790ad6e-f349-4563-b089-f1b5906897f3.png" width="1920" height="692" alt="CGNFS-e e Entidades debatem classificação tributária de serviços funerários e seus impactos sobre o IBS" data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/cgnfs-e-e-entidades-debatem-classificacao-tributaria-de-servicos-funerarios-e-seus-impactos-sobre-o-ibs'&gt;CGNFS-e e Entidades debatem classificação tributária de serviços funerários e seus impactos sobre o IBS&lt;/a&gt;" data-description="" data-link="https://www.gov.br/nfse/pt-br/noticias/cgnfs-e-e-entidades-debatem-classificacao-tributaria-de-servicos-funerarios-e-seus-impactos-sobre-o-ibs" data-content-uuid="43ab8341b2a6478d9419d57225aaf167" data-content-type="collective.nitf.content" data-has-subitem="True" />
+            </a>
+            <span class="pause-overlay fas fa-pause-circle"></span>
+            <div class="swiper-pagination-cover"></div>
+            <div class="info-title">CGNFS-e e Entidades debatem classificação tributária de serviços funerários e seus impactos sobre o IBS</div>
+            <div class="info-description"></div>
+          </div>
+        
+          <div class="swiper-slide">
+
             <a href="https://www.gov.br/nfse/pt-br/noticias/cgnfs-e-se-reune-para-apresentar-entregas-e-alinhar-os-proximos-passos-da-plataforma">
-              <img src="https://www.gov.br/nfse/pt-br/noticias/cgnfs-e-se-reune-para-apresentar-entregas-e-alinhar-os-proximos-passos-da-plataforma/banner-nfse.jpg/@@images/83898c76-1769-4afe-b435-6be2a4348912.jpeg" width="960" height="345" alt="CGNFS-e se reúne para apresentar entregas e alinhar os próximos passos da plataforma" data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/cgnfs-e-se-reune-para-apresentar-entregas-e-alinhar-os-proximos-passos-da-plataforma'&gt;CGNFS-e se reúne para apresentar entregas e alinhar os próximos passos da plataforma&lt;/a&gt;" data-description="" data-link="https://www.gov.br/nfse/pt-br/noticias/cgnfs-e-se-reune-para-apresentar-entregas-e-alinhar-os-proximos-passos-da-plataforma" data-content-uuid="ce64bbe106b349cfab2a9016f448c3f1" data-content-type="collective.nitf.content" data-has-subitem="True" />
+              <img src="https://www.gov.br/nfse/pt-br/noticias/cgnfs-e-se-reune-para-apresentar-entregas-e-alinhar-os-proximos-passos-da-plataforma/banner-nfse.jpg/@@images/4061e63c-6074-47c8-9650-62bcc641ccf2.jpeg" width="960" height="345" alt="CGNFS-e se reúne para apresentar entregas e alinhar os próximos passos da plataforma" data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/cgnfs-e-se-reune-para-apresentar-entregas-e-alinhar-os-proximos-passos-da-plataforma'&gt;CGNFS-e se reúne para apresentar entregas e alinhar os próximos passos da plataforma&lt;/a&gt;" data-description="" data-link="https://www.gov.br/nfse/pt-br/noticias/cgnfs-e-se-reune-para-apresentar-entregas-e-alinhar-os-proximos-passos-da-plataforma" data-content-uuid="ce64bbe106b349cfab2a9016f448c3f1" data-content-type="collective.nitf.content" data-has-subitem="True" />
             </a>
             <span class="pause-overlay fas fa-pause-circle"></span>
             <div class="swiper-pagination-cover"></div>
@@ -1916,45 +1843,12 @@
           <div class="swiper-slide">
 
             <a href="https://www.gov.br/nfse/pt-br/noticias/comite-gestor-da-nfs-e-realiza-primeira-reuniao-presencial-do-gt-empresas-em-sao-paulo">
-              <img src="https://www.gov.br/nfse/pt-br/noticias/comite-gestor-da-nfs-e-realiza-primeira-reuniao-presencial-do-gt-empresas-em-sao-paulo/nfse-2.jpeg/@@images/bf7d0316-8aef-4678-ae0d-4af6998d6230.jpeg" width="768" height="276" alt="O evento aconteceu na sede da Associação Comercial de São Paulo e abordou evoluções da NFS-e e da Calculadora de Tributos da Reforma Tributária" data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/comite-gestor-da-nfs-e-realiza-primeira-reuniao-presencial-do-gt-empresas-em-sao-paulo'&gt;Comitê Gestor da NFS-e realiza primeira reunião presencial do GT Empresas em São Paulo&lt;/a&gt;" data-description="O evento aconteceu na sede da Associação Comercial de São Paulo e abordou evoluções da NFS-e e da Calculadora de Tributos da Reforma Tributária" data-link="https://www.gov.br/nfse/pt-br/noticias/comite-gestor-da-nfs-e-realiza-primeira-reuniao-presencial-do-gt-empresas-em-sao-paulo" data-content-uuid="25c75c94ef9e405cb5f5feb36381215d" data-content-type="collective.nitf.content" data-has-subitem="True" />
+              <img src="https://www.gov.br/nfse/pt-br/noticias/comite-gestor-da-nfs-e-realiza-primeira-reuniao-presencial-do-gt-empresas-em-sao-paulo/nfse-2.jpeg/@@images/c9cf5280-4771-4f77-8272-1af511f016cc.jpeg" width="768" height="276" alt="O evento aconteceu na sede da Associação Comercial de São Paulo e abordou evoluções da NFS-e e da Calculadora de Tributos da Reforma Tributária" data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/comite-gestor-da-nfs-e-realiza-primeira-reuniao-presencial-do-gt-empresas-em-sao-paulo'&gt;Comitê Gestor da NFS-e realiza primeira reunião presencial do GT Empresas em São Paulo&lt;/a&gt;" data-description="O evento aconteceu na sede da Associação Comercial de São Paulo e abordou evoluções da NFS-e e da Calculadora de Tributos da Reforma Tributária" data-link="https://www.gov.br/nfse/pt-br/noticias/comite-gestor-da-nfs-e-realiza-primeira-reuniao-presencial-do-gt-empresas-em-sao-paulo" data-content-uuid="25c75c94ef9e405cb5f5feb36381215d" data-content-type="collective.nitf.content" data-has-subitem="True" />
             </a>
             <span class="pause-overlay fas fa-pause-circle"></span>
             <div class="swiper-pagination-cover"></div>
             <div class="info-title">Comitê Gestor da NFS-e realiza primeira reunião presencial do GT Empresas em São Paulo</div>
             <div class="info-description">O evento aconteceu na sede da Associação Comercial de São Paulo e abordou evoluções da NFS-e e da Calculadora de Tributos da Reforma Tributária</div>
-          </div>
-        
-          <div class="swiper-slide">
-
-            <a href="https://www.gov.br/nfse/pt-br/noticias/publicada-a-nota-tecnica-009-da-nfs-e">
-              <img src="https://www.gov.br/nfse/pt-br/noticias/publicada-a-nota-tecnica-009-da-nfs-e/02-imagem-01.png/@@images/12630534-8e9d-499e-bd4c-5d820fbc83d4.png" width="1920" height="692" alt="Evoluções da plataforma consolidam adaptações da DPS e das NFS-e geradas pelo sistema" data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/publicada-a-nota-tecnica-009-da-nfs-e'&gt;Publicada a Nota Técnica 009 com evoluções da NFS-e&lt;/a&gt;" data-description="Evoluções da plataforma consolidam adaptações da DPS e das NFS-e geradas pelo sistema" data-link="https://www.gov.br/nfse/pt-br/noticias/publicada-a-nota-tecnica-009-da-nfs-e" data-content-uuid="1180ee6b3f6c4cbab323a1aa89060159" data-content-type="collective.nitf.content" data-has-subitem="True" />
-            </a>
-            <span class="pause-overlay fas fa-pause-circle"></span>
-            <div class="swiper-pagination-cover"></div>
-            <div class="info-title">Publicada a Nota Técnica 009 com evoluções da NFS-e</div>
-            <div class="info-description">Evoluções da plataforma consolidam adaptações da DPS e das NFS-e geradas pelo sistema</div>
-          </div>
-        
-          <div class="swiper-slide">
-
-            <a href="https://www.gov.br/nfse/pt-br/noticias/municipios-sem-adesao-ou-parametrizacao-da-nfs-e-ja-estao-sujeitos-a-bloqueio-de-transferencias">
-              <img src="https://www.gov.br/nfse/pt-br/noticias/municipios-sem-adesao-ou-parametrizacao-da-nfs-e-ja-estao-sujeitos-a-bloqueio-de-transferencias/02-imagem-04.png/@@images/65902f11-3a54-4db8-9fad-6f4685343410.png" width="1920" height="690" alt="Lei Complementar nº 214/2025 prêve o bloqueio de transferências voluntárias para os Municípios que não cumprirem suas obrigações com a NFS-e." data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/municipios-sem-adesao-ou-parametrizacao-da-nfs-e-ja-estao-sujeitos-a-bloqueio-de-transferencias'&gt;Municípios sem adesão ou parametrização da NFS-e já estão sujeitos a bloqueio de transferências&lt;/a&gt;" data-description="Lei Complementar nº 214/2025 prêve o bloqueio de transferências voluntárias para os Municípios que não cumprirem suas obrigações com a NFS-e." data-link="https://www.gov.br/nfse/pt-br/noticias/municipios-sem-adesao-ou-parametrizacao-da-nfs-e-ja-estao-sujeitos-a-bloqueio-de-transferencias" data-content-uuid="7b5321af022d40049e76151fac0b2770" data-content-type="collective.nitf.content" data-has-subitem="True" />
-            </a>
-            <span class="pause-overlay fas fa-pause-circle"></span>
-            <div class="swiper-pagination-cover"></div>
-            <div class="info-title">Municípios sem adesão ou parametrização da NFS-e já estão sujeitos a bloqueio de transferências</div>
-            <div class="info-description">Lei Complementar nº 214/2025 prêve o bloqueio de transferências voluntárias para os Municípios que não cumprirem suas obrigações com a NFS-e.</div>
-          </div>
-        
-          <div class="swiper-slide">
-
-            <a href="https://www.gov.br/nfse/pt-br/noticias/atendimento-aos-contribuintes-passa-a-ser-realizado-diretamente-pelos-municipios">
-              <img src="https://www.gov.br/nfse/pt-br/noticias/atendimento-aos-contribuintes-passa-a-ser-realizado-diretamente-pelos-municipios/02-imagem-03.png/@@images/387aaf95-3ea7-4207-9e05-cc1f565256ef.png" width="1920" height="692" alt="A mudança reforça o papel dos Municípios no suporte aos contribuintes em suas administrações tributárias." data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/atendimento-aos-contribuintes-passa-a-ser-realizado-diretamente-pelos-municipios'&gt;Atendimento aos contribuintes passa a ser realizado diretamente pelos Municípios&lt;/a&gt;" data-description="A mudança reforça o papel dos Municípios no suporte aos contribuintes em suas administrações tributárias." data-link="https://www.gov.br/nfse/pt-br/noticias/atendimento-aos-contribuintes-passa-a-ser-realizado-diretamente-pelos-municipios" data-content-uuid="5c704e490d6a4e5e9c2ff2c31d88be1d" data-content-type="collective.nitf.content" data-has-subitem="True" />
-            </a>
-            <span class="pause-overlay fas fa-pause-circle"></span>
-            <div class="swiper-pagination-cover"></div>
-            <div class="info-title">Atendimento aos contribuintes passa a ser realizado diretamente pelos Municípios</div>
-            <div class="info-description">A mudança reforça o papel dos Municípios no suporte aos contribuintes em suas administrações tributárias.</div>
           </div>
         
       </div>

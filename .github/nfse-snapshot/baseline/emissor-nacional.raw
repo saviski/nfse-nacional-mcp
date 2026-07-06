@@ -4,7 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>NFS-e | Portal Contribuinte</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <script type="text/javascript" src="/EmissorNacional/ruxitagentjs_ICA7NVfqrux_10339260603164134.js" data-dtconfig="rid=RID_464339452|rpid=-387090975|domain=nfse.gov.br|reportUrl=/EmissorNacional/rb_9e18c036-457d-4148-ad5d-a819c73ccba6|app=50fc81f76b4568f3|owasp=1|featureHash=ICA7NVfqrux|rdnt=1|uxrgce=1|cuc=y04prtav|mel=100000|expw=1|dpvc=1|lastModification=1783083903441|postfix=y04prtav|tp=500,50,0|srbbv=2|agentUri=/EmissorNacional/ruxitagentjs_ICA7NVfqrux_10339260603164134.js"></script><link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
     <link href="/EmissorNacional/Content/Base?v=PNNgqFMeiX_JCCYDv-3Z3MCHsfnKA_V8oEHE8c3GJic1" rel="stylesheet"/>
 
     <link href="/EmissorNacional/Content/Login?v=sQpjaIRR9G5ynhXjYkuDQVKmyKFtq78zC9uXGNzbjmU1" rel="stylesheet"/>
@@ -37,7 +37,7 @@
     <div class="col-lg-4 descricao">
         <div class="login-section autenticacao">
             <h2>Acesso com Usuário/Senha</h2>
-<form action="/EmissorNacional/Login?ReturnUrl=%2FEmissorNacional%2F" class="" method="post"><input name="__RequestVerificationToken" type="hidden" value="CNlMboWstbm-TPEeF1KQiVLPK-1QQlnV26x1YvKaG-b3ISovb6ir3Mf458_eCOPqdJVATDhj8MOGSBhxCwGGBl9gu7MwHY6EcT8dOOhjwRo1" />                <div class="form-group">
+<form action="/EmissorNacional/Login?ReturnUrl=%2FEmissorNacional%2F" class="" method="post"><input name="__RequestVerificationToken" type="hidden" value="I90chv0TIsdtEjKAd0pnTG_7lNARDCoLNSJqN22nT1J4xO_Uqd7Ro_6bBb0AkH0do-sFriaWEt2A2ox_x2fk8KZsIJ41" />                <div class="form-group">
                     <input class="form-control input-lg cpfcnpj" data-val="true" data-val-length="The field CPF/CNPJ must be a string with a maximum length of 18." data-val-length-max="18" id="Inscricao" maxlength="18" name="Inscricao" placeholder="CPF/CNPJ" type="text" value="" />
                     <span class="field-validation-valid text-danger" data-valmsg-for="Inscricao" data-valmsg-replace="true"></span>
                 </div>
@@ -58,7 +58,7 @@
         <div class="login-section certificado">
             <h2>Acesso com Certificado Digital</h2>
             <p class="text-center">Se você já possui certificado digital, clique na imagem abaixo</p>
-            <a class="img-certificado" href="/EmissorNacional/Certificado" title="Acesso via certificado digital">Acesso via certificado digital</a>
+            <a class="img-certificado" href="https://certificado.nfse.gov.br/EmissorNacional/Certificado" title="Acesso via certificado digital">Acesso via certificado digital</a>
             <p id="info-certificado" class="text-center">
                 <a href="http://idg.receita.fazenda.gov.br/orientacao/tributaria/senhas-e-procuracoes/senhas/certificados-digitais">Saiba como obter o certificado digital</a>
             </p>
