@@ -196,18 +196,42 @@ def resolver_cliente(nome: str, clientes: dict) -> tuple:
 
 # ─── Parsers de e-mail ───────────────────────────────────────────────────────
 
+def _looks_like_html(text: str) -> bool:
+    return bool(re.search(r"<(?:html|body|table|div|span|td|p)[>\s]", text, re.IGNORECASE))
+
+def _strip_html(html: str) -> str:
+    """Remove tags HTML e normaliza espaço em branco."""
+    text = re.sub(r"<[^>]+>", " ", html)
+    return re.sub(r"[ \t]+", " ", text)
+
+def _decode_part(part) -> str:
+    """Decodifica payload de uma parte MIME respeitando o charset declarado."""
+    raw = part.get_payload(decode=True)
+    if not raw:
+        return ""
+    charset = part.get_param("charset") or "utf-8"
+    return raw.decode(charset, errors="replace")
+
 def _get_body(msg) -> str:
-    """Extrai o texto de um e-mail (multipart ou não)."""
+    """Extrai texto de um e-mail e sempre retorna plain text (sem tags HTML)."""
     if msg.is_multipart():
         plain = html = ""
         for part in msg.walk():
             ct = part.get_content_type()
-            if ct == "text/plain":
-                plain = part.get_payload(decode=True).decode("utf-8", errors="ignore")
-            elif ct == "text/html" and not plain:
-                html = part.get_payload(decode=True).decode("utf-8", errors="ignore")
-        return plain or html
-    return msg.get_payload(decode=True).decode("utf-8", errors="ignore")
+            decoded = _decode_part(part)
+            if not decoded:
+                continue
+            if ct == "text/html":
+                if not html:
+                    html = decoded
+            elif ct == "text/plain" and not _looks_like_html(decoded):
+                if not plain:
+                    plain = decoded
+        # Rendimento envia HTML disfarçado de text/plain — usa o html quando não há plain real
+        body = plain or html
+    else:
+        body = _decode_part(msg)
+    return _strip_html(body) if _looks_like_html(body) else body
 
 def parse_rendimento(msg) -> dict:
     """Parser para e-mails do Banco Rendimento (cambioonline@mail-rendimento.com.br)."""
@@ -220,10 +244,14 @@ def parse_rendimento(msg) -> dict:
     def parse_br(s):
         return float(s.replace(".", "").replace(",", ".")) if s else None
 
+    # O HTML stripped do Rendimento coloca label e valor em linhas separadas.
+    # [:\s]+ com DOTALL captura "Label: Valor" e "Label:\n Valor".
     raw_usd  = find(r"Valor Recebido[:\s]+US\$\s*([\d\.,]+)")
     raw_brl  = find(r"Total[:\s]+R\$\s*([\d\.,]+)")
-    raw_date = find(r"Remessa recebida do exterior\s+(\d{2}/\d{2}/\d{4})")
-    ordenante= find(r"Ordenante[:\s]+([^\n\r]+)")
+    raw_date = find(r"Remessa recebida do exterior[\s]+(\d{2}/\d{2}/\d{4})")
+    if not raw_date:
+        raw_date = find(r"(\d{2}/\d{2}/\d{4})")  # fallback: primeira data no body
+    ordenante = find(r"Ordenante[:\s]+([A-Z][^\n\r<]{2,})")
 
     if not all([raw_usd, raw_brl, raw_date]):
         raise RuntimeError(f"Rendimento: campos não encontrados no e-mail (usd={raw_usd}, brl={raw_brl}, data={raw_date})")
@@ -250,9 +278,14 @@ def parse_remessa_online(msg) -> dict:
     def parse_br(s):
         return float(s.replace(".", "").replace(",", ".")) if s else None
 
-    # Valores no corpo
+    # Formato "Comprovante de Transferência": "Valor em reais\n BRL X"
     raw_brl = find(r"Valor em reais\s+BRL\s*([\d\.,]+)", body)
     raw_usd = find(r"Valor em moeda estrangeira[:\s]+USD\s*([\d\.,]+)", body)
+    # Formato "Seu dinheiro está a caminho!": "USD X.XXX,XX\n Valor Resgatado\n R$ X.XXX,XX"
+    if not raw_usd:
+        raw_usd = find(r"USD\s*([\d\.,]+)", body)
+    if not raw_brl:
+        raw_brl = find(r"R\$\s*([\d\.,]+)", body)
 
     # Data: usa o cabeçalho Date do e-mail
     date_header = msg.get("Date", "")
@@ -262,8 +295,10 @@ def parse_remessa_online(msg) -> dict:
     except Exception:
         dCompet = datetime.now().strftime("%Y-%m-%d")
 
-    # Nome do cliente: extrai do assunto "Comprovante de Transferência 1/NOME - #ID"
-    cliente_nome = find(r"Comprovante de Transfer[eê]ncia\s+\d+/([^-#\n]+)", subject)
+    # Nome do cliente: extrai do assunto (decodificado) "Comprovante de Transferência 1/NOME - #ID"
+    from email.header import decode_header as _dh, make_header as _mh
+    subject_decoded = str(_mh(_dh(subject)))
+    cliente_nome = find(r"Comprovante de Transfer[eê]ncia\s+\d+/([^-#\n]+)", subject_decoded)
     if not cliente_nome:
         cliente_nome = find(r"Transfer[eê]ncia\s+\d+/([^-#\n]+)", body)
     cliente_nome = (cliente_nome or "").strip()
@@ -286,12 +321,10 @@ BUILTIN_PARSERS = {
     "rendimento":     parse_rendimento,
 }
 
-# Default: só Remessa Online — é a corretora mais comum em conjunto com AdSense.
-# Usuários que usam Banco Rendimento ou outra fonte devem configurar
-# `email_parsers` em config.json explicitamente.
 DEFAULT_EMAIL_PARSERS = [
-    {"sender": "nao-responder@remessaonline.com.br", "parser": "remessa_online"},
-    {"sender": "noreply@remessaonline.com.br",       "parser": "remessa_online"},
+    {"sender": "nao-responder@remessaonline.com.br",  "parser": "remessa_online"},
+    {"sender": "noreply@remessaonline.com.br",        "parser": "remessa_online"},
+    {"sender": "cambioonline@mail-rendimento.com.br", "parser": "rendimento"},
 ]
 
 
@@ -348,8 +381,10 @@ def _xoauth2_string(user: str, access_token: str) -> str:
 def imap_connect(config: dict, secrets: dict):
     imap = imaplib.IMAP4_SSL("imap.gmail.com")
     access_token = _gmail_access_token(secrets)
-    auth_string  = _xoauth2_string(config["gmail_user"], access_token)
-    imap.authenticate("XOAUTH2", lambda x: auth_string)
+    # imaplib.authenticate() chama binascii.b2a_base64() internamente, então
+    # o callback deve retornar bytes *crus* (não base64-encoded).
+    raw = f"user={config['gmail_user']}\x01auth=Bearer {access_token}\x01\x01".encode()
+    imap.authenticate("XOAUTH2", lambda x: raw)
     return imap
 
 def buscar_pagamentos_mes(config: dict, secrets: dict, mes: str) -> list:
@@ -392,6 +427,15 @@ def buscar_pagamentos_mes(config: dict, secrets: dict, mes: str) -> list:
                 print(f"   ⚠️  Skipping e-mail '{msg.get('Subject','')}': {e}")
 
     imap.logout()
+
+    # Deduplica por (usd, brl, data) — cada transferência pode gerar vários e-mails
+    # ("aviso" + "comprovante"). Prefere o comprovante (tem nome do cliente).
+    seen: dict[tuple, dict] = {}
+    for t in transferencias:
+        key = (t["vUSD"], t["vBRL"], t["dCompet"])
+        if key not in seen or (not seen[key].get("cliente_nome") and t.get("cliente_nome")):
+            seen[key] = t
+    transferencias = list(seen.values())
 
     # Ordena por data
     transferencias.sort(key=lambda x: x["dCompet"])

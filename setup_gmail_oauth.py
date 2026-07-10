@@ -22,8 +22,9 @@ SKILL_DIR = os.path.dirname(os.path.abspath(__file__))
 CLIENT_SECRET_FILE = os.path.join(SKILL_DIR, "client_secret.json")
 SECRETS_FILE       = os.path.join(SKILL_DIR, "secrets.json")
 
-SCOPES = ["https://www.googleapis.com/auth/gmail.send",
-          "https://www.googleapis.com/auth/gmail.readonly"]
+# IMAP XOAUTH2 requer o escopo full mail; gmail.readonly + gmail.send são
+# só para a API REST e não funcionam para autenticação via imaplib.
+SCOPES = ["https://mail.google.com/"]
 
 
 def main():
