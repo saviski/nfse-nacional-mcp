@@ -1253,7 +1253,7 @@
             </li>
         
             <li class="plain">
-                <a href="https://www.gov.br/pt-br/temas/redes-civis-de-unidades-de-atendimento-do-governo-federal">Redes de Atendimento do Governo Federal</a>
+                <a href="https://www.gov.br/pt-br/temas/redes-civis-de-unidades-de-atendimento-do-governo-federal">Redes de Atendimento da Administração Pública Federal</a>
                 
             </li>
         
@@ -1440,7 +1440,7 @@
                     </li>
                 
                     <li class="dropdown-submenu">
-                        <a href="https://www.gov.br/pt-br/dados-do-governo-federal" class="hasDropDown">Dados do Governo Federal</a>
+                        <a href="https://www.gov.br/pt-br/dados-da-administracao-publica-federal" class="hasDropDown">Dados da Administração Pública Federal</a>
                         
                             
     <ul class="submenu navTree">
@@ -1456,7 +1456,7 @@
             </li>
         
             <li class="plain">
-                <a href="http://paineldecompras.economia.gov.br">Painel de Compras do Governo Federal</a>
+                <a href="http://paineldecompras.economia.gov.br">Painel de Compras da Administração Pública Federal</a>
                 
             </li>
         
@@ -1560,7 +1560,7 @@
 
             <div class="viewlet-institucionais-servicos-govbr linha-recom">
 
-    <script type="text/javascript">window.mais_acessados=["13151","10942","10796","10966","24076","12350"];</script>
+    <script type="text/javascript">window.mais_acessados=["13151","10942","10796","10966","12350","24076"];</script>
 
     <script type="text/javascript">window.destaques=["24130","13362","12169"];</script>
 
@@ -1643,14 +1643,14 @@
                                     <span class="texto">Consultar restituição do imposto de renda</span>
                                 </a>
                             
-                                <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/novo-desenrola-brasil-familias?origem=maisacessado_inst">
+                                <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/consultar-dados-do-cadastro-unico-cadunico?origem=maisacessado_inst">
                                     <span class="ranking">5</span>
-                                    <span class="texto">Novo Desenrola Brasil - Famílias</span>
+                                    <span class="texto">Consultar dados do Cadastro Único</span>
                                 </a>
                             
-                                <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/consultar-dados-do-cadastro-unico-cadunico?origem=maisacessado_inst">
+                                <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/novo-desenrola-brasil-familias?origem=maisacessado_inst">
                                     <span class="ranking">6</span>
-                                    <span class="texto">Consultar dados do Cadastro Único</span>
+                                    <span class="texto">Novo Desenrola Brasil - Famílias</span>
                                 </a>
                             
                         </div>
@@ -1809,6 +1809,28 @@
         
           <div class="swiper-slide">
 
+            <a href="https://www.gov.br/nfse/pt-br/noticias/nfs-e-informa-indisponibilidade-do-ambiente-do-cnpj-no-dia-25-de-julho">
+              <img src="https://www.gov.br/nfse/pt-br/noticias/nfs-e-informa-indisponibilidade-do-ambiente-do-cnpj-no-dia-25-de-julho/02-imagem-05.jpeg/@@images/348f49b8-a4c8-4c3b-b3de-94a0c68bd411.jpeg" width="768" height="276" alt="Parada programada visa a implantação do CNPJ alfanumérico" data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/nfs-e-informa-indisponibilidade-do-ambiente-do-cnpj-no-dia-25-de-julho'&gt;NFS-e informa: indisponibilidade do ambiente do CNPJ no dia 25 de julho&lt;/a&gt;" data-description="Parada programada visa a implantação do CNPJ alfanumérico" data-link="https://www.gov.br/nfse/pt-br/noticias/nfs-e-informa-indisponibilidade-do-ambiente-do-cnpj-no-dia-25-de-julho" data-content-uuid="25afddebfd2041b8ab6f108617d016d0" data-content-type="collective.nitf.content" data-has-subitem="True" />
+            </a>
+            <span class="pause-overlay fas fa-pause-circle"></span>
+            <div class="swiper-pagination-cover"></div>
+            <div class="info-title">NFS-e informa: indisponibilidade do ambiente do CNPJ no dia 25 de julho</div>
+            <div class="info-description">Parada programada visa a implantação do CNPJ alfanumérico</div>
+          </div>
+        
+          <div class="swiper-slide">
+
+            <a href="https://www.gov.br/nfse/pt-br/noticias/nfs-e-via-publicada-nova-api-para-consulta-de-aliquotas-do-iss">
+              <img src="https://www.gov.br/nfse/pt-br/noticias/nfs-e-via-publicada-nova-api-para-consulta-de-aliquotas-do-iss/02-imagem-06.jpeg/@@images/e3c25b8b-61e1-4875-b315-292b407a3572.jpeg" width="768" height="276" alt="As Administrações Municipais poderão consultar alíquotas de ISS por trecho e data" data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/nfs-e-via-publicada-nova-api-para-consulta-de-aliquotas-do-iss'&gt;NFS-e Via: Publicada nova API para consulta de alíquotas do ISS&lt;/a&gt;" data-description="As Administrações Municipais poderão consultar alíquotas de ISS por trecho e data" data-link="https://www.gov.br/nfse/pt-br/noticias/nfs-e-via-publicada-nova-api-para-consulta-de-aliquotas-do-iss" data-content-uuid="e1af4cd2043141b8a421b7d6e0f795b4" data-content-type="collective.nitf.content" data-has-subitem="True" />
+            </a>
+            <span class="pause-overlay fas fa-pause-circle"></span>
+            <div class="swiper-pagination-cover"></div>
+            <div class="info-title">NFS-e Via: Publicada nova API para consulta de alíquotas do ISS</div>
+            <div class="info-description">As Administrações Municipais poderão consultar alíquotas de ISS por trecho e data</div>
+          </div>
+        
+          <div class="swiper-slide">
+
             <a href="https://www.gov.br/nfse/pt-br/noticias/se-cgnfs-e-prorroga-o-prazo-para-adequacao-ao-novo-leiaute-do-danfse">
               <img src="https://www.gov.br/nfse/pt-br/noticias/se-cgnfs-e-prorroga-o-prazo-para-adequacao-ao-novo-leiaute-do-danfse/02-imagem-02.png/@@images/584dd174-001e-4d4a-8595-07e73dc084ea.png" width="1920" height="693" alt="A atual API será descontinuada a partir de 15 de julho" data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/se-cgnfs-e-prorroga-o-prazo-para-adequacao-ao-novo-leiaute-do-danfse'&gt;SE/CGNFS-e prorroga o prazo para adequação ao novo leiaute do DANFSE&lt;/a&gt;" data-description="A atual API será descontinuada a partir de 15 de julho" data-link="https://www.gov.br/nfse/pt-br/noticias/se-cgnfs-e-prorroga-o-prazo-para-adequacao-ao-novo-leiaute-do-danfse" data-content-uuid="6bf96573ec0c40a7ab5d45de28acd1ea" data-content-type="collective.nitf.content" data-has-subitem="True" />
             </a>
@@ -1816,39 +1838,6 @@
             <div class="swiper-pagination-cover"></div>
             <div class="info-title">SE/CGNFS-e prorroga o prazo para adequação ao novo leiaute do DANFSE</div>
             <div class="info-description">A atual API será descontinuada a partir de 15 de julho</div>
-          </div>
-        
-          <div class="swiper-slide">
-
-            <a href="https://www.gov.br/nfse/pt-br/noticias/cgnfs-e-e-entidades-debatem-classificacao-tributaria-de-servicos-funerarios-e-seus-impactos-sobre-o-ibs">
-              <img src="https://www.gov.br/nfse/pt-br/noticias/cgnfs-e-e-entidades-debatem-classificacao-tributaria-de-servicos-funerarios-e-seus-impactos-sobre-o-ibs/02-imagem-01.png/@@images/4790ad6e-f349-4563-b089-f1b5906897f3.png" width="1920" height="692" alt="CGNFS-e e Entidades debatem classificação tributária de serviços funerários e seus impactos sobre o IBS" data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/cgnfs-e-e-entidades-debatem-classificacao-tributaria-de-servicos-funerarios-e-seus-impactos-sobre-o-ibs'&gt;CGNFS-e e Entidades debatem classificação tributária de serviços funerários e seus impactos sobre o IBS&lt;/a&gt;" data-description="" data-link="https://www.gov.br/nfse/pt-br/noticias/cgnfs-e-e-entidades-debatem-classificacao-tributaria-de-servicos-funerarios-e-seus-impactos-sobre-o-ibs" data-content-uuid="43ab8341b2a6478d9419d57225aaf167" data-content-type="collective.nitf.content" data-has-subitem="True" />
-            </a>
-            <span class="pause-overlay fas fa-pause-circle"></span>
-            <div class="swiper-pagination-cover"></div>
-            <div class="info-title">CGNFS-e e Entidades debatem classificação tributária de serviços funerários e seus impactos sobre o IBS</div>
-            <div class="info-description"></div>
-          </div>
-        
-          <div class="swiper-slide">
-
-            <a href="https://www.gov.br/nfse/pt-br/noticias/cgnfs-e-se-reune-para-apresentar-entregas-e-alinhar-os-proximos-passos-da-plataforma">
-              <img src="https://www.gov.br/nfse/pt-br/noticias/cgnfs-e-se-reune-para-apresentar-entregas-e-alinhar-os-proximos-passos-da-plataforma/banner-nfse.jpg/@@images/4061e63c-6074-47c8-9650-62bcc641ccf2.jpeg" width="960" height="345" alt="CGNFS-e se reúne para apresentar entregas e alinhar os próximos passos da plataforma" data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/cgnfs-e-se-reune-para-apresentar-entregas-e-alinhar-os-proximos-passos-da-plataforma'&gt;CGNFS-e se reúne para apresentar entregas e alinhar os próximos passos da plataforma&lt;/a&gt;" data-description="" data-link="https://www.gov.br/nfse/pt-br/noticias/cgnfs-e-se-reune-para-apresentar-entregas-e-alinhar-os-proximos-passos-da-plataforma" data-content-uuid="ce64bbe106b349cfab2a9016f448c3f1" data-content-type="collective.nitf.content" data-has-subitem="True" />
-            </a>
-            <span class="pause-overlay fas fa-pause-circle"></span>
-            <div class="swiper-pagination-cover"></div>
-            <div class="info-title">CGNFS-e se reúne para apresentar entregas e alinhar os próximos passos da plataforma</div>
-            <div class="info-description"></div>
-          </div>
-        
-          <div class="swiper-slide">
-
-            <a href="https://www.gov.br/nfse/pt-br/noticias/comite-gestor-da-nfs-e-realiza-primeira-reuniao-presencial-do-gt-empresas-em-sao-paulo">
-              <img src="https://www.gov.br/nfse/pt-br/noticias/comite-gestor-da-nfs-e-realiza-primeira-reuniao-presencial-do-gt-empresas-em-sao-paulo/nfse-2.jpeg/@@images/c9cf5280-4771-4f77-8272-1af511f016cc.jpeg" width="768" height="276" alt="O evento aconteceu na sede da Associação Comercial de São Paulo e abordou evoluções da NFS-e e da Calculadora de Tributos da Reforma Tributária" data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/comite-gestor-da-nfs-e-realiza-primeira-reuniao-presencial-do-gt-empresas-em-sao-paulo'&gt;Comitê Gestor da NFS-e realiza primeira reunião presencial do GT Empresas em São Paulo&lt;/a&gt;" data-description="O evento aconteceu na sede da Associação Comercial de São Paulo e abordou evoluções da NFS-e e da Calculadora de Tributos da Reforma Tributária" data-link="https://www.gov.br/nfse/pt-br/noticias/comite-gestor-da-nfs-e-realiza-primeira-reuniao-presencial-do-gt-empresas-em-sao-paulo" data-content-uuid="25c75c94ef9e405cb5f5feb36381215d" data-content-type="collective.nitf.content" data-has-subitem="True" />
-            </a>
-            <span class="pause-overlay fas fa-pause-circle"></span>
-            <div class="swiper-pagination-cover"></div>
-            <div class="info-title">Comitê Gestor da NFS-e realiza primeira reunião presencial do GT Empresas em São Paulo</div>
-            <div class="info-description">O evento aconteceu na sede da Associação Comercial de São Paulo e abordou evoluções da NFS-e e da Calculadora de Tributos da Reforma Tributária</div>
           </div>
         
       </div>
