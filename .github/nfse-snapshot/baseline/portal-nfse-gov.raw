@@ -1560,7 +1560,7 @@
 
             <div class="viewlet-institucionais-servicos-govbr linha-recom">
 
-    <script type="text/javascript">window.mais_acessados=["13151","10942","10796","10966","12350","24076"];</script>
+    <script type="text/javascript">window.mais_acessados=["13151","10796","10942","10966","12350","24076"];</script>
 
     <script type="text/javascript">window.destaques=["24130","13362","12169"];</script>
 
@@ -1628,14 +1628,14 @@
                                     <span class="texto">Consultar Meu Imposto de Renda</span>
                                 </a>
                             
-                                <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/declarar-meu-imposto-de-renda?origem=maisacessado_inst">
+                                <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/assinatura-eletronica?origem=maisacessado_inst">
                                     <span class="ranking">2</span>
-                                    <span class="texto">Entregar Meu Imposto de Renda</span>
+                                    <span class="texto">Assinatura Eletrônica</span>
                                 </a>
                             
-                                <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/assinatura-eletronica?origem=maisacessado_inst">
+                                <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/declarar-meu-imposto-de-renda?origem=maisacessado_inst">
                                     <span class="ranking">3</span>
-                                    <span class="texto">Assinatura Eletrônica</span>
+                                    <span class="texto">Entregar Meu Imposto de Renda</span>
                                 </a>
                             
                                 <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/consultar-restituicao-de-imposto-de-renda?origem=maisacessado_inst">
@@ -1806,6 +1806,17 @@
   <div class="cover-carousel-tile-swiper tile-content" tabindex="0" data-autoplay="True">
     <div class="swiper-container">
       <div class="swiper-wrapper">
+        
+          <div class="swiper-slide">
+
+            <a href="https://www.gov.br/nfse/pt-br/noticias/danfse-novos-ajustes-de-leiaute-e-prorrogacao-do-prazo-para-adequacao">
+              <img src="https://www.gov.br/nfse/pt-br/noticias/danfse-novos-ajustes-de-leiaute-e-prorrogacao-do-prazo-para-adequacao/02-imagem-03.png/@@images/3e534630-6ba8-4693-8478-3da5f8559a6f.png" width="1920" height="692" alt="Novo prazo passa a ser 3 de agosto de 2026" data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/danfse-novos-ajustes-de-leiaute-e-prorrogacao-do-prazo-para-adequacao'&gt;DANFSE: novos ajustes e prorrogação do prazo para adequação&lt;/a&gt;" data-description="Novo prazo passa a ser 3 de agosto de 2026" data-link="https://www.gov.br/nfse/pt-br/noticias/danfse-novos-ajustes-de-leiaute-e-prorrogacao-do-prazo-para-adequacao" data-content-uuid="b14236876f564fbe989d796c2f313cfe" data-content-type="collective.nitf.content" data-has-subitem="True" />
+            </a>
+            <span class="pause-overlay fas fa-pause-circle"></span>
+            <div class="swiper-pagination-cover"></div>
+            <div class="info-title">DANFSE: novos ajustes e prorrogação do prazo para adequação</div>
+            <div class="info-description">Novo prazo passa a ser 3 de agosto de 2026</div>
+          </div>
         
           <div class="swiper-slide">
 
