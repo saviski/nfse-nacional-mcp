@@ -1560,9 +1560,9 @@
 
             <div class="viewlet-institucionais-servicos-govbr linha-recom">
 
-    <script type="text/javascript">window.mais_acessados=["13151","10796","10942","10966","12350","24076"];</script>
+    <script type="text/javascript">window.mais_acessados=["13151","10796","10942","10966","12350","10418"];</script>
 
-    <script type="text/javascript">window.destaques=["24130","13362","12169"];</script>
+    <script type="text/javascript">window.destaques=["24130","24076","13362","12169"];</script>
 
     <script type="text/javascript">window.quantidade_servicos_destaque="5";</script>
 
@@ -1648,9 +1648,9 @@
                                     <span class="texto">Consultar dados do Cadastro Único</span>
                                 </a>
                             
-                                <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/novo-desenrola-brasil-familias?origem=maisacessado_inst">
+                                <a class="item-tile-servico-mais-acessados" href="https://www.gov.br/pt-br/servicos/consultar-cadastro-de-pessoas-fisicas?origem=maisacessado_inst">
                                     <span class="ranking">6</span>
-                                    <span class="texto">Novo Desenrola Brasil - Famílias</span>
+                                    <span class="texto">Consultar CPF</span>
                                 </a>
                             
                         </div>
@@ -1673,6 +1673,15 @@
                                         
                                     </span>
                                     <span class="texto">Tela Brasil</span>
+                                    
+                                </a>
+                            
+                                <a class="item-tile-servico-destaque" href="https://www.gov.br/pt-br/servicos/solicitar-renegociacao-de-dividas-familias?origem=destaque_inst">
+                                    <span class="categoria-container">
+                                        <span class="categoria">Vida Financeira</span>
+                                        <span class="badge novo">Novo</span>
+                                    </span>
+                                    <span class="texto">Renegociação de Dívidas - Famílias</span>
                                     
                                 </a>
                             
@@ -1809,8 +1818,19 @@
         
           <div class="swiper-slide">
 
+            <a href="https://www.gov.br/nfse/pt-br/noticias/plataforma-nfs-e-disponibiliza-novas-evolucoes-em-producao-restrita-e-divulga-cronograma-de-implantacao">
+              <img src="https://www.gov.br/nfse/pt-br/noticias/plataforma-nfs-e-disponibiliza-novas-evolucoes-em-producao-restrita-e-divulga-cronograma-de-implantacao/imagem-05.jpeg/@@images/29ce898b-7b1f-420a-9d2b-50caa8193e2c.jpeg" width="768" height="276" alt="Entre as evoluções estão o CNPJ Alfanumérico e os grupos IBS/CBS no Emissor Web" data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/plataforma-nfs-e-disponibiliza-novas-evolucoes-em-producao-restrita-e-divulga-cronograma-de-implantacao'&gt;Plataforma NFS-e disponibiliza novas evoluções em Produção Restrita e divulga cronograma de implantação&lt;/a&gt;" data-description="Entre as evoluções estão o CNPJ Alfanumérico e os grupos IBS/CBS no Emissor Web" data-link="https://www.gov.br/nfse/pt-br/noticias/plataforma-nfs-e-disponibiliza-novas-evolucoes-em-producao-restrita-e-divulga-cronograma-de-implantacao" data-content-uuid="d7f3d47b92b94bc3a17afd59c42fc357" data-content-type="collective.nitf.content" data-has-subitem="True" />
+            </a>
+            <span class="pause-overlay fas fa-pause-circle"></span>
+            <div class="swiper-pagination-cover"></div>
+            <div class="info-title">Plataforma NFS-e disponibiliza novas evoluções em Produção Restrita e divulga cronograma de implantação</div>
+            <div class="info-description">Entre as evoluções estão o CNPJ Alfanumérico e os grupos IBS/CBS no Emissor Web</div>
+          </div>
+        
+          <div class="swiper-slide">
+
             <a href="https://www.gov.br/nfse/pt-br/noticias/manutencao-no-ambiente-do-cnpj-neste-sabado-25-nao-afetara-os-principais-servicos-da-nfs-e">
-              <img src="https://www.gov.br/nfse/pt-br/noticias/manutencao-no-ambiente-do-cnpj-neste-sabado-25-nao-afetara-os-principais-servicos-da-nfs-e/c680d198-3b65-45ad-8031-d78707fb70e8.jpeg/@@images/64d624bd-5479-4031-865e-d59822be3937.jpeg" width="768" height="491" alt="Apenas os serviços de criação de usuário e recuperação de senha do Portal do Contribuinte serão afetados" data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/manutencao-no-ambiente-do-cnpj-neste-sabado-25-nao-afetara-os-principais-servicos-da-nfs-e'&gt;Manutenção no ambiente do CNPJ neste sábado (25) não afetará os principais serviços da NFS-e&lt;/a&gt;" data-description="Apenas os serviços de criação de usuário e recuperação de senha do Portal do Contribuinte serão afetados" data-link="https://www.gov.br/nfse/pt-br/noticias/manutencao-no-ambiente-do-cnpj-neste-sabado-25-nao-afetara-os-principais-servicos-da-nfs-e" data-content-uuid="c051af0db6c14785a413ff42917d17b5" data-content-type="collective.nitf.content" data-has-subitem="True" />
+              <img src="https://www.gov.br/nfse/pt-br/noticias/manutencao-no-ambiente-do-cnpj-neste-sabado-25-nao-afetara-os-principais-servicos-da-nfs-e/imagem_08.jpg/@@images/3ebead7c-9368-4718-938c-7eb7e5caf180.jpeg" width="768" height="277" alt="Apenas os serviços de criação de usuário e recuperação de senha do Portal do Contribuinte serão afetados" data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/manutencao-no-ambiente-do-cnpj-neste-sabado-25-nao-afetara-os-principais-servicos-da-nfs-e'&gt;Manutenção no ambiente do CNPJ neste sábado (25) não afetará os principais serviços da NFS-e&lt;/a&gt;" data-description="Apenas os serviços de criação de usuário e recuperação de senha do Portal do Contribuinte serão afetados" data-link="https://www.gov.br/nfse/pt-br/noticias/manutencao-no-ambiente-do-cnpj-neste-sabado-25-nao-afetara-os-principais-servicos-da-nfs-e" data-content-uuid="c051af0db6c14785a413ff42917d17b5" data-content-type="collective.nitf.content" data-has-subitem="True" />
             </a>
             <span class="pause-overlay fas fa-pause-circle"></span>
             <div class="swiper-pagination-cover"></div>
@@ -1827,39 +1847,6 @@
             <div class="swiper-pagination-cover"></div>
             <div class="info-title">DANFSE: novos ajustes e prorrogação do prazo para adequação</div>
             <div class="info-description">Novo prazo passa a ser 3 de agosto de 2026</div>
-          </div>
-        
-          <div class="swiper-slide">
-
-            <a href="https://www.gov.br/nfse/pt-br/noticias/nfs-e-informa-indisponibilidade-do-ambiente-do-cnpj-no-dia-25-de-julho">
-              <img src="https://www.gov.br/nfse/pt-br/noticias/nfs-e-informa-indisponibilidade-do-ambiente-do-cnpj-no-dia-25-de-julho/02-imagem-05.jpeg/@@images/348f49b8-a4c8-4c3b-b3de-94a0c68bd411.jpeg" width="768" height="276" alt="Parada programada visa a implantação do CNPJ alfanumérico" data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/nfs-e-informa-indisponibilidade-do-ambiente-do-cnpj-no-dia-25-de-julho'&gt;NFS-e informa: indisponibilidade do ambiente do CNPJ no dia 25 de julho&lt;/a&gt;" data-description="Parada programada visa a implantação do CNPJ alfanumérico" data-link="https://www.gov.br/nfse/pt-br/noticias/nfs-e-informa-indisponibilidade-do-ambiente-do-cnpj-no-dia-25-de-julho" data-content-uuid="25afddebfd2041b8ab6f108617d016d0" data-content-type="collective.nitf.content" data-has-subitem="True" />
-            </a>
-            <span class="pause-overlay fas fa-pause-circle"></span>
-            <div class="swiper-pagination-cover"></div>
-            <div class="info-title">NFS-e informa: indisponibilidade do ambiente do CNPJ no dia 25 de julho</div>
-            <div class="info-description">Parada programada visa a implantação do CNPJ alfanumérico</div>
-          </div>
-        
-          <div class="swiper-slide">
-
-            <a href="https://www.gov.br/nfse/pt-br/noticias/nfs-e-via-publicada-nova-api-para-consulta-de-aliquotas-do-iss">
-              <img src="https://www.gov.br/nfse/pt-br/noticias/nfs-e-via-publicada-nova-api-para-consulta-de-aliquotas-do-iss/02-imagem-06.jpeg/@@images/e3c25b8b-61e1-4875-b315-292b407a3572.jpeg" width="768" height="276" alt="As Administrações Municipais poderão consultar alíquotas de ISS por trecho e data" data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/nfs-e-via-publicada-nova-api-para-consulta-de-aliquotas-do-iss'&gt;NFS-e Via: Publicada nova API para consulta de alíquotas do ISS&lt;/a&gt;" data-description="As Administrações Municipais poderão consultar alíquotas de ISS por trecho e data" data-link="https://www.gov.br/nfse/pt-br/noticias/nfs-e-via-publicada-nova-api-para-consulta-de-aliquotas-do-iss" data-content-uuid="e1af4cd2043141b8a421b7d6e0f795b4" data-content-type="collective.nitf.content" data-has-subitem="True" />
-            </a>
-            <span class="pause-overlay fas fa-pause-circle"></span>
-            <div class="swiper-pagination-cover"></div>
-            <div class="info-title">NFS-e Via: Publicada nova API para consulta de alíquotas do ISS</div>
-            <div class="info-description">As Administrações Municipais poderão consultar alíquotas de ISS por trecho e data</div>
-          </div>
-        
-          <div class="swiper-slide">
-
-            <a href="https://www.gov.br/nfse/pt-br/noticias/se-cgnfs-e-prorroga-o-prazo-para-adequacao-ao-novo-leiaute-do-danfse">
-              <img src="https://www.gov.br/nfse/pt-br/noticias/se-cgnfs-e-prorroga-o-prazo-para-adequacao-ao-novo-leiaute-do-danfse/02-imagem-02.png/@@images/584dd174-001e-4d4a-8595-07e73dc084ea.png" width="1920" height="693" alt="A atual API será descontinuada a partir de 15 de julho" data-title="&lt;a href='https://www.gov.br/nfse/pt-br/noticias/se-cgnfs-e-prorroga-o-prazo-para-adequacao-ao-novo-leiaute-do-danfse'&gt;SE/CGNFS-e prorroga o prazo para adequação ao novo leiaute do DANFSE&lt;/a&gt;" data-description="A atual API será descontinuada a partir de 15 de julho" data-link="https://www.gov.br/nfse/pt-br/noticias/se-cgnfs-e-prorroga-o-prazo-para-adequacao-ao-novo-leiaute-do-danfse" data-content-uuid="6bf96573ec0c40a7ab5d45de28acd1ea" data-content-type="collective.nitf.content" data-has-subitem="True" />
-            </a>
-            <span class="pause-overlay fas fa-pause-circle"></span>
-            <div class="swiper-pagination-cover"></div>
-            <div class="info-title">SE/CGNFS-e prorroga o prazo para adequação ao novo leiaute do DANFSE</div>
-            <div class="info-description">A atual API será descontinuada a partir de 15 de julho</div>
           </div>
         
       </div>
