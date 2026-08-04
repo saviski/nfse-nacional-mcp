@@ -19,7 +19,7 @@ pelo path real onde você clonou este repo:
       "command": "uv",
       "args": [
         "run",
-        "--with", "mcp[cli]",
+        "--with", "mcp[cli]<2",
         "--with", "requests",
         "--with", "cryptography",
         "--with", "lxml",
@@ -78,7 +78,7 @@ Depois, em uma conversa nova:
 claude mcp add nfse-nacional \
   --scope user \
   -- uv run \
-       --with "mcp[cli]" \
+       --with "mcp[cli]<2" \
        --with requests \
        --with cryptography \
        --with lxml \
@@ -157,7 +157,7 @@ Zed usa um schema próprio dentro de `settings.json`:
         "path": "uv",
         "args": [
           "run",
-          "--with", "mcp[cli]",
+          "--with", "mcp[cli]<2",
           "--with", "requests",
           "--with", "cryptography",
           "--with", "lxml",
@@ -192,7 +192,7 @@ No `~/.continue/config.json`, dentro do bloco `experimental`:
           "command": "uv",
           "args": [
             "run",
-            "--with", "mcp[cli]",
+            "--with", "mcp[cli]<2",
             "--with", "requests",
             "--with", "cryptography",
             "--with", "lxml",
@@ -226,7 +226,7 @@ options = ClaudeAgentOptions(
             "command": "uv",
             "args": [
                 "run",
-                "--with", "mcp[cli]",
+                "--with", "mcp[cli]<2",
                 "--with", "requests",
                 "--with", "cryptography",
                 "--with", "lxml",
@@ -287,7 +287,7 @@ acentos e espaços funcionam normalmente.
    config no startup. Fechar a janela ≠ encerrar o processo.
 2. Teste o servidor diretamente:
    ```bash
-   uv run --with "mcp[cli]" --with requests --with cryptography \
+   uv run --with "mcp[cli]<2" --with requests --with cryptography \
           --with lxml --with signxml --with google-auth \
           --with google-auth-oauthlib \
           python3 nfse_mcp_server.py

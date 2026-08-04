@@ -36,8 +36,9 @@ SERVER_NAME  = "nfse-nacional"
 SERVER_PATH  = SKILL_DIR / "nfse_mcp_server.py"
 
 # Dependências que o `uv run` baixa automaticamente na primeira chamada.
+# mcp pinado em <2: a versão 2.x removeu a API de decorators (Server.list_tools)
 UV_DEPS = [
-    "mcp[cli]",
+    "mcp[cli]<2",
     "requests",
     "cryptography",
     "lxml",

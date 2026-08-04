@@ -263,7 +263,7 @@ No Windows: `%APPDATA%\Claude\claude_desktop_config.json`
       "command": "uv",
       "args": [
         "run",
-        "--with", "mcp[cli]",
+        "--with", "mcp[cli]<2",
         "--with", "requests",
         "--with", "cryptography",
         "--with", "lxml",
