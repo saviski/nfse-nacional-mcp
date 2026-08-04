@@ -21,7 +21,6 @@ tools deste repositório.
 - Leitura de e-mails via **Gmail IMAP + XOAUTH2**:
   - Parsers **configuráveis** via `config.json → email_parsers`. Built-ins: `remessa_online` (default — combinação mais comum com AdSense) e `rendimento` (Banco Rendimento). Adicionar uma nova corretora = escrever uma função e registrá-la em `BUILTIN_PARSERS` — ver `emitir_nfse.py`.
   - Categorização de e-mails da contabilidade (fiscal / contábil / pessoal / financeiro)
-- **Watcher automatizado** via GitHub Actions: verifica semanalmente se a API oficial mudou e abre PR via Claude Code (ver `.github/workflows/check-nfse-changes.yml`)
 - **Servidor MCP** expondo 11 tools ao Claude Desktop:
   - **Setup conversacional** — deixe o Claude te configurar passo a passo:
     - `status_setup` — diagnóstico do que falta em config/secrets/clientes
@@ -54,12 +53,7 @@ nfse-nacional-mcp/
 ├── .gitignore
 ├── README.md
 ├── AGENTS.md                 # guia de registro manual em Claude Desktop, Cursor, Zed, etc.
-├── certs/                    # coloque seu .pfx aqui (não versionado)
-└── .github/
-    ├── workflows/
-    │   └── check-nfse-changes.yml   # watcher semanal da API oficial
-    └── scripts/
-        └── check_nfse_changes.py    # snapshot + diff das URLs oficiais
+└── certs/                    # coloque seu .pfx aqui (não versionado)
 ```
 
 ---
