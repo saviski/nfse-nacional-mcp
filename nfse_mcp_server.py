@@ -776,6 +776,13 @@ async def call_tool(name: str, arguments: dict) -> list[types.TextContent]:
         finally:
             nfse.cleanup_session(session)
 
+        _PDF_LABEL = {
+            "ok":           "anexado",
+            "indisponivel": "indisponível (serviço DANFSE fora do ar)",
+            "sem_danfse":   "sem DANFSE para a chave",
+        }
+        pdf_status = resultado.get("pdf_status", "ok")
+        tem_pdf    = bool(resultado.get("pdf_bytes"))
         resposta = {
             "status":       "emitida",
             "chave_acesso": resultado.get("chave"),
@@ -783,6 +790,7 @@ async def call_tool(name: str, arguments: dict) -> list[types.TextContent]:
             "competencia":  competencia,
             "usd":          usd,
             "brl":          brl,
+            "pdf":          _PDF_LABEL.get(pdf_status, pdf_status),
         }
 
         if encaminhar and not resultado.get("dry_run"):
@@ -794,8 +802,20 @@ async def call_tool(name: str, arguments: dict) -> list[types.TextContent]:
                     resultado.get("pdf_bytes"),
                 )
                 resposta["encaminhado_para"] = config["email_contabilidade"]
+                resposta["anexos_enviados"]  = "xml_e_pdf" if tem_pdf else "somente_xml"
+                if not tem_pdf:
+                    resposta["aviso"] = (
+                        "⚠️ E-mail enviado SEM o PDF porque o serviço DANFSE do governo "
+                        "está indisponível. Reenvie o PDF com `baixar_pdf_nota` + "
+                        "`encaminhar_nota_contabilidade` quando o serviço voltar."
+                    )
             except Exception as e:
                 resposta["aviso_encaminhamento"] = str(e)
+        elif not tem_pdf:
+            resposta["aviso"] = (
+                "⚠️ Nota emitida sem PDF (serviço DANFSE indisponível). "
+                "O XML foi salvo; baixe o PDF depois com `baixar_pdf_nota`."
+            )
 
         return [types.TextContent(type="text",
                                   text=json.dumps(resposta, ensure_ascii=False, indent=2))]
@@ -833,6 +853,11 @@ async def call_tool(name: str, arguments: dict) -> list[types.TextContent]:
         finally:
             nfse.cleanup_session(session)
 
+        _PDF_LABEL = {
+            "ok":           "anexado",
+            "indisponivel": "indisponível (serviço DANFSE fora do ar)",
+            "sem_danfse":   "sem DANFSE para a chave",
+        }
         resposta = {
             "total_solicitadas": len(notas_in),
             "total_emitidas":    len(resultados),
@@ -843,12 +868,16 @@ async def call_tool(name: str, arguments: dict) -> list[types.TextContent]:
                     "usd":          r["dados"]["vUSD"],
                     "brl":          r["dados"]["vBRL"],
                     "chave_acesso": r.get("chave"),
+                    "pdf":          _PDF_LABEL.get(r.get("pdf_status", "ok"), r.get("pdf_status")),
                 }
                 for r in resultados
             ],
         }
         if erros:
             resposta["erros"] = erros
+
+        # Notas cujo PDF ficou faltando — precisam de reenvio quando o serviço voltar.
+        sem_pdf = [r for r in resultados if not r.get("pdf_bytes")]
 
         if encaminhar and resultados:
             try:
@@ -860,8 +889,27 @@ async def call_tool(name: str, arguments: dict) -> list[types.TextContent]:
                 } for r in resultados])
                 resposta["encaminhado_para"] = config["email_contabilidade"]
                 resposta["envio_agrupado"]   = True
+                if sem_pdf:
+                    # NÃO afirmar que enviou XML+PDF: o e-mail saiu sem alguns PDFs.
+                    resposta["anexos_enviados"] = "somente_xml" if len(sem_pdf) == len(resultados) else "xml_completo_pdf_parcial"
+                    resposta["pdf_pendente"] = [
+                        {"cliente": r["cliente"]["xNome"], "chave_acesso": r.get("chave")}
+                        for r in sem_pdf
+                    ]
+                    resposta["aviso"] = (
+                        f"⚠️ {len(sem_pdf)} de {len(resultados)} nota(s) foram enviadas SEM o PDF "
+                        f"porque o serviço DANFSE do governo está indisponível. Reenvie o PDF com "
+                        f"`baixar_pdf_nota` + `encaminhar_nota_contabilidade` quando o serviço voltar."
+                    )
+                else:
+                    resposta["anexos_enviados"] = "xml_e_pdf"
             except Exception as e:
                 resposta["aviso_encaminhamento"] = str(e)
+        elif sem_pdf:
+            resposta["aviso"] = (
+                f"⚠️ {len(sem_pdf)} nota(s) sem PDF (serviço DANFSE indisponível). "
+                f"O XML foi salvo; baixe o PDF depois com `baixar_pdf_nota`."
+            )
 
         return [types.TextContent(type="text",
                                   text=json.dumps(resposta, ensure_ascii=False, indent=2))]
@@ -900,16 +948,24 @@ async def call_tool(name: str, arguments: dict) -> list[types.TextContent]:
         session = nfse.session_mtls(config["cert_path"], senha)
         try:
             pdf_bytes = nfse.baixar_pdf(session, config, chave)
+        except nfse.DanfseIndisponivelError as e:
+            return _text_reply(
+                f"⏳ Serviço DANFSE indisponível (fora do ar) para a chave {chave}.\n"
+                f"{e}\n"
+                "Isto é uma indisponibilidade temporária no lado do governo "
+                "(adn.nfse.gov.br/danfse retornou 502/503/504). O XML já está salvo; "
+                "tente `baixar_pdf_nota` de novo mais tarde."
+            )
         finally:
             nfse.cleanup_session(session)
 
         if not pdf_bytes:
             return _text_reply(
-                f"❌ Não foi possível baixar o PDF da chave {chave}.\n"
+                f"❌ A chave {chave} não tem DANFSE disponível (HTTP 404).\n"
                 "Possíveis causas:\n"
                 "  - Chave incorreta\n"
-                "  - Nota emitida por outro CNPJ (sem permissão no portal)\n"
-                "  - Portal EmissorNacional fora do ar"
+                "  - Nota emitida por outro CNPJ (sem permissão)\n"
+                "  - DANFSE ainda não gerado para essa nota"
             )
 
         nome = (arguments.get("nome_arquivo") or "").strip() or f"nfse_{chave}"

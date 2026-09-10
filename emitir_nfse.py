@@ -985,69 +985,64 @@ def extrair_chave_acesso(nfse_xml):
         return idv or None
     return None
 
-def baixar_pdf(session, config, chave):
-    """Baixa o DANFSE em PDF.
+class DanfseIndisponivelError(RuntimeError):
+    """O serviço oficial de DANFSE (PDF) respondeu, mas está fora do ar
+    (502/503/504 persistente). Distingue outage transitório de erro definitivo
+    para o chamador decidir se reenvia o PDF depois."""
 
-    Estratégia (em ordem de tentativa):
 
-    1. **Portal EmissorNacional via mTLS + sessão** (preferida, retorna o
-       DANFSE oficial assinado):
+def baixar_pdf(session, config, chave, tentativas=5):
+    """Baixa o DANFSE (PDF) pelo serviço oficial do ADN.
 
-         GET https://www.nfse.gov.br/EmissorNacional/Certificado     (login)
-         GET https://www.nfse.gov.br/EmissorNacional/Notas/Download/DANFSe/{chave}
+    Endpoint oficial (confirmado no manual v1.2 do Sistema Nacional NFS-e e
+    contra o ambiente de produção restrita):
 
-       O primeiro request, feito com o cert mTLS, estabelece a sessão e
-       redireciona para `/Dashboard`. A cookie jar da `session` mantém o
-       cookie `ARRAffinity` para o segundo request.
+        GET https://adn.nfse.gov.br/danfse/{chave}      (mTLS ICP-Brasil)
 
-    2. **Fallback** `https://adn.nfse.gov.br/danfse/{chave}` — endpoint
-       público sem login que retornou 502 intermitente nos testes mas
-       pode voltar a funcionar.
+    Retorna:
+      - `bytes` do PDF em caso de sucesso;
+      - `None` se a chave não tem DANFSE disponível (404 definitivo);
+    Levanta:
+      - `DanfseIndisponivelError` se o serviço está fora (502/503/504 após
+        todas as tentativas) — assim o chamador não confunde outage do
+        governo com "nota sem PDF" e pode reenviar depois.
 
-    Retorna `bytes` do PDF, ou `None` se nenhuma rota deu PDF.
+    NB: a rota antiga via portal EmissorNacional (www.nfse.gov.br) foi
+    descontinuada aqui — o portal passou a exigir desafio JavaScript de WAF
+    (F5) no endpoint de download, que retorna 403 para clientes não-browser.
     """
-    portal_base = config.get("portal_base_url", "https://www.nfse.gov.br/EmissorNacional")
-
-    # ── Rota 1: portal com login via cert ────────────────────────────────────
-    try:
-        # Login: GET /Certificado redireciona para Dashboard se cert válido.
-        r_login = session.get(
-            f"{portal_base}/Certificado",
-            allow_redirects=True,
-            timeout=30,
-        )
-        # Sucesso = chegou no Dashboard (ou qualquer página que não seja /Login)
-        if r_login.ok and "/Login" not in r_login.url:
-            r_pdf = session.get(
-                f"{portal_base}/Notas/Download/DANFSe/{chave}",
-                headers={"Accept": "application/pdf"},
-                allow_redirects=True,
-                timeout=60,
-            )
-            ct = r_pdf.headers.get("content-type", "")
-            if r_pdf.ok and ct.startswith("application/pdf"):
-                return r_pdf.content
-            # Se voltou HTML, o cert pode não ter permissão na chave
-            # (ex: nota emitida por outro CNPJ).
-    except requests.RequestException:
-        pass  # Tenta o fallback
-
-    # ── Rota 2: fallback /adn/danfse (502 intermitente) ──────────────────────
     adn_base = config.get("adn_base_url", "https://adn.nfse.gov.br").split("/contribuintes")[0]
     url = f"{adn_base}/danfse/{chave}"
-    for _ in range(3):
+    headers = {
+        "Accept": "application/pdf",
+        "User-Agent": config.get("danfse_user_agent", "nfse-nacional-mcp/1.0"),
+    }
+
+    ultimo_status = None
+    for tent in range(tentativas):
         try:
-            r = session.get(url, headers={"Accept": "application/pdf"}, timeout=30)
-            if r.ok and r.headers.get("content-type", "").startswith("application/pdf"):
-                return r.content
-            if r.status_code in (502, 503, 504):
-                time.sleep(2)
-                continue
-            return None
+            r = session.get(url, headers=headers, timeout=45)
         except requests.RequestException:
-            time.sleep(2)
+            time.sleep(2 * (tent + 1))
             continue
-    return None
+
+        ct = r.headers.get("content-type", "")
+        if r.ok and ct.startswith("application/pdf"):
+            return r.content
+        ultimo_status = r.status_code
+        if r.status_code in (502, 503, 504):
+            time.sleep(2 * (tent + 1))  # backoff — outage costuma ser transitório
+            continue
+        if r.status_code == 404:
+            return None  # chave sem DANFSE — definitivo, não adianta reenviar
+        # Qualquer outro status: para e sinaliza indisponibilidade
+        break
+
+    raise DanfseIndisponivelError(
+        f"Serviço DANFSE indisponível para a chave {chave} "
+        f"(último status HTTP: {ultimo_status}). O PDF pode ser reenviado "
+        f"depois com `baixar_pdf_nota` quando o serviço voltar."
+    )
 
 # ─── E-mail para contabilidade ───────────────────────────────────────────────
 
@@ -1190,7 +1185,19 @@ def emitir_uma_nota(config, secrets, clientes, session, dados, cliente_chave,
     if n_emitido:
         salvar_cache_ndps(n_emitido, chave)
 
-    pdf_bytes = baixar_pdf(session, config, chave) if chave else None
+    # A nota JÁ foi emitida (irreversível) — uma falha no PDF nunca pode
+    # derrubar isto. Capturamos o outage do serviço DANFSE e seguimos,
+    # registrando o status para o chamador saber que o PDF ficou faltando.
+    pdf_bytes = None
+    pdf_status = "ok"
+    if chave:
+        try:
+            pdf_bytes = baixar_pdf(session, config, chave)
+            if pdf_bytes is None:
+                pdf_status = "sem_danfse"   # 404 — nota sem DANFSE disponível
+        except DanfseIndisponivelError as e:
+            pdf_status = "indisponivel"     # serviço fora (502/503/504)
+            print(f"  ⚠️  PDF não baixado: {e}")
 
     # Salva os arquivos localmente
     output_dir = Path(config.get("output_dir", str(DATA_DIR / "notas")))
@@ -1202,16 +1209,17 @@ def emitir_uma_nota(config, secrets, clientes, session, dados, cliente_chave,
         (output_dir / f"nfse_{tag}_{nome}.pdf").write_bytes(pdf_bytes)
         print(f"  💾 Arquivos salvos em {output_dir}/nfse_{tag}_{nome}.[xml|pdf]")
     else:
-        print(f"  💾 XML salvo em {output_dir}/nfse_{tag}_{nome}.xml")
+        print(f"  💾 XML salvo em {output_dir}/nfse_{tag}_{nome}.xml (PDF: {pdf_status})")
 
     return {
-        "dps_id":    dps_id,
-        "chave":     chave,
-        "dry_run":   False,
-        "xml_bytes": nfse_xml,
-        "pdf_bytes": pdf_bytes,
-        "cliente":   cliente,
-        "dados":     dados,
+        "dps_id":     dps_id,
+        "chave":      chave,
+        "dry_run":    False,
+        "xml_bytes":  nfse_xml,
+        "pdf_bytes":  pdf_bytes,
+        "pdf_status": pdf_status,
+        "cliente":    cliente,
+        "dados":      dados,
     }
 
 # ─── Main ─────────────────────────────────────────────────────────────────────
