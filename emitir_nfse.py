@@ -19,7 +19,6 @@ Exemplos de uso:
 
 import argparse
 import base64
-import calendar
 import gzip
 import email as email_lib
 import hashlib
@@ -393,12 +392,14 @@ def buscar_pagamentos_mes(config: dict, secrets: dict, mes: str) -> list:
     Retorna lista de dicts com os dados de cada transferência.
     """
     ano, m = mes.split("-")
-    _, ultimo_dia = calendar.monthrange(int(ano), int(m))
 
     meses_imap = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
     nome_mes = meses_imap[int(m) - 1]
     imap_ini = f"01-{nome_mes}-{ano}"
-    imap_fim = f"{ultimo_dia}-{nome_mes}-{ano}"
+    # IMAP BEFORE é EXCLUSIVO da data — para incluir o último dia do mês,
+    # o limite tem que ser o dia 01 do mês seguinte (senão perde e-mails do dia 31).
+    prox_ano, prox_m = (int(ano) + 1, 1) if int(m) == 12 else (int(ano), int(m) + 1)
+    imap_fim = f"01-{meses_imap[prox_m - 1]}-{prox_ano}"
 
     imap = imap_connect(config, secrets)
     imap.select("INBOX")
