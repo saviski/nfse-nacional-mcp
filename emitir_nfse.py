@@ -1047,15 +1047,29 @@ def baixar_pdf(session, config, chave, tentativas=5):
 
 # ─── E-mail para contabilidade ───────────────────────────────────────────────
 
-def enviar_notas_contabilidade(config, secrets, notas):
+def enviar_notas_contabilidade(config, secrets, notas, correcao=False):
     """Envia uma ou mais NFS-e em um único e-mail para a contabilidade via Mailgun.
 
     `notas` é uma lista de dicts com chaves: `dados`, `cliente`, `xml_bytes`, `pdf_bytes`.
     Quando há mais de uma nota, todas são anexadas na mesma mensagem.
     Sempre adiciona CC para `email_remetente_cc` (o próprio remetente).
+
+    `correcao=True`: marca o e-mail como correção de um envio anterior. Nesse
+    modo TODAS as notas precisam ter XML **e** PDF — se faltar PDF em alguma,
+    levanta RuntimeError (o reenvio de correção só sai completo, nunca só-XML).
+    O assunto recebe o prefixo "[CORREÇÃO]" e o corpo abre explicando.
     """
     if not notas:
         return
+
+    if correcao:
+        sem_pdf = [n for n in notas if not n.get("pdf_bytes")]
+        if sem_pdf:
+            faltando = ", ".join(n["cliente"]["xNome"] for n in sem_pdf)
+            raise RuntimeError(
+                "Reenvio de correção exige XML+PDF em todas as notas, mas o PDF "
+                f"está ausente para: {faltando}. Baixe o DANFSE antes de reenviar."
+            )
     # Usa a competência da primeira nota (assume-se que é um lote do mesmo período).
     mes_fmt = notas[0]["dados"]["dCompet"][:7].replace("-", "/")
     nomes   = [n["cliente"]["xNome"] for n in notas]
@@ -1098,6 +1112,16 @@ def enviar_notas_contabilidade(config, secrets, notas):
             + "\n".join(linhas)
             + f"\n\nTotal: R$ {tot_brl:,.2f} (US$ {tot_usd:,.2f}).\n"
             + assinatura_bloco + rodape
+        )
+
+    # Modo correção: marca assunto e abre o corpo explicando o reenvio.
+    if correcao:
+        assunto = f"[CORREÇÃO] {assunto}"
+        corpo = (
+            "Olá,\n\nEste e-mail é uma CORREÇÃO de um envio anterior: as notas abaixo "
+            "foram enviadas antes apenas com o XML (o PDF/DANFSE estava indisponível "
+            "no portal na ocasião). Reenviamos agora com o XML e o PDF de cada uma.\n\n"
+            + corpo.split("\n\n", 1)[1]
         )
 
     # Monta os anexos com nomes únicos por (cliente, ordem).
