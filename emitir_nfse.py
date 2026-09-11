@@ -1089,7 +1089,6 @@ def enviar_notas_contabilidade(config, secrets, notas, correcao=False):
         corpo = (
             f"Olá,\n\nSegue a NFS-e referente ao pagamento de {nomes[0]},\n"
             f"competência {mes_fmt}, no valor de R$ {d['vBRL']:,.2f} (US$ {d['vUSD']:,.2f}).\n"
-            + assinatura_bloco + rodape
         )
     else:
         nomes_unicos = sorted(set(nomes))
@@ -1111,7 +1110,6 @@ def enviar_notas_contabilidade(config, secrets, notas, correcao=False):
             f"recebidos na competência {mes_fmt}:\n\n"
             + "\n".join(linhas)
             + f"\n\nTotal: R$ {tot_brl:,.2f} (US$ {tot_usd:,.2f}).\n"
-            + assinatura_bloco + rodape
         )
 
     # Modo correção: marca assunto e abre o corpo explicando o reenvio.
@@ -1123,6 +1121,25 @@ def enviar_notas_contabilidade(config, secrets, notas, correcao=False):
             "no portal na ocasião). Reenviamos agora com o XML e o PDF de cada uma.\n\n"
             + corpo.split("\n\n", 1)[1]
         )
+    else:
+        # Envio normal: se algum PDF não pôde ser baixado (instabilidade do serviço
+        # de DANFSE do Sistema Nacional), avisa na mensagem — o XML é o documento legal.
+        faltam_pdf = [n for n in notas if not n.get("pdf_bytes")]
+        if faltam_pdf:
+            if len(notas) == 1:
+                alvo = "o PDF (DANFSE) desta nota"
+            elif len(faltam_pdf) == len(notas):
+                alvo = "o PDF (DANFSE) das notas"
+            else:
+                alvo = "o PDF (DANFSE) de parte das notas"
+            corpo += (
+                f"\nObservação: {alvo} não está anexado no momento devido a "
+                "instabilidade no serviço de geração de DANFSE do Sistema Nacional "
+                "NFS-e. O XML em anexo é o documento com validade legal; o PDF será "
+                "encaminhado assim que o serviço normalizar.\n"
+            )
+
+    corpo += assinatura_bloco + rodape
 
     # Monta os anexos com nomes únicos por (cliente, ordem).
     tag      = mes_fmt.replace("/", "_")
