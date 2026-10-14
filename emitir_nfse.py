@@ -429,18 +429,50 @@ def buscar_pagamentos_mes(config: dict, secrets: dict, mes: str) -> list:
 
     imap.logout()
 
-    # Deduplica por (usd, brl, data) — cada transferência pode gerar vários e-mails
-    # ("aviso" + "comprovante"). Prefere o comprovante (tem nome do cliente).
-    seen: dict[tuple, dict] = {}
-    for t in transferencias:
-        key = (t["vUSD"], t["vBRL"], t["dCompet"])
-        if key not in seen or (not seen[key].get("cliente_nome") and t.get("cliente_nome")):
-            seen[key] = t
-    transferencias = list(seen.values())
+    transferencias = _deduplicar_transferencias(transferencias)
 
     # Ordena por data
     transferencias.sort(key=lambda x: x["dCompet"])
     return transferencias
+
+
+def _id_transferencia(t: dict) -> str | None:
+    """Nº da transferência no assunto do comprovante ('... - #15759771')."""
+    m = re.search(r"#(\d+)", t.get("_subject") or "")
+    return m.group(1) if m else None
+
+
+def _deduplicar_transferencias(transferencias: list, janela_dias: int = 3) -> list:
+    """Funde e-mails que descrevem a mesma transferência.
+
+    A Remessa Online manda um aviso ("Seu dinheiro está a caminho!") e depois
+    o comprovante — às vezes em dias diferentes. Mesmos valores USD+BRL dentro
+    de `janela_dias` contam como a mesma transferência; fica o comprovante,
+    que traz o nº da transferência e o nome do cliente. Dois comprovantes com
+    nºs diferentes nunca são fundidos, mesmo com valores idênticos.
+    """
+    def dia(t):
+        return datetime.strptime(t["dCompet"], "%Y-%m-%d").date()
+
+    # Comprovantes (com nº) primeiro, para que sejam eles os preservados.
+    ordenadas = sorted(transferencias, key=lambda t: (_id_transferencia(t) is None, t["dCompet"]))
+    unicas: list = []
+    for t in ordenadas:
+        tid = _id_transferencia(t)
+        duplicada = False
+        for u in unicas:
+            if (u["vUSD"], u["vBRL"]) != (t["vUSD"], t["vBRL"]):
+                continue
+            if abs((dia(u) - dia(t)).days) > janela_dias:
+                continue
+            uid = _id_transferencia(u)
+            if tid and uid and tid != uid:
+                continue
+            duplicada = True
+            break
+        if not duplicada:
+            unicas.append(t)
+    return unicas
 
 def buscar_ultimo_pagamento(config: dict, secrets: dict) -> dict:
     """Busca o e-mail de pagamento mais recente de qualquer corretora."""
@@ -992,7 +1024,7 @@ class DanfseIndisponivelError(RuntimeError):
     para o chamador decidir se reenvia o PDF depois."""
 
 
-def baixar_pdf(session, config, chave, tentativas=5):
+def baixar_pdf(session, config, chave, tentativas=3, timeout=15):
     """Baixa o DANFSE (PDF) pelo serviço oficial do ADN.
 
     Endpoint oficial (confirmado no manual v1.2 do Sistema Nacional NFS-e e
@@ -1021,10 +1053,12 @@ def baixar_pdf(session, config, chave, tentativas=5):
 
     ultimo_status = None
     for tent in range(tentativas):
+        ultima = tent == tentativas - 1
         try:
-            r = session.get(url, headers=headers, timeout=45)
+            r = session.get(url, headers=headers, timeout=timeout)
         except requests.RequestException:
-            time.sleep(2 * (tent + 1))
+            if not ultima:
+                time.sleep(2 * (tent + 1))
             continue
 
         ct = r.headers.get("content-type", "")
@@ -1032,7 +1066,8 @@ def baixar_pdf(session, config, chave, tentativas=5):
             return r.content
         ultimo_status = r.status_code
         if r.status_code in (502, 503, 504):
-            time.sleep(2 * (tent + 1))  # backoff — outage costuma ser transitório
+            if not ultima:
+                time.sleep(2 * (tent + 1))  # backoff — outage costuma ser transitório
             continue
         if r.status_code == 404:
             return None  # chave sem DANFSE — definitivo, não adianta reenviar
@@ -1044,6 +1079,42 @@ def baixar_pdf(session, config, chave, tentativas=5):
         f"(último status HTTP: {ultimo_status}). O PDF pode ser reenviado "
         f"depois com `baixar_pdf_nota` quando o serviço voltar."
     )
+
+# ─── Nomes de arquivo e formatação ───────────────────────────────────────────
+
+def _fmt_br(valor: float) -> str:
+    """1234567.8 → '1.234.567,80' (padrão brasileiro)."""
+    return f"{valor:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
+
+
+def _nnfse_do_xml(xml_bytes) -> int | None:
+    """nNFSe a partir do XML da NFS-e (via chave de acesso); None se não der."""
+    try:
+        return _extrair_nnfse_da_chave(extrair_chave_acesso(xml_bytes))
+    except Exception:
+        return None
+
+
+def nome_base_nota(dados: dict, cliente: dict, n_nfse: int | None) -> str:
+    """Nome-base (sem extensão) dos arquivos de uma nota.
+
+    Inclui o nNFSe quando conhecido — várias notas do mesmo cliente no mesmo
+    mês teriam o mesmo nome sem ele, e uma sobrescreveria a outra.
+    """
+    tag  = dados["dCompet"][:7].replace("-", "_")
+    nome = cliente["xNome"].lower().replace(" ", "_")
+    base = f"nfse_{tag}_{nome}"
+    return f"{base}_n{n_nfse}" if n_nfse else base
+
+
+def _caminho_livre(diretorio: Path, base: str, ext: str) -> Path:
+    """Primeiro caminho `base[_N]ext` que ainda não existe em `diretorio`."""
+    candidato = diretorio / f"{base}{ext}"
+    i = 2
+    while candidato.exists():
+        candidato = diretorio / f"{base}_{i}{ext}"
+        i += 1
+    return candidato
 
 # ─── E-mail para contabilidade ───────────────────────────────────────────────
 
@@ -1088,7 +1159,7 @@ def enviar_notas_contabilidade(config, secrets, notas, correcao=False):
         d = notas[0]["dados"]
         corpo = (
             f"Olá,\n\nSegue a NFS-e referente ao pagamento de {nomes[0]},\n"
-            f"competência {mes_fmt}, no valor de R$ {d['vBRL']:,.2f} (US$ {d['vUSD']:,.2f}).\n"
+            f"competência {mes_fmt}, no valor de R$ {_fmt_br(d['vBRL'])} (US$ {_fmt_br(d['vUSD'])}).\n"
         )
     else:
         nomes_unicos = sorted(set(nomes))
@@ -1103,13 +1174,13 @@ def enviar_notas_contabilidade(config, secrets, notas, correcao=False):
             tot_usd += d["vUSD"]
             linhas.append(
                 f"  • {n['cliente']['xNome']} — {d['dCompet']} — "
-                f"R$ {d['vBRL']:,.2f} (US$ {d['vUSD']:,.2f})"
+                f"R$ {_fmt_br(d['vBRL'])} (US$ {_fmt_br(d['vUSD'])})"
             )
         corpo = (
             f"Olá,\n\nSeguem {len(notas)} NFS-e referentes aos pagamentos "
             f"recebidos na competência {mes_fmt}:\n\n"
             + "\n".join(linhas)
-            + f"\n\nTotal: R$ {tot_brl:,.2f} (US$ {tot_usd:,.2f}).\n"
+            + f"\n\nTotal: R$ {_fmt_br(tot_brl)} (US$ {_fmt_br(tot_usd)}).\n"
         )
 
     # Modo correção: marca assunto e abre o corpo explicando o reenvio.
@@ -1141,23 +1212,19 @@ def enviar_notas_contabilidade(config, secrets, notas, correcao=False):
 
     corpo += assinatura_bloco + rodape
 
-    # Monta os anexos com nomes únicos por (cliente, ordem).
-    tag      = mes_fmt.replace("/", "_")
-    contagem = {}
-    ocorr    = {}
-    for n in notas:
-        k = n["cliente"]["xNome"].lower().replace(" ", "_")
-        ocorr[k] = ocorr.get(k, 0) + 1
-
+    # Anexos com o mesmo nome dos arquivos locais (inclui o nNFSe, lido do XML).
+    # Se o nNFSe não puder ser lido, desambigua nomes repetidos com _2, _3...
     anexos = []  # lista de tuplas ("attachment", (filename, bytes, mime))
+    usados = set()
     for n in notas:
-        nome_cli = n["cliente"]["xNome"].lower().replace(" ", "_")
-        contagem[nome_cli] = contagem.get(nome_cli, 0) + 1
-        suf  = f"_{contagem[nome_cli]}" if ocorr[nome_cli] > 1 else ""
-        base = f"nfse_{tag}_{nome_cli}{suf}"
-        anexos.append(("attachment", (f"{base}.xml", n["xml_bytes"], "application/xml")))
+        base = nome_base_nota(n["dados"], n["cliente"], _nnfse_do_xml(n["xml_bytes"]))
+        unico, i = base, 2
+        while unico in usados:
+            unico, i = f"{base}_{i}", i + 1
+        usados.add(unico)
+        anexos.append(("attachment", (f"{unico}.xml", n["xml_bytes"], "application/xml")))
         if n.get("pdf_bytes"):
-            anexos.append(("attachment", (f"{base}.pdf", n["pdf_bytes"], "application/pdf")))
+            anexos.append(("attachment", (f"{unico}.pdf", n["pdf_bytes"], "application/pdf")))
 
     # ── Envio via Mailgun API ──────────────────────────────────────────────
     api_key = secrets.get("mailgun_api_key") or os.environ.get("MAILGUN_API_KEY")
@@ -1230,28 +1297,35 @@ def emitir_uma_nota(config, secrets, clientes, session, dados, cliente_chave,
     # A nota JÁ foi emitida (irreversível) — uma falha no PDF nunca pode
     # derrubar isto. Capturamos o outage do serviço DANFSE e seguimos,
     # registrando o status para o chamador saber que o PDF ficou faltando.
+    #
+    # Na emissão o PDF é "melhor esforço": UMA tentativa curta. Retries longos
+    # aqui fazem a chamada estourar o timeout do cliente MCP depois que a nota
+    # já foi emitida — e um timeout numa operação irreversível convida a
+    # repetir a chamada, emitindo em dobro. Reenvio de PDF com mais tentativas
+    # fica para `baixar_pdf_nota`.
     pdf_bytes = None
     pdf_status = "ok"
     if chave:
         try:
-            pdf_bytes = baixar_pdf(session, config, chave)
+            pdf_bytes = baixar_pdf(session, config, chave, tentativas=1, timeout=10)
             if pdf_bytes is None:
                 pdf_status = "sem_danfse"   # 404 — nota sem DANFSE disponível
         except DanfseIndisponivelError as e:
             pdf_status = "indisponivel"     # serviço fora (502/503/504)
             print(f"  ⚠️  PDF não baixado: {e}")
 
-    # Salva os arquivos localmente
+    # Salva os arquivos localmente — nome inclui o nNFSe para que notas do
+    # mesmo cliente no mesmo mês não se sobrescrevam.
     output_dir = Path(config.get("output_dir", str(DATA_DIR / "notas")))
     output_dir.mkdir(parents=True, exist_ok=True)
-    tag  = dados["dCompet"][:7].replace("-", "_")
-    nome = cliente["xNome"].lower().replace(" ", "_")
-    (output_dir / f"nfse_{tag}_{nome}.xml").write_bytes(nfse_xml)
+    base = nome_base_nota(dados, cliente, n_emitido)
+    xml_path = _caminho_livre(output_dir, base, ".xml")
+    xml_path.write_bytes(nfse_xml)
     if pdf_bytes:
-        (output_dir / f"nfse_{tag}_{nome}.pdf").write_bytes(pdf_bytes)
-        print(f"  💾 Arquivos salvos em {output_dir}/nfse_{tag}_{nome}.[xml|pdf]")
+        xml_path.with_suffix(".pdf").write_bytes(pdf_bytes)
+        print(f"  💾 Arquivos salvos em {xml_path.with_suffix('')}.[xml|pdf]")
     else:
-        print(f"  💾 XML salvo em {output_dir}/nfse_{tag}_{nome}.xml (PDF: {pdf_status})")
+        print(f"  💾 XML salvo em {xml_path} (PDF: {pdf_status})")
 
     return {
         "dps_id":     dps_id,
