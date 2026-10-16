@@ -431,6 +431,25 @@ async def list_tools() -> list[types.Tool]:
             },
         ),
         types.Tool(
+            name="verificar_pendencias_mes",
+            description=(
+                "Cruza os pagamentos recebidos num mês (Gmail) com as NFS-e já "
+                "emitidas (XMLs salvos em output_dir) e lista os pagamentos que "
+                "ainda não têm nota. Somente leitura — NÃO emite nada. Se `mes` "
+                "for omitido, usa o mês anterior ao atual. Usado pelo lembrete "
+                "mensal de emissão."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "mes": {
+                        "type": "string",
+                        "description": "Mês AAAA-MM (opcional; padrão: mês anterior ao atual)",
+                    },
+                },
+            },
+        ),
+        types.Tool(
             name="emitir_nota",
             description=(
                 "Emite uma NFS-e via API do Sistema Nacional NFS-e. "
@@ -747,6 +766,29 @@ async def call_tool(name: str, arguments: dict) -> list[types.TextContent]:
                     "assunto":       p.get("_subject"),
                 }
                 for p in pagamentos
+            ],
+        })
+
+    # ── verificar_pendencias_mes ─────────────────────────────────────────────
+    if name == "verificar_pendencias_mes":
+        mes = (arguments.get("mes") or "").strip() or nfse.mes_anterior()
+        try:
+            r = nfse.pagamentos_pendentes(config, secrets, mes)
+        except Exception as e:
+            return _text_reply(f"Erro ao verificar pendências de {mes}: {e}")
+
+        def _pg(p):
+            return {"data": p["dCompet"], "cliente_nome": p.get("cliente_nome"),
+                    "usd": p["vUSD"], "brl": p["vBRL"]}
+        return _json_reply({
+            "mes":              mes,
+            "total_pagamentos": len(r["pagamentos"]),
+            "total_emitidos":   len(r["emitidos"]),
+            "total_pendentes":  len(r["pendentes"]),
+            "pendentes":        [_pg(p) for p in r["pendentes"]],
+            "emitidos": [
+                {**_pg(p), "nNFSe": p["nota"]["nNFSe"], "competencia_nota": p["nota"]["dCompet"]}
+                for p in r["emitidos"]
             ],
         })
 

@@ -38,6 +38,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email import encoders
 from email.utils import parsedate_to_datetime
+from html import unescape as _unescape_html
 from io import BytesIO
 from pathlib import Path
 
@@ -199,9 +200,9 @@ def _looks_like_html(text: str) -> bool:
     return bool(re.search(r"<(?:html|body|table|div|span|td|p)[>\s]", text, re.IGNORECASE))
 
 def _strip_html(html: str) -> str:
-    """Remove tags HTML e normaliza espaço em branco."""
-    text = re.sub(r"<[^>]+>", " ", html)
-    return re.sub(r"[ \t]+", " ", text)
+    """Remove tags HTML, decodifica entidades (&nbsp;, &#233;) e normaliza espaços."""
+    text = _unescape_html(re.sub(r"<[^>]+>", " ", html))
+    return re.sub(r"[ \t\xa0]+", " ", text)
 
 def _decode_part(part) -> str:
     """Decodifica payload de uma parte MIME respeitando o charset declarado."""
@@ -280,11 +281,13 @@ def parse_remessa_online(msg) -> dict:
     # Formato "Comprovante de Transferência": "Valor em reais\n BRL X"
     raw_brl = find(r"Valor em reais\s+BRL\s*([\d\.,]+)", body)
     raw_usd = find(r"Valor em moeda estrangeira[:\s]+USD\s*([\d\.,]+)", body)
-    # Formato "Seu dinheiro está a caminho!": "USD X.XXX,XX\n Valor Resgatado\n R$ X.XXX,XX"
+    # Formato "Seu dinheiro está a caminho!": "Valor recebido: USD X" … "Valor Resgatado R$ Y".
+    # Ancorado nos rótulos: e-mails promocionais da Remessa também citam valores
+    # ("USD a R$ 5,29", a cotação do dia) e não podem virar pagamento.
     if not raw_usd:
-        raw_usd = find(r"USD\s*([\d\.,]+)", body)
+        raw_usd = find(r"Valor recebido\W{0,40}USD\s*([\d\.,]+)", body)
     if not raw_brl:
-        raw_brl = find(r"R\$\s*([\d\.,]+)", body)
+        raw_brl = find(r"Valor Resgatado\W{0,40}R\$\s*([\d\.,]+)", body)
 
     # Data: usa o cabeçalho Date do e-mail
     date_header = msg.get("Date", "")
@@ -764,6 +767,85 @@ def consultar_ultimo_nnfse_local(config: dict) -> int:
         if n is not None and n > maior:
             maior = n
     return maior
+
+
+def notas_emitidas_locais(config: dict) -> list:
+    """NFS-e do nosso CNPJ salvas em output_dir, lidas do conteúdo dos XMLs.
+
+    Ignora o nome do arquivo (há arquivos antigos com outros padrões) e
+    descarta XMLs que não são NFS-e autorizada (ex: DPS de dry-run).
+    """
+    output_dir = Path(config.get("output_dir", str(DATA_DIR / "notas")))
+    if not output_dir.exists():
+        return []
+    ns = f"{{{NS_NFSE}}}"
+    notas = {}
+    for xml_path in sorted(output_dir.glob("*.xml")):
+        try:
+            root = etree.fromstring(xml_path.read_bytes())
+        except (OSError, etree.XMLSyntaxError):
+            continue
+        inf = root.find(f".//{ns}infNFSe")
+        if inf is None:
+            continue
+        idv   = inf.get("Id", "")
+        chave = idv[3:] if idv.startswith("NFS") else idv
+        if len(chave) < 36 or chave[9:23] != config["cnpj"]:
+            continue
+        vserv = root.find(f".//{ns}vServ")
+        dcomp = root.find(f".//{ns}dCompet")
+        if vserv is None or dcomp is None or not vserv.text or not dcomp.text:
+            continue
+        toma = root.find(f".//{ns}toma/{ns}xNome")
+        notas[chave] = {
+            "chave":   chave,
+            "nNFSe":   _extrair_nnfse_da_chave(chave),
+            "vServ":   float(vserv.text),
+            "dCompet": dcomp.text.strip(),
+            "tomador": toma.text if toma is not None else None,
+            "arquivo": xml_path.name,
+        }
+    return sorted(notas.values(), key=lambda n: n["nNFSe"] or 0)
+
+
+def mes_anterior(hoje=None) -> str:
+    """'AAAA-MM' do mês anterior a `hoje` (padrão: data atual)."""
+    hoje = hoje or datetime.now().date()
+    return (hoje.replace(day=1) - timedelta(days=1)).strftime("%Y-%m")
+
+
+def pagamentos_pendentes(config: dict, secrets: dict, mes: str,
+                         janela_dias: int = 10, pagamentos=None, notas=None) -> dict:
+    """Cruza os pagamentos de `mes` com as NFS-e já emitidas. Não emite nada.
+
+    Um pagamento conta como emitido se há nota com o mesmo valor em reais e
+    competência a até `janela_dias` da data do pagamento — cobre pagamento no
+    último dia do mês emitido com competência no dia 1º seguinte. Cada nota
+    cobre no máximo um pagamento (a de competência mais próxima).
+    """
+    if pagamentos is None:
+        pagamentos = buscar_pagamentos_mes(config, secrets, mes)
+    if notas is None:
+        notas = notas_emitidas_locais(config)
+
+    def dia(s):
+        return datetime.strptime(s, "%Y-%m-%d").date()
+
+    usadas, emitidos, pendentes = set(), [], []
+    for p in sorted(pagamentos, key=lambda x: x["dCompet"]):
+        candidatas = [
+            n for n in notas
+            if n["chave"] not in usadas
+            and round(n["vServ"], 2) == round(p["vBRL"], 2)
+            and abs((dia(n["dCompet"]) - dia(p["dCompet"])).days) <= janela_dias
+        ]
+        if candidatas:
+            nota = min(candidatas, key=lambda n: abs((dia(n["dCompet"]) - dia(p["dCompet"])).days))
+            usadas.add(nota["chave"])
+            emitidos.append({**p, "nota": nota})
+        else:
+            pendentes.append(p)
+    return {"mes": mes, "pagamentos": pagamentos, "emitidos": emitidos, "pendentes": pendentes}
 
 
 def _cache_ndps_path() -> Path:
