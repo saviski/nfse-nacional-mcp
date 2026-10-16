@@ -949,6 +949,38 @@ def _toma_xml(cliente: dict) -> str:
         f"</toma>"
     )
 
+IBSCBS_CAMPOS_OBRIGATORIOS = ("cIndOp", "CST", "cClassTrib")
+
+
+def _ibscbs_xml(config: dict, cliente: dict, dados: dict) -> str:
+    """Bloco <IBSCBS> da DPS (reforma tributária), ou "" se não configurado.
+
+    Códigos em config.json → "ibscbs", sobrescrevíveis por cliente em
+    clientes.json → "ibscbs". A DPS só declara a classificação: base,
+    alíquotas e valores são calculados pelo sistema nacional. Entra só
+    para competência a partir de `a_partir_de` (o leiaute aceita o grupo
+    apenas para dCompet >= 2026-01-01).
+    """
+    cfg = {**(config.get("ibscbs") or {}), **(cliente.get("ibscbs") or {})}
+    if not cfg or dados["dCompet"] < cfg.get("a_partir_de", "2026-01-01"):
+        return ""
+    faltando = [c for c in IBSCBS_CAMPOS_OBRIGATORIOS if not cfg.get(c)]
+    if faltando:
+        raise ValueError(f"config ibscbs incompleta: faltam {', '.join(faltando)}")
+    # Ordem dos elementos segue o XSD (TCRTCInfoIBSCBS).
+    return (
+        "<IBSCBS>"
+        f"<finNFSe>{cfg.get('finNFSe', '0')}</finNFSe>"
+        f"<cIndOp>{cfg['cIndOp']}</cIndOp>"
+        f"<indDest>{cfg.get('indDest', '0')}</indDest>"
+        "<valores><trib><gIBSCBS>"
+        f"<CST>{cfg['CST']}</CST>"
+        f"<cClassTrib>{cfg['cClassTrib']}</cClassTrib>"
+        "</gIBSCBS></trib></valores>"
+        "</IBSCBS>"
+    )
+
+
 def build_dps_xml(config: dict, dados: dict, ndps: int, cliente: dict) -> tuple:
     """Retorna (xml_string, dps_id)."""
     cnpj          = config["cnpj"]
@@ -964,6 +996,7 @@ def build_dps_xml(config: dict, dados: dict, ndps: int, cliente: dict) -> tuple:
     vServ    = f"{dados['vBRL']:.2f}"
     vMoeda   = f"{dados['vUSD']:.2f}"
     toma_xml = _toma_xml(cliente)
+    ibscbs_xml = _ibscbs_xml(config, cliente, dados)
 
     xml = f"""<?xml version="1.0" encoding="UTF-8"?>
 <DPS xmlns="{NS_NFSE}" versao="{versao}">
@@ -1027,6 +1060,7 @@ def build_dps_xml(config: dict, dados: dict, ndps: int, cliente: dict) -> tuple:
         </totTrib>
       </trib>
     </valores>
+    {ibscbs_xml}
   </infDPS>
 </DPS>"""
 

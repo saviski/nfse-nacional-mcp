@@ -12,6 +12,16 @@
 
   "versao_leiaute": "1.01",
 
+  "_comentario_ibscbs": "Grupo IBS/CBS da reforma tributária (LC 214/2025). Se omitido, a DPS sai sem o grupo. Os valores abaixo são de EXPORTAÇÃO de serviço (CST 410 / cClassTrib 410004) — confirme os códigos da sua operação com a contabilidade. Pode ser sobrescrito por cliente em clientes.json (chave 'ibscbs'). O sistema nacional calcula base, alíquotas e valores; 'a_partir_de' é a competência mínima em que o grupo é enviado.",
+  "ibscbs": {
+    "a_partir_de": "2026-10-01",
+    "finNFSe": "0",
+    "cIndOp": "100302",
+    "indDest": "0",
+    "CST": "410",
+    "cClassTrib": "410004"
+  },
+
   "_comentario_cert": "Caminho (relativo ao projeto) do certificado digital A1 no formato PFX. A senha vai em secrets.json.",
   "cert_path": "certs/meu_certificado.pfx",
 

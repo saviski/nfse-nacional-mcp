@@ -85,6 +85,7 @@ CONFIG_OPCIONAIS = {
     "contab_remetentes":   "Dict { 'email@contab': 'categoria' } para classificar e-mails recebidos",
     "contab_categorias":   "Dict { 'categoria': 'Rótulo 📑' } — labels das categorias",
     "email_parsers":       "Lista [{sender, parser}] de remetentes de pagamentos a parsear. Default: Remessa Online. Parsers built-in: 'remessa_online', 'rendimento'.",
+    "ibscbs":              "Grupo IBS/CBS da reforma tributária: {a_partir_de, finNFSe, cIndOp, indDest, CST, cClassTrib}. Ex. exportação de serviço: CST 410 / cClassTrib 410004. Confirme os códigos com a contabilidade.",
 }
 
 CONFIG_DEFAULTS = {
